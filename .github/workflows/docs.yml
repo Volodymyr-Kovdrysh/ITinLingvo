@@ -28,12 +28,12 @@ jobs:
         
     - name: Build HTML
       run: |
-        make html
+        make -C docs html
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        publish_dir: ./docs/_build/html
         publish_branch: gh-pages
         force_orphan: true
