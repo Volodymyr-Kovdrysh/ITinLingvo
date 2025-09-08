@@ -10,12 +10,14 @@ project = 'Інформаційні технології у лінгвістиц
 copyright = '2025, Володимир КОВДРИШ'
 author = 'Володимир КОВДРИШ'
 
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 master_doc = "index"
 extensions = ["myst_parser",
-              "sphinx.ext.autodoc"]
+              "sphinx.ext.autodoc",
+              'sphinx_togglebutton']
 source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
@@ -47,6 +49,7 @@ html_theme_options = {
     "show_toc_level": 2
 }
 html_static_path = ['_static']
+html_title = project
 
 myst_enable_extensions = [
   "deflist",
