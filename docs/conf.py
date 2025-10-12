@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Інформаційні технології у лінгвістиці'
-copyright = '2025, Володимир КОВДРИШ'
-author = 'Володимир КОВДРИШ'
+copyright = '2025, Василь МАЦЕНКО, Володимир КОВДРИШ'
+author = 'Василь МАЦЕНКО, Володимир КОВДРИШ'
 
 
 # -- General configuration ---------------------------------------------------
@@ -59,3 +59,15 @@ myst_enable_extensions = [
   "attrs_block", 
   "attrs_inline",
   "fieldlist"]
+
+# нумерація фігур/таблиць/лістингів
+numfig = True
+# глибина секцій у номері (0 = глобальна нумерація; 1 = усередині розділу і т.д.)
+numfig_secnum_depth = 1
+# україномовні підписи
+numfig_format = {
+    'figure': 'Рис. %s',
+    'table': 'Таблиця %s',
+    'code-block': 'Лістинг %s',
+    'section': 'Розділ %s',
+}
