@@ -11,4 +11,5 @@ app/laba4
 app/laba5
 app/laba6
 app/laba7
+app/laba8
 ```
