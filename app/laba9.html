@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. ЛАБОРАТОРНА РОБОТА №9 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba9';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="10. ЛАБОРАТОРНА РОБОТА №10" href="laba10.html" />
+    <link rel="prev" title="8. ЛАБОРАТОРНА РОБОТА №8" href="laba8.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba9.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba9.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba9.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba9.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №9</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.1.1. <strong>Найважливіші типи словників</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.1.2. <strong>Електронні словники</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.1.3. <strong>Двомовні словники. Сім’я електронних словників</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.1.4. <strong>Електронні словники англійської та інших мов</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.1.5. <strong>Електронні словники української мови.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.1.6. <strong>Електронні словники української мови</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.1.7. <strong>Енциклопедичні (термінологічні) словники</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.3. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o9">
+<h1><span class="section-number">9. </span>ЛАБОРАТОРНА РОБОТА №9<a class="headerlink" href="#o9" title="Link to this heading">#</a></h1>
+<p><strong>Електронні словники</strong></p>
+<p><strong>План</strong></p>
+<ol class="arabic simple">
+<li><p>Найважливіші типи словників</p></li>
+<li><p>Електронні словники</p></li>
+<li><p>Двомовні словники. Сім’я електронних словників</p></li>
+<li><p>Електронні словники англійської та інших мов</p></li>
+<li><p>Електронні словники української мови.</p></li>
+<li><p>Енциклопедичні (термінологічні) словники</p></li>
+</ol>
+<section id="id1">
+<h2><span class="section-number">9.1. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">9.1.1. </span><strong>Найважливіші типи словників</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Лінгвістична інформація відображається у словниках. Словники – це найбільш традиційна форма подання лексичної інформації. Словники – це унікальне джерело лексичних (термінологічних) ресурсів мови, а також перекладацьких відповідностей. Одна з найважливіших робіт у мовознавстві – це складання словників.</p>
+<p>Існують різноманітні типи словників. Поділ словників на типи відбувається за різними ознаками: залежно від мети словника, порядку розташування слів і т.д.</p>
+<p>Традиційно виділяють лінгвістичні, енциклопедичні та проміжні словники. В лінгвістичних словниках збираються та описуються самі лексичні одиниці мови – їх значення, особливості використання, структурні властивості, співвідношення з лексичними системами інших мов і т.д. В енциклопедичних словниках описуються предмети, явища, факти, реалії оточуючого світу.</p>
+<p>Розглянемо найважливіші типи лінгвістичних словників. <em><strong>Тлумачні</strong></em> словники – це словники, які подають тлумачення слів і фразеологізмів будь-якої мови засобами самої ж мови. Як правило, тлумачні словники дають граматичну характеристику слів і різні інші додаткові відомості.</p>
+<p>У <em><strong>перекладних</strong></em> словниках (найчастіше двомовних) даються переклади слів на інші мови. Переклад слів представляє велику трудність, оскільки обсяг значення слів у різних мовах часто не збігається (укр. їхати, йти – фр. arriver).</p>
+<p><em><strong>Орфографічні</strong></em> словники дають відомості про правильне написання слів або його форм. <em><strong>Орфоепічні</strong></em> словники вказують правильну вимову слів.</p>
+<p><em><strong>Етимологічні</strong></em> словники містять відомості про походження слів. Від етимологічних словників слід відрізняти <em><strong>історичні</strong></em> словники. Вони простежують історію слів і їхніх окремих значень з указанням виникнення нових слів і значень, їх видозміни протягом певного історичного періоду. Окремим різновидом історичного словника є словник письменника або окремого пам’ятника. Вони включають всі слова, ужиті в творах письменника, наприклад, словники Шекспіра, Гете.</p>
+<p>Особливе місце займають <em><strong>діалектні</strong></em> словники, що містять діалектну та загальнонародну лексику.</p>
+<p>Серед лінгвістичних словників великий інтерес представляють різні <em><strong>фразеологічні</strong></em> словники. Вони бувають перекладними або <em><strong>одномовними</strong></em>, що надають тлумачення значень фразеологізмів.</p>
+<p>З інших <em><strong>спеціальних</strong></em> лінгвістичних словників відзначимо словники синонімів, антонімів, омонімів, іноземних слів, словники скорочень, словники власних імен, словники рим, авторські словники тощо.</p>
+<p>Порівняно новий тип словників – це <em><strong>частотні</strong></em> словники. Їх завдання — показати порівняльну частоту вживаних слів мови. Частотні словники сучасності створюються на основі електронних корпусів мови (наприклад, British National Corpus, Corpus of Contemporary American English, Корпус української мови тощо).</p>
+<p>Словники-<em><strong>тезауруси</strong></em>, у яких слова, що належать до певної галузі знань, розташовано не за алфавітним, а за тематичним принципом, показують семантичні зв’язки між лексичними одиницями. Після реєстрового слова тезауруси містять синонімічні терміни та назви, найближчі родові й видові терміни, терміни, що вказують на відношення “частина-ціле” та інші типи асоціацій.</p>
+<p>Цікавий матеріал про морфологічний склад слів дають <em><strong>інверсні</strong></em> (зворотні) словники. <em><strong>Зворотний словник</strong></em> – це словник, у якому слова розташовуються з урахуванням алфавіту не від початку до кінця слова (як у більшості словників), а від кінця до початку. Зворотні словники складаються для мов, у яких кінець слова (закінчення, суфікси) відіграє велику граматичну роль. Для зручності пошуку вирівнювання списку слів у такому словнику здійснюється не за лівим, а за правим краєм. Сьогодні такі словники реалізуються в електронному форматі й часто є частиною корпусів мови або морфологічних баз даних.</p>
+<p>Перехідним від лінгвістичних до енциклопедичних словників є <em><strong>словники термінів</strong></em> різних наук і галузей техніки. Основна маса перекладу – не художній чи драматургічний переклад, а переклад науково-технічний, юридичний, політичний, рекламний, тому необхідно мати термінологічні словники. Термінологічні словники мають широке поширення. Вони включають спеціальні терміни, що вживаються в різних наукових галузях: хімії, фізиці, біології, інформатиці, лінгвістиці тощо (наприклад, словник американської лінгвістичної термінології).</p>
+<ol class="arabic simple">
+<li><p>Одна з основних властивостей словників у традиційній книжковій формі – це їх статичність. Статичність означає, що будь-які неточності чи помилки в словниках можуть бути виправлені, а нові словникові статті внесені лише при новому виданні. При розв’язуванні багатьох практичних задач необхідні електронні словники, які репрезентують відношення між лексичними одиницями. Сучасні електронні словники інтегруються у корпуси мов, мають функції пошуку за морфологічними, семантичними й синтаксичними ознаками (наприклад, Oxford Lexico, Merriam-Webster Online, r2u.org.ua, sum.in.ua).</p></li>
+</ol>
+<p>У сучасній лексикографії активно розвиваються електронні, корпусні, когнітивні та мультимедійні словники. Вони дозволяють аналізувати мову в динаміці, автоматично добирати приклади вживання та взаємозв’язки між словами. Такі ресурси, як Oxford English Dictionary Online, SUM-20, Glosbe, Reverso Context, стали основою цифрової лінгвістики ХХІ століття.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">9.1.2. </span><strong>Електронні словники</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><em><strong>Електронні словники</strong></em> – це аналог звичайних словників, але в спеціальному машинному форматі, призначеному для використання на комп’ютерах і мобільних пристроях. Вони набули широкого розповсюдження завдяки зручності, швидкості пошуку та доступності через Інтернет і мобільні застосунки. Електронні словники є унікальним джерелом лексичних (термінологічних) ресурсів мови, а також перекладацьких відповідників.</p>
+<p>Перевагою електронних словників, що вигідно відрізняє їх від друкованих видань, є зручність користування, висока швидкість обробки інформації (практично в кожному електронному словнику є функція автоматичного пошуку), оперативне поповнення новими словниковими статтями, а також портативність. Наприклад, паперова версія Великого Оксфордського словника (Oxford English Dictionary) містить 12 томів, що ускладнює пошук, тоді як час пошуку в електронній версії зведений до мінімуму. Автоматичні словники обсягом у декілька мільйонів словникових статей нині — реальність, тоді як традиційні друковані словники зазвичай містять 150–200 тисяч статей.</p>
+<p>На відміну від традиційних словників, автоматичні словники мають високу динамічність. Відбір лексики для них триває постійно: здійснюється виключення застарілих слів і додавання нових, оновлення граматичних і стилістичних відомостей. Також перевагою електронних словників є можливість підключення користувацьких словників і перемикання напряму перекладу. Електронні словники підтримують розширені можливості подання словникових статей — графічні елементи, вимову, мультимедіа, гіперпосилання, що забезпечують швидкий перехід до пов’язаних слів і тем.</p>
+<p>Онлайнові словники зазвичай мають алфавітний індекс, де кожна літера є гіперпосиланням на потрібну статтю. Функція автоматичного пошуку суттєво спрощує роботу з лексичними ресурсами. На відміну від паперових словників, електронні лексикографічні бази постійно оновлюються, включаючи найновішу лексику. Наприклад, словники в галузі штучного інтелекту чи нанотехнологій змінюються щомісяця. Саме динамічність і повнота сучасних термінів робить електронні словники незамінними.</p>
+<p>В електронних перекладних словниках, як і в термінологічних, до 80–90 % лексичного масиву становлять словосполучення.
+Електронні ресурси поділяються за формою доступу на <strong>онлайнові</strong> (веб-версії, що потребують підключення до Інтернету) та <strong>офлайнові</strong> (програми, які можна встановити локально). Нині користувачі надають перевагу онлайновим словникам через їх зручність, доступність і регулярне оновлення баз у реальному часі. Онлайн-версія словника <em>Merriam-Webster</em> містить понад 470 000 слів, а ресурси, як-от <em>Cambridge Dictionary Online</em> чи <em>Oxford Learner’s Dictionaries</em>, постійно оновлюються.</p>
+<p>У словнику кожна реєстрова одиниця утворює статтю, структура якої включає лексичний вхід, граматичну інформацію, тлумачення, приклади, синоніми та ін. У електронних словниках кількість зон статті зазвичай більша, ніж у паперових аналогах, оскільки вони можуть містити аудіо-та відеофрагменти.</p>
+<p>Залежно від кількості мов, електронні словники поділяють на одномовні, двомовні (для перекладу) та багатомовні.
+Одномовні електронні словники допомагають перекладачам уточнювати значення, добирати синоніми, антоніми, тлумачити неологізми, розшифровувати скорочення. Найважливішим типом є тлумачний словник.
+За допомогою таких ресурсів можна перевірити сполучуваність слів. Наприклад, у словнику <em>Collins Cobuild</em> вказано, що у британській англійській прийнято вживати <em>different from</em>, тоді як <em>different to</em> — рідше, а <em>different than</em> — неприйнятне.</p>
+<p>Двомовні словники (перекладні) подають переклади слів або фраз з однієї мови на іншу.
+Варто розрізняти <strong>автоматичні словники</strong> й <strong>системи машинного перекладу</strong> — останні включають перші, але мають складнішу структуру. Основними одиницями таких систем є фрази, а не окремі слова.</p>
+<p>Нині активно розвивається <em><strong>машинна лексикографія</strong></em> — галузь, що займається автоматизацією створення словників і використанням корпусів текстів. Вона передбачає оцифровування традиційних словників і створення спеціалізованих онлайн-ресурсів.</p>
+<p>Існують різні типи електронних словників: граматичні, тлумачні, термінологічні, тезауруси, онтології, корконданси.
+<em><strong>Тезауруси</strong></em> — словники, у яких слова впорядковано тематично, а не алфавітно, із зазначенням семантичних зв’язків. Приклади англомовних онлайн-тезаурусів: <a class="reference external" href="https://www.thesaurus.com">https://www.thesaurus.com</a> та <a class="reference external" href="https://www.visualthesaurus.com">https://www.visualthesaurus.com</a>.</p>
+<p><em><strong>Корконданс</strong></em> — тип словника, у якому кожне слово подається з коротким контекстом. Приклад — онлайн-корконданс роману Івана Франка <em>«Перехресні стежки»</em> на сайті <a class="reference external" href="https://ktf.franko.lviv.ua">https://ktf.franko.lviv.ua</a>.</p>
+<p><em><strong>Онтології</strong></em> — це системи понять певної галузі знань. Прикладом є <strong>WordNet</strong> — велика лексична база даних англійської мови, створена у Прінстонському університеті: <a class="reference external" href="https://wordnet.princeton.edu">https://wordnet.princeton.edu</a>.
+У WordNet слова поділено на групи синонімів — <em>синсети</em>, що утворюють ієрархічні зв’язки (гіпонімія, гіперонімія, меронімія). WordNet став основою для створення подібних ресурсів іншими мовами, зокрема в межах проекту <em>EuroWordNet</em>.</p>
+<p>Серед сучасних онтологій варто відзначити <em>OpenCyc</em> (<a class="reference external" href="https://www.opencyc.org">https://www.opencyc.org</a>) — відкриту систему понять для англійської мови, а також <em>ConceptNet</em> (<a class="reference external" href="https://conceptnet.io">https://conceptnet.io</a>) — багатомовну семантичну мережу, що активно використовується в системах штучного інтелекту.</p>
+<p><em><strong>Етимологічні ресурси:</strong></em></p>
+<ul class="simple">
+<li><p><em>Online Etymology Dictionary</em> — <a class="reference external" href="https://www.etymonline.com">https://www.etymonline.com</a></p></li>
+<li><p><em>Етимологічний словник української мови</em> — <a class="reference external" href="https://litopys.org.ua">https://litopys.org.ua</a></p></li>
+<li><p><em>Історія української мови</em> — <a class="reference external" href="https://www.history.org.ua">https://www.history.org.ua</a></p></li>
+</ul>
+<p><em><strong>Словники скорочень:</strong></em></p>
+<ul class="simple">
+<li><p><em>Acronym Finder</em> — <a class="reference external" href="https://www.acronymfinder.com">https://www.acronymfinder.com</a></p></li>
+<li><p><em>Abkuerzungen.de</em> — <a class="reference external" href="https://www.abkuerzungen.de">https://www.abkuerzungen.de</a></p></li>
+<li><p><em>Словник скорочень української мови</em> — <a class="reference external" href="https://www.ukrskor.info">https://www.ukrskor.info</a></p></li>
+</ul>
+<p><em><strong>Тлумачні та перекладні словники:</strong></em></p>
+<ul class="simple">
+<li><p><em>Merriam-Webster Dictionary</em> — <a class="reference external" href="https://www.merriam-webster.com">https://www.merriam-webster.com</a></p></li>
+<li><p><em>Le Trésor de la langue française informatisé (TLFi)</em> — <a class="reference external" href="https://www.atilf.fr">https://www.atilf.fr</a></p></li>
+<li><p><em>Oxford English Dictionary Online</em> — <a class="reference external" href="https://www.oed.com">https://www.oed.com</a></p></li>
+<li><p>Українські ресурси: <a class="reference external" href="https://r2u.org.ua">https://r2u.org.ua</a>, <a class="reference external" href="https://sum.in.ua">https://sum.in.ua</a></p></li>
+</ul>
+<p><em><strong>Словники синонімів і антонімів:</strong></em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.synonym.com">https://www.synonym.com</a></p></li>
+<li><p><a class="reference external" href="https://www.wordhippo.com">https://www.wordhippo.com</a></p></li>
+</ul>
+<p>Чудово 👌
+Ось оновлений і повністю актуалізований підпункт
+<strong>«Двомовні словники. Сім’я електронних словників»</strong>,
+який зберігає логіку оригіналу (структуру, академічний стиль),
+але замість застарілого <strong>ABBYY Lingvo</strong> подає <strong>сучасну “сім’ю” актуальних електронних словників і перекладацьких систем</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h3><span class="section-number">9.1.3. </span><strong>Двомовні словники. Сім’я електронних словників</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Машинні двомовні словники, що використовуються у сучасних системах перекладу, мають бути політематичними, адже реальні тексти поєднують лексику з різних сфер. Разом із базовим політематичним словником зазвичай використовують набір спеціалізованих тематичних ресурсів. Якість перекладу прямо залежить від повноти словникової бази.</p>
+<p>Сьогодні найпоширенішими представниками “сім’ї” сучасних двомовних електронних словників є <strong>Reverso Context</strong>, <strong>DeepL Dictionary</strong>, <strong>Glosbe</strong>, <strong>Cambridge Dictionary Online</strong>, <strong>Lingea Translator</strong>, <strong>Oxford Learner’s Dictionaries</strong>, <strong>Collins Dictionary</strong> та інші. Вони поєднують функції перекладу, тлумачення, прикладів уживання, фонетичної транскрипції й озвучення.</p>
+<p><a class="reference external" href="https://context.reverso.net"><strong>Reverso Context</strong></a>. Reverso – це двомовний словник і система контекстного перекладу, яка базується на корпусах автентичних текстів. Вона надає приклади вживання слова у різних контекстах, автоматично добирає переклади й граматичні форми, а також підтримує озвучення. Перевагою Reverso є адаптація перекладу до стилю тексту та можливість навчання нових слів за допомогою розділу <em>Reverso Vocabulary</em>.</p>
+<p><a class="reference external" href="https://www.deepl.com/translator"><strong>DeepL Dictionary</strong></a>. DeepL – це система перекладу з підтримкою штучного інтелекту, яка включає вбудований словник. Вона забезпечує точний переклад речень і словосполучень, пропонує кілька варіантів перекладу слова з прикладами вживання та автоматично визначає мову оригіналу. DeepL активно використовується у професійному перекладі та підтримує понад 30 мов.</p>
+<p><a class="reference external" href="https://glosbe.com"><strong>Glosbe</strong></a>. Glosbe – багатомовний двомовний словник із відкритим наповненням. Він об’єднує понад 6 мільйонів перекладних пар і містить приклади з реальних текстів, а також машинні й людські переклади. Glosbe дозволяє користувачам доповнювати базу власними записами, що робить його “живим” колаборативним словником.</p>
+<p><a class="reference external" href="https://dictionary.cambridge.org"><strong>Cambridge Dictionary Online</strong></a>. Цей ресурс поєднує тлумачний і перекладний словник. Він містить приклади вживання з British та American English, інформацію про вимову (британський та американський варіанти), граматику, фразові дієслова та ідіоми. Підтримуються інтерфейси для української, польської, німецької, іспанської та інших мов.</p>
+<p><a class="reference external" href="https://www.lingea.com/translator"><strong>Lingea Translator</strong></a>. Lingea – це серія професійних електронних словників і перекладачів, що підтримують десятки мовних пар (зокрема українську). Перевагою є наявність офлайн-версій, лексичних баз за спеціальностями (медицина, техніка, юриспруденція), а також інтегровані граматичні таблиці.</p>
+<p><a class="reference external" href="https://www.oxfordlearnersdictionaries.com"><strong>Oxford Learner’s Dictionaries</strong></a>. Словник пропонує тлумачення, приклади, синонімію, вимову, а також функцію “See also”, яка дозволяє швидко переходити між пов’язаними словами. Ресурс орієнтований на вивчення англійської мови, але має перекладні бази для популярних мов, включно з українською.</p>
+<p><a class="reference external" href="https://www.collinsdictionary.com"><strong>Collins Dictionary</strong></a>. Містить багатомовні словникові бази, приклади вживання, аудіовимову, фразеологію та етимологію. Collins також має API для інтеграції перекладацьких функцій у зовнішні програми.</p>
+<p>Сучасні електронні двомовні словники поєднують властивості лексикографічних, навчальних і машинних систем. Вони дозволяють не лише перекладати слова, а й аналізувати контексти, добирати стилістичні варіанти, отримувати граматичні підказки, а іноді — автоматично створювати навчальні картки для вивчення лексики.</p>
+<p>Сьогодні традиційні проєкти на кшталт <strong>ABBYY Lingvo</strong> мають переважно історичне значення, адже поступилися місцем новим хмарним і штучно-інтелектуальним рішенням, які забезпечують значно ширшу інтеграцію мовних ресурсів і щоденне оновлення баз даних.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">9.1.4. </span><strong>Електронні словники англійської та інших мов</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>У сучасній лексикографії існує велика кількість електронних словників, які охоплюють англійську та інші європейські мови. Вони забезпечують не лише переклад, а й контекстне вживання, синонімію, граматичні підказки, озвучення та інтеграцію з навчальними платформами. Нижче наведено найвідоміші та найактуальніші ресурси.</p>
+<ul class="simple">
+<li><p><strong>Oxford English Dictionary (OED)</strong> — <a class="reference external" href="https://www.oed.com">https://www.oed.com</a>
+Найповніший академічний словник англійської мови, що охоплює понад 600 000 слів, фраз і ідіом. Онлайн-версія регулярно оновлюється та містить історію походження слів і приклади з літератури.</p></li>
+<li><p><strong>Oxford Learner’s Dictionaries</strong> — <a class="reference external" href="https://www.oxfordlearnersdictionaries.com">https://www.oxfordlearnersdictionaries.com</a>
+Сучасний тлумачний словник для студентів і перекладачів, що містить транскрипцію, вимову (<em>British</em> / <em>American English</em>), приклади, фразові дієслова та ідіоми.</p></li>
+<li><p><strong>Cambridge Dictionary</strong> — <a class="reference external" href="https://dictionary.cambridge.org">https://dictionary.cambridge.org</a>
+Один із найпопулярніших онлайн-словників, який пропонує переклад, приклади вживання, граматичні довідки та можливість вивчення слів через інтерактивні вправи.</p></li>
+<li><p><strong>Collins Dictionary</strong> — <a class="reference external" href="https://www.collinsdictionary.com">https://www.collinsdictionary.com</a>
+Містить тлумачення, переклади, синоніми, фразеологію, аудіовимову та етимологічні відомості. Підтримує API для інтеграції з перекладацькими застосунками.</p></li>
+<li><p><strong>Longman Dictionary of Contemporary English (LDOCE)</strong> — <a class="reference external" href="https://www.ldoceonline.com">https://www.ldoceonline.com</a>
+Один із провідних навчальних словників англійської мови, який активно використовується у викладанні та тестуванні (IELTS, TOEFL, Cambridge Exams).</p></li>
+<li><p><strong>Duden Online</strong> — <a class="reference external" href="https://www.duden.de">https://www.duden.de</a>
+Офіційний орфографічний і тлумачний словник німецької мови, який регламентує правопис і норми сучасного німецького мовлення.</p></li>
+<li><p><strong>Larousse</strong> — <a class="reference external" href="https://www.larousse.fr">https://www.larousse.fr</a>
+Тлумачний та перекладний словник французької мови з прикладами вживання, граматичними таблицями й тематичними рубриками.</p></li>
+<li><p><strong>Glosbe</strong> — <a class="reference external" href="https://glosbe.com">https://glosbe.com</a>
+Багатомовний перекладний онлайн-словник із «пам’яттю перекладів». Містить мільйони прикладів з реальних текстів і дозволяє користувачам доповнювати базу власними перекладами.</p></li>
+<li><p><strong>Wiktionary</strong> — <a class="reference external" href="https://www.wiktionary.org">https://www.wiktionary.org</a>
+Відкритий багатомовний словник, що постійно поповнюється спільнотою користувачів. Український розділ налічує понад 70 000 статей.</p></li>
+<li><p><strong>E2U — Англо-український словник</strong> — <a class="reference external" href="https://e2u.org.ua">https://e2u.org.ua</a>
+Український онлайн-ресурс, який містить понад 170 000 статей, включно з українсько-англійським лінгвістичним словником і термінологією Європейського Союзу. Підтримує пошук за частиною слова та має форум обговорень.</p></li>
+<li><p><strong>GrammarCheck</strong> — <a class="reference external" href="https://www.grammarcheck.net">https://www.grammarcheck.net</a>
+Інтерактивний сервіс перевірки граматики, орфографії та стилю англійських текстів, який часто використовується поряд зі словниками як допоміжний інструмент редагування.</p></li>
+</ul>
+<p>Сьогодні електронні словники англійської та інших мов стали комплексними лінгвістичними системами, які поєднують традиційні тлумачні ресурси, перекладні бази, корпуси прикладів і засоби штучного інтелекту. Їхня динамічність, мультимедійність і доступність забезпечують широкий спектр можливостей для дослідників, викладачів і перекладачів у цифрову епоху.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">9.1.5. </span><strong>Електронні словники української мови.</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Ось сучасна, актуалізована та перевірена версія підпункту
+📘 <strong>«Електронні словники української мови»</strong>,
+зі збереженням структури й академічного стилю, але з чинними посиланнями, коментарями до ресурсів і уточненнями станом на 2025 рік:</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h3><span class="section-number">9.1.6. </span><strong>Електронні словники української мови</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Сучасна українська лексикографія активно розвивається у цифровому форматі. Більшість основних словників нині доступні онлайн, інтегровані в наукові портали та надають зручні інструменти для дослідників, викладачів і студентів.</p>
+<p><a class="reference external" href="https://sum.in.ua"><strong>Академічний тлумачний словник української мови (СУМ-11)</strong></a>. Містить 129 375 словникових статей, охоплює загальновживану лексику, діалектизми, усталені словосполучення. Наведено граматичні та стилістичні характеристики, приклади вживання з української художньої літератури. Це один із найавторитетніших і найповніших академічних словників української мови, укладений за матеріалами від Котляревського до сучасності.</p>
+<p><a class="reference external" href="https://lcorp.ulif.org.ua/dictua"><strong>«Словники України online» (УЛІФ)</strong></a>. Комплексна електронна система, що надає тлумачення, граматичні форми, синонімію, антонімію й фразеологію українських слів. Базується на ресурсах Українського лінгвістичного фонду НАН України.</p>
+<p>На порталі <a class="reference external" href="https://ulif.org.ua">https://ulif.org.ua</a> також доступні:</p>
+<ul class="simple">
+<li><p><em>Тлумачний словник української мови</em> у 20 томах (нині оцифровано 6 томів: А – Кварта);</p></li>
+<li><p>технічні двомовні й тримовні словники;</p></li>
+<li><p><strong>Український національний лінгвістичний корпус</strong>, який дає змогу аналізувати реальне вживання слів у текстах.</p></li>
+</ul>
+<p><a class="reference external" href="https://www.slovnyk.ua"><strong>Орфографічний словник української мови</strong></a>. Електронний ресурс з орфографії, граматики й правописних норм. Містить форум для отримання консультацій і приклади сучасного вживання, відповідає чинній редакції <em>Українського правопису</em> (2019).</p>
+<p><a class="reference external" href="http://ukrlit.org/"><strong>УКРЛІТ.ORG — публічний електронний словник</strong></a>.Розроблено за принципом перехресної бази даних: кожне слово поєднане з усіма словниковими статтями, у яких воно фігурує. Можна переглядати значення слова окремо за конкретним словником або у зведеній формі. Ресурс має кількарівневу навігацію, пошук з автодоповненням і містить посилання на українську художню літературу, біографії авторів і засоби транслітерації.</p>
+<p><a class="reference external" href="http://www.mova.info/"><strong>Лінгвістичний портал MOVA.info</strong></a>. Надає доступ до різних електронних словників, функцію транслітерації, читальну залу та базу посилань на ресурси з історії, граматики й стилістики української мови. Використовується як навчально-довідкова платформа.</p>
+<p><a class="reference external" href="https://e2u.org.ua"><strong>E2U — Англо-український і термінологічний словник ЄС</strong></a>. Онлайн-ресурс, який містить понад 170 000 статей, зокрема <em>англійсько-французько-німецько-український словник термінології Європейського Союзу</em>. Підтримує пошук за частиною слова та має інтегрований форум обговорень.</p>
+<p><a class="reference external" href="https://uk.worldwidedictionary.org"><strong>Всесвітній словник української мови</strong></a>. Містить словники відмінків, синонімів і фразеологізмів української мови, а також інтерактивні інструменти перевірки форми слова.</p>
+<p><strong>Інші ресурси</strong></p>
+<ul class="simple">
+<li><p><em>Список електронних словників української мови</em> — у статті <strong>«Українська лексикографія»</strong> на <a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%96%D1%8F">Вікіпедії</a>.</p></li>
+<li><p><a class="reference external" href="https://inmo.org.ua"><strong>Інститут мовознавства ім. О. О. Потебні НАН України</strong></a> — публікує наукові розробки з української лексикографії та електронні корпуси.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3><span class="section-number">9.1.7. </span><strong>Енциклопедичні (термінологічні) словники</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Однією з найпоширеніших причин помилок під час перекладу є неправильне використання термінів. За оцінками перекладацьких компаній, до третини неточностей у текстах виникають саме через неузгоджену термінологію. Узгодження термінів дозволяє зменшити час пошуку правильних відповідників, підвищити якість перекладу та забезпечити сталість термінології у різних мовах і документах.</p>
+<p>Робота над електронними термінологічними словниками та базами даних є одним із ключових напрямів сучасної комп’ютерної лексикографії й прикладної лінгвістики.</p>
+<p><strong>Комп’ютерна термінографія</strong>.</p>
+<p>Це галузь комп’ютерної лексикографії, що займається створенням електронних термінологічних словників і баз термінів.
+<strong>Термінологічні словники</strong> — це словники, у яких подано систему термінів певної галузі науки, техніки, виробництва, мистецтва тощо. Сукупність таких словників формує <strong>науково-технічні тезауруси</strong>, які описують поняття, зв’язки між ними та їхні переклади різними мовами.</p>
+<p>Важливою задачею термінографії є стандартизація та уніфікація термінів, а також забезпечення їх однозначного перекладу різними мовами. Сучасні технології дають змогу обробляти великі термінологічні масиви — від абревіатур до повних дефініцій і прикладів уживання. Такі ресурси утворюють <strong>термінологічні бази даних (ТБД)</strong>, обладнані системами автоматичного пошуку та фільтрації.</p>
+<p><strong>Міжнародні термінологічні ресурси</strong></p>
+<ul class="simple">
+<li><p><strong>ISO Online Browsing Platform (OBP)</strong> — <a class="reference external" href="https://www.iso.org/obp">https://www.iso.org/obp</a>
+Електронна база даних Міжнародної організації зі стандартизації, що містить тисячі офіційно затверджених термінів із різних галузей знань (техніка, енергетика, якість, екологія тощо).</p></li>
+<li><p><strong>UNBIS Thesaurus</strong> — <a class="reference external" href="https://lib-thesaurus.un.org">https://lib-thesaurus.un.org</a>
+Багатомовний тезаурус Організації Об’єднаних Націй, який охоплює понад 8 000 термінів, пов’язаних із міжнародними відносинами, правом, економікою, гуманітарними питаннями. Доступний англійською, французькою та іспанською мовами.</p></li>
+<li><p><strong>IATE (InterActive Terminology for Europe)</strong> — <a class="reference external" href="https://iate.europa.eu">https://iate.europa.eu</a>
+Європейська багатомовна термінологічна база даних, створена ЄС для перекладачів і дослідників. Містить понад 8 млн записів для 24 офіційних мов Євросоюзу, включно з українською.</p></li>
+<li><p><strong>OneLook Dictionary Search</strong> — <a class="reference external" href="https://www.onelook.com">https://www.onelook.com</a>
+Пошукова система, яка одночасно звертається до понад 2 000 англомовних словників, включно з тлумачними, технічними, енциклопедичними та термінологічними ресурсами.</p></li>
+<li><p><strong>TermCoord (European Parliament Terminology Coordination Unit)</strong> — <a class="reference external" href="https://termcoord.eu">https://termcoord.eu</a>
+Портал координації термінологічної роботи Європарламенту. Містить посилання на спеціалізовані бази термінів, глосарії та стандартизаційні документи.</p></li>
+<li><p><strong>FAO Term Portal</strong> — <a class="reference external" href="https://www.fao.org/faoterm">https://www.fao.org/faoterm</a>
+Термінологічна база Продовольчої та сільськогосподарської організації ООН, що охоплює понад 100 000 термінів у галузі аграрних і природничих наук.</p></li>
+</ul>
+<p><strong>Програмні рішення для управління термінологією</strong></p>
+<ul class="simple">
+<li><p><strong>SDL MultiTerm</strong> — корпоративна система управління термінологічними базами, інтегрована з CAT-інструментами (Trados Studio).</p></li>
+<li><p><strong>MemoQ Term Base</strong> — компонент системи MemoQ, що дозволяє створювати й редагувати багатомовні термінологічні бази.</p></li>
+<li><p><strong>TermWeb</strong> — вебплатформа для створення та спільного використання корпоративних тезаурусів.</p></li>
+<li><p><a class="reference external" href="https://anylexic.com"><strong>AnyLexic</strong></a> — програма для створення двомовних банків термінів і керування ними в перекладацьких проєктах.</p></li>
+</ul>
+<p><strong>Українські ресурси</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://e2u.org.ua/dicts/euro"><strong>Термінологічна база ЄС українською мовою</strong></a>
+Містить переклади термінів Європейського Союзу українською, французькою, англійською та німецькою мовами.</p></li>
+<li><p><a class="reference external" href="https://inmo.org.ua"><strong>Інститут української мови НАН України</strong></a> — розробляє і публікує галузеві глосарії та стандартизовані терміносистеми для наукових і технічних дисциплін.</p></li>
+</ul>
+<p>Термінологічні словники еволюціонують у напрямі семантичних мереж і онтологій. Вони інтегруються в системи автоматизованого перекладу, штучного інтелекту й інформаційного пошуку.
+Такі бази забезпечують <strong>спільний доступ до термінології</strong>, автоматичне пропонування варіантів під час перекладу текстів і значно скорочують час лексичної обробки.</p>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">9.2. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>У <strong>СУМ-11</strong> (<a class="reference external" href="https://sum.in.ua">https://sum.in.ua</a>) знайти тлумачення слів: <em>зібганий</em>, <em>юрок</em>, <em>нежер</em>, <em>вава</em>, <em>драглий</em>, <em>амариліс</em>. Виписати приклади вживання цих слів.</p></li>
+<li><p>На сайті <strong>СУМ-11</strong> в рядок пошуку введіть слово <em>культура</em>. Визначте різні тлумачення цього слова. Далі відзначте прапорець <strong>«в означеннях»</strong> і визначте контексти вживання. Збережіть результати у Word.</p></li>
+<li><p>У тлумачному онлайн-словнику <strong>УКРЛІТ</strong> (<a class="reference external" href="https://ukrlit.org">https://ukrlit.org</a>) знайти тлумачення слів <em>«кибалка»</em>, <em>«кукуц»</em>, <em>«кунгас»</em>, <em>«верч»</em>. Укажіть, з якого словника взято тлумачення. Огляньте систему навігації. Здійсніть <strong>транслітерацію</strong> слова <em>«зошит»</em>.</p></li>
+<li><p>В онлайн-словниках УЛІФ (<strong>«Словники України online»</strong>) (<a class="reference external" href="https://lcorp.ulif.org.ua/dictua">https://lcorp.ulif.org.ua/dictua</a>) знайти <strong>синоніми</strong> до слова <em>«червоний»</em>. Для слова <em>«привіт»</em> знайти відмінки, синоніми та усталені фрази. Зберегти у Word.</p></li>
+<li><p>На порталі <strong>Словник.ua</strong> (<a class="reference external" href="https://slovnyk.ua">https://slovnyk.ua</a>) виконати <strong>транслітерацію</strong> слів <em>культура</em>, <em>лінгвістика</em>; перевірити <strong>орфографію</strong> слів <em>декрет</em>, <em>лейбгвардія</em> та прислівника <em>ледве-ледве</em>. Визначити <strong>правильне звертання</strong> за ім’ям/по батькові (сервіс «Звертання»).</p></li>
+<li><p>У <strong>СУМ-11</strong> (<a class="reference external" href="https://sum.in.ua">https://sum.in.ua</a>) знайти тлумачення слова <em>«теорема»</em>.</p></li>
+<li><p>У <strong>Словнику української мови за ред. Б. Грінченка</strong> (<a class="reference external" href="https://hrinchenko.com">https://hrinchenko.com</a> або дзеркало УЛІФ: <a class="reference external" href="https://lcorp.ulif.org.ua/LSlist/">https://lcorp.ulif.org.ua/LSlist/</a>) знайти тлумачення й приклади вживання слів <em>ніколитися</em>, <em>прикохати</em>.</p></li>
+<li><p>У тлумачних словниках іншомовних слів (напр., <strong>СУМ-11</strong>, <strong>Словник.ua</strong>) знайти науково-популярні пояснення запозичень із наведеними українськими відповідниками та синонімами: а) <em>дефініція</em>, б) <em>диптих</em>, в) <em>граматикалізація</em>. Зберегти у Word.</p></li>
+<li><p>Використовуючи <strong>інверсний словник української мови</strong> (Інститут мовознавства НАНУ: <a class="reference external" href="https://inmo.org.ua">https://inmo.org.ua</a> → публікації/ресурси; або альтернативно — розділ «Словоформи» на <a class="reference external" href="https://slovnyk.ua">https://slovnyk.ua</a>), визначити розподіл слів за <strong>кінцевими літерами</strong>: на яку букву закінчується найбільше слів; скільки слів закінчується на <em>«ай»</em>, <em>«жа»</em>, <em>«гав»</em>, <em>«зац»</em>; навести приклади.</p></li>
+<li><p>На <strong>svitslova.com</strong>:
+– у <strong>словнику омонімів</strong> знайти значення для <em>дисципліна</em>, <em>дріб</em>, <em>коса</em>, <em>ласка</em>;
+– у <strong>словнику антонімів</strong> підібрати протилежні до <em>відносний</em>, <em>вигода</em>, <em>видумка</em>;
+– у <strong>фразеологічному словнику</strong> знайти <em>«їсти облизні»</em>, <em>«біла ворона»</em>, <em>«байди бити»</em>.
+Також у <strong>Всесвітньому словнику української мови</strong> (<a class="reference external" href="https://uk.worldwidedictionary.org">https://uk.worldwidedictionary.org</a>) знайти відмінки/синоніми/фразеологізми для <em>жодний</em>, <em>фавор</em>.</p></li>
+<li><p>На <strong>Вікіпедії</strong> (<a class="reference external" href="https://uk.wikipedia.org">https://uk.wikipedia.org</a>) знайти <strong>список словників української мови</strong>; переглянути також на сайті <strong>Інституту мовознавства ім. О. О. Потебні НАНУ</strong> (<a class="reference external" href="https://inmo.org.ua">https://inmo.org.ua</a>). Зберегти у Word.</p></li>
+<li><p>На <strong>Вікіпедії</strong> знайти трактування поняття <strong>«комп’ютерна лінгвістика»</strong>. Зберегти у Word.</p></li>
+<li><p>На <strong>Вікіпедії</strong> за посиланням <strong>«Українська лексикографія»</strong> знайти список українських словників та енциклопедій. Визначити, які доступні <strong>онлайн</strong>. Зберегти у Word.</p></li>
+<li><p>На <strong>Merriam-Webster</strong> (<a class="reference external" href="https://www.merriam-webster.com">https://www.merriam-webster.com</a>) увести <em>culture</em>. Визначити <strong>зони словникової статті</strong> (визначення, приклади, етимологія/джерела тощо) та знайти <strong>синоніми/антоніми</strong>. Зберегти у Word.</p></li>
+<li><p>На <strong>Oxford Learner’s Dictionaries</strong> (актуальна заміна застарілого <em>en.oxforddictionaries.com</em>): <a class="reference external" href="https://www.oxfordlearnersdictionaries.com">https://www.oxfordlearnersdictionaries.com</a>. Увести <em>cat</em>, визначити <strong>зони статті</strong> (визначення, приклади тощо) і знайти <strong>синоніми</strong>. Тут же відшукати <strong>списки двобуквених слів</strong> (через пошук/блог Oxford). Знайти відповідь про <strong>походження знака $</strong> (розділ <em>Word origins</em>/блог Oxford Languages).</p></li>
+<li><p>(Замість неактуального <strong>lingvo.ua</strong>) Використати <strong>Reverso Context</strong> (<a class="reference external" href="https://context.reverso.net">https://context.reverso.net</a>) та/або <strong>Glosbe</strong> (<a class="reference external" href="https://glosbe.com">https://glosbe.com</a>) для тлумачення/перекладу слова <strong>«лінгводидактика»</strong> та перекладу слів/словосполучень з вашої предметної галузі. Зберегти у Word.</p></li>
+<li><p>(Замість неактуального <strong>babylon-software.com</strong>) Використати <strong>Dictionary.com</strong> (<a class="reference external" href="https://www.dictionary.com">https://www.dictionary.com</a>) для тлумачення <em>conclusion</em> і виконати переклад на укр. (через <strong>Reverso</strong> / <strong>DeepL</strong>).</p></li>
+<li><p>(Замість <strong>thesaurus.babylon-software.com</strong>) Використати <strong>Thesaurus.com</strong> (<a class="reference external" href="https://www.thesaurus.com">https://www.thesaurus.com</a>) — знайти <strong>синоніми</strong> до <em>conclusion</em>; переглянути групи синонімів <strong>WordNet</strong> на офіційному інтерфейсі: <a class="reference external" href="https://wordnetweb.princeton.edu/">https://wordnetweb.princeton.edu/</a>.</p></li>
+<li><p>Здійснити переклад словосполучення <strong>«лексична парадигма»</strong> за допомогою англо-українського словника <strong>E2U</strong> (<a class="reference external" href="https://e2u.org.ua">https://e2u.org.ua</a>).</p></li>
+<li><p>На <strong>E2U</strong> (<a class="reference external" href="https://e2u.org.ua">https://e2u.org.ua</a>):
+а) у довіднику ідіом знайти «ні пуху ні пера», <strong>і правильний варіант англ.</strong> <em>no pain, no gain</em> (виправлення помилки в оригіналі);
+б) у словнику термінології <strong>ЄС</strong> знайти <em>багатомовність</em> та <em>верховенство права</em> англійською, французькою, німецькою.</p></li>
+<li><p>В <strong>Online Etymology Dictionary</strong> (<a class="reference external" href="https://www.etymonline.com">https://www.etymonline.com</a>) знайти історію слів <em>dictionary</em>, <em>OED</em>, <em>language</em>; в етимологічних ресурсах України (<a class="reference external" href="https://history.org.ua">https://history.org.ua</a>) — історію слова <em>ректор</em>.</p></li>
+<li><p>В <strong>онлайн-конкордансі</strong> роману І. Франка «Перехресні стежки» (<a class="reference external" href="http://www.ktf.franko.lviv.ua">http://www.ktf.franko.lviv.ua</a>) знайти контексти слова <em>«надпрокуратор»</em>. Зберегти у Word.</p></li>
+<li><p>(Замість неактуального <strong>Lingvo online</strong>) Використати <strong>Reverso</strong> або <strong>Glosbe</strong>: перекласти <em>table</em> → укр., переглянути <strong>приклади вживання</strong>; знайти переклад словосполучень <em>night table</em>, <em>table beet</em>.</p></li>
+<li><p>На <strong>Duden</strong> (<a class="reference external" href="https://www.duden.de">https://www.duden.de</a>) в <strong>Online-Wörterbuch</strong> знайти тлумачення німецьких слів/словосполучень. Коротко описати можливості онлайн-словника.</p></li>
+<li><p>Використовуючи <strong>Oxford English Dictionary (OED)</strong> (<a class="reference external" href="https://www.oed.com">https://www.oed.com</a>) або <strong>Oxford Learner’s</strong> (для навчального рівня), запропонувати коректний переклад словосполучення <strong>«evolution scopes»</strong> (пояснити контекстно: чи йдеться про <em>scopes of evolution</em> тощо).</p></li>
+<li><p>В <strong>Oxford Collocations Dictionary</strong> (онлайн-доступ через університетську підписку або розділи <strong>Oxford Learner’s</strong>/<strong>Collins</strong>) знайти <strong>колокації</strong> для <em>idea</em>.</p></li>
+<li><p>(Замість <strong>lingvo.ua</strong>) На <strong>r2u.org.ua</strong> та/або <strong>E2U</strong> здійснити переклад слова <strong>«мировой»</strong> українською (контекстуально: <em>мировий суддя</em> vs <em>світовий</em>).</p></li>
+<li><p>(Замість рос. <strong>Multitran</strong>) Використати <strong>Lingea Translator</strong> (<a class="reference external" href="https://www.lingea.com/translator">https://www.lingea.com/translator</a>) або <strong>Glosbe</strong>: перекласти на німецьку <strong>словосполучення, пов’язані зі словом «речення»</strong> (<em>Satz</em> + колокації).</p></li>
+<li><p>На <strong>Glosbe</strong> (<a class="reference external" href="https://glosbe.com">https://glosbe.com</a>) перекласти слово/речення на англійську, німецьку, французьку. Переглянути <strong>приклади речень</strong> із перекладом.</p></li>
+<li><p>На <strong>Thesaurus.com</strong> (<a class="reference external" href="https://www.thesaurus.com">https://www.thesaurus.com</a>) знайти <strong>синоніми</strong> до <em>glossarist</em>.</p></li>
+<li><p>(Замість неактуального <strong>freetranslations.org</strong>) Використати <strong>DeepL</strong> (<a class="reference external" href="https://www.deepl.com/translator">https://www.deepl.com/translator</a>) або <strong>Reverso</strong> — перекласти назву твору <strong>«Хіба ревуть воли, як ясла повні»</strong> англійською, німецькою, французькою (звернути увагу на усталені перекладацькі відповідники).</p></li>
+<li><p>У <strong>Вікісловнику</strong> (<a class="reference external" href="https://www.wiktionary.org">https://www.wiktionary.org</a>) перекласти слово <em>«лінгвістика»</em> на інші мови (переглянути мовні розділи/інтервікі).</p></li>
+<li><p>На сторінках <strong>Glosbe</strong>, <strong>Wiktionary</strong>, <strong>Reverso</strong> оглянути, <strong>які мовні пари</strong> доступні для перекладу з/на українську (розділ <em>Languages</em>).</p></li>
+<li><p>У <strong>словнику скорочень української мови</strong> (<a class="reference external" href="https://www.ukrskor.info">https://www.ukrskor.info</a>) знайти значення <strong>ЧНУ</strong>, <strong>ГМО</strong>. В іноземних словниках скорочень (напр., <strong>AcronymFinder</strong>: <a class="reference external" href="https://www.acronymfinder.com">https://www.acronymfinder.com</a>) відшукати <strong>RGB</strong>, <strong>GDI</strong>.</p></li>
+<li><p>На <strong>bab.la</strong> (німецька версія: <a class="reference external" href="https://de.bab.la">https://de.bab.la</a>) — відмінювання <strong>дієслів</strong> англійської, німецької, французької; перегляд <strong>списків словників</strong> на сайті; пошук запитань/відповідей на <strong>форумі</strong>.</p></li>
+<li><p>У <strong>OneLook</strong> (<a class="reference external" href="https://www.onelook.com">https://www.onelook.com</a>) знайти визначення слова <em>telegony</em> та <strong>пов’язані слова</strong>; те саме для <em>blue</em>.</p></li>
+<li><p>Знайти тлумачення <em>telegony</em> у <strong>Google</strong> (пошуковий запит у лапках) і додатково відкрити <strong>Dictionary.com</strong> / <strong>Merriam-Webster</strong> для надійної дефініції (уникати випадкових блогів).</p></li>
+<li><p><strong>Dictionary.com</strong> (<a class="reference external" href="https://www.dictionary.com">https://www.dictionary.com</a>) — знайти <strong>синоніми</strong> для <em>red</em> (посилання <strong>Thesaurus</strong> у верхньому меню).</p></li>
+<li><p>(Замість неактуального <code class="docutils literal notranslate"><span class="pre">word-online.freedict.com</span></code>) Скористатися офіційним веб-інтерфейсом <strong>Princeton WordNet</strong>: <a class="reference external" href="https://wordnetweb.princeton.edu/">https://wordnetweb.princeton.edu/</a> — знайти <strong>синсети</strong> для <em>dog</em> і побудувати <strong>ієрархічний ланцюг</strong> (гіпонім/гіперонім).</p></li>
+<li><p><strong>IATE — термінологічна база ЄС</strong> (<a class="reference external" href="https://iate.europa.eu">https://iate.europa.eu</a>):
+– увести <strong>NLP</strong>, <strong>RGB</strong> (EN → DE/FR), встановити <strong>Subject field: Information Technology</strong>;
+– повторити для <strong>culture</strong>;
+– визначити <strong>офіційні мови ЄС</strong> (довідкова сторінка IATE/ЄК).</p></li>
+<li><p>На сайті <strong>ISO</strong> знайти терміни/визначення: <em>direct method</em>, <em>test environment</em>, <em>color rendering</em>, <em>компетенція</em>, <em>пенетрат</em> — через <strong>ISO OBP</strong>: <a class="reference external" href="https://www.iso.org/obp">https://www.iso.org/obp</a>. На цьому ж сайті знайти <strong>коди країн за ISO 3166</strong>: Україна, Бельгія, Білорусь, Ємен.</p></li>
+</ol>
+<p><em><strong>Контрольні питання</strong></em></p>
+<ol class="arabic simple">
+<li><p>Які основні переваги електронних словників порівняно з друкованими?</p></li>
+<li><p>Як класифікуються одномовні словники? Наведіть приклади.</p></li>
+<li><p>Які електронні словники української мови є найпоширенішими?</p></li>
+<li><p>Назвіть електронні словники англійської та інших мов. Опишіть їхні можливості.</p></li>
+<li><p>Які словники використовують для перекладу? У чому відмінність між двомовними та багатомовними електронними словниками?</p></li>
+<li><p>Назвіть сучасні англо-українські онлайн-словники.</p></li>
+<li><p>Опишіть функціональні можливості сучасних перекладацьких систем (Glosbe, Reverso Context, DeepL).</p></li>
+<li><p>Що таке термінологічна база даних (ТБД)? Наведіть приклади міжнародних термінологічних ресурсів (IATE, ISO OBP, UNBIS Thesaurus).</p></li>
+<li><p>Які існують електронні енциклопедії? Що таке Вікіпедія і яку роль вона відіграє у розвитку відкритих лексикографічних ресурсів?</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2><span class="section-number">9.3. </span>Вимоги до виконання і подання<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Виконати <strong>практичні завдання 1–41</strong>.</p>
+<ul class="simple">
+<li><p>Для кожного завдання зафіксувати результат (скріншот, файл, текст відповіді).</p></li>
+</ul>
+</li>
+<li><p>Дати відповіді на <strong>контрольні питання</strong> у кінці роботи.</p></li>
+<li><p>Оформити все у вигляді <strong>одного документа (.docx або .pdf)</strong>.</p>
+<ul class="simple">
+<li><p>Титульна сторінка з темою, ПІБ, групою.</p></li>
+<li><p>Результати практичних завдань (з коментарями та скріншотами).</p></li>
+<li><p>Відповіді на контрольні питання.</p></li>
+</ul>
+</li>
+<li><p>Подати звіт у <strong>Google Classroom</strong> до встановленого дедлайну.</p></li>
+<li><p><strong>Схема імені файлу:</strong>
+<code class="docutils literal notranslate"><span class="pre">&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР9.pdf</span></code></p>
+<ul class="simple">
+<li><p>Приклад: <code class="docutils literal notranslate"><span class="pre">143_ПетренкоІван_ЛР9.pdf</span></code></p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba8.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ЛАБОРАТОРНА РОБОТА №8</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>ЛАБОРАТОРНА РОБОТА №10</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.1.1. <strong>Найважливіші типи словників</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.1.2. <strong>Електронні словники</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.1.3. <strong>Двомовні словники. Сім’я електронних словників</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.1.4. <strong>Електронні словники англійської та інших мов</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.1.5. <strong>Електронні словники української мови.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.1.6. <strong>Електронні словники української мови</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.1.7. <strong>Енциклопедичні (термінологічні) словники</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.3. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
