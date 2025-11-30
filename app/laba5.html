@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. ЛАБОРАТОРНА РОБОТА №5 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba5';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="6. ЛАБОРАТОРНА РОБОТА №6" href="laba6.html" />
+    <link rel="prev" title="4. ЛАБОРАТОРНА РОБОТА №4" href="laba4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba5.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba5.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.2.1. <strong>1. Простіші розрахунки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2.2. <strong>2. Вбудовані функції</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.2.2.1. <strong>3.1. Адресація у формулах</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.2.2.2. <strong>3.2. Імена комірок і діапазонів</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.2.3. <strong>4. Текстові функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.2.4. <strong>5. Макроси (сценарії)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">5.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o5">
+<h1><span class="section-number">5. </span>ЛАБОРАТОРНА РОБОТА №5<a class="headerlink" href="#o5" title="Link to this heading">#</a></h1>
+<p><strong>Обчислення в Excel. Текстові функції Excel</strong></p>
+<section id="id1">
+<h2><span class="section-number">5.1. </span><strong>План</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Простіші розрахунки в таблицях</p></li>
+<li><p>Вбудовані функції</p></li>
+<li><p>Формули та адресація у формулах</p></li>
+<li><p>Текстові функції</p></li>
+<li><p>Макроси</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2><span class="section-number">5.2. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3><span class="section-number">5.2.1. </span><strong>1. Простіші розрахунки</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Незважаючи на велику обчислювальну потужність Excel, розрахунки  в ньому організовані дуже зручно та інтуїтивно зрозуміло. Вони проводяться  за розробленими користувачем <em>формулами</em>.</p>
+<p>Формулою називається математичне співвідношення, яке обчисляє нове значення на основі уже введених значень.</p>
+<p>Для введення і перегляду формул використовують рядок формул.</p>
+<p><strong><em>Рядок формул</em></strong> – панель у верхній частині вікна MS Excel, що використовується для введення або зміни тексту, чисел та формул у комірках або на діаграмах. Рядок формул складається з трьох секторів. У першому секторі вказується адреса активної комірки і кнопка, що відкриває список даних функцій під час створення формул. При введенні даних у другому секторі з’являються допоміжні кнопки: <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAASCAIAAACfGrqqAAAA6UlEQVR4Xu2RQRbDIAgFObrH6zILD9QolSAfCW2zyCK+WUT8kImhur1uDmHpbjyKVzApFqIdDMVHAa2npLpoLOdIb9gDVVb1U5KKIldKQUu7Rxup7P0mHDPa7CsQCoc7/dryZ786FONGmhcGWgZLVZv955e5QvfnapZneT9XJXOFn+R4BfVVQdqOZg6/DgY0eGFYWcE28iVdsi2dcaaIWekDGIxNU0ZObzNXqC+Mn41fRUXtZyomaRBLoxtD40UiJw9HRm+O+fMFuEXkW7/WcvblLaM3gQofYd3Afu4EJOPXYli6G4/iFbwBXigbrW2+E8gAAAAASUVORK5CYII=" />  (<strong>Відміна, Застосувати, Вставити функцію</strong>). У третьому секторі відображається вміст активної комірки.<br />
+Формула може містити:</p>
+<ul class="simple">
+<li><p>посилання – адреси або імена комірок;</p></li>
+<li><p>константи – текстові значення або числа, введені в комірку;</p></li>
+<li><p>оператори  – позначки або символи, що визначають тип обчислення у формулі. Існують математичні (+,-,*,/,^), логічні оператори, оператори порівняння й посилань і константи;</p></li>
+<li><p>вбудовані функції – заздалегідь визначені формули, що виконують обчислення за певними величинами, які називають аргументами, і в зазначеному порядку дозволяють спростити формули користувачеві.</p></li>
+</ul>
+<p>Введення формул починають зі знака “=”, який є ознакою початку математичної операції і вказує системі на необхідність збереження наступного за ним виразу у вигляді формули, наприклад <strong>=В3*С1</strong>.</p>
+<p>MS Excel зберігає формули у внутрішньому форматі та виводить їх у рядку формул, але в комірці замість формули розміщує результат обчислень. У формулах використовуються, крім стандартних арифметичних операцій (+ (додавання), – (віднімання), / (ділення), * (множення), ^(піднесення до степеня), % (процент)), спеціальні функції. Результатом арифметичних операцій є числа.</p>
+<p>До логічних операторів порівняння відносяться: = (рівно), &gt; (більше), &lt; (менше), &gt;= (більше або рівно), &lt;= (менше або рівно), &lt;&gt; (не рівно). Результатом порівняння є одне з двох логічних значень – <em>істинно</em> або <em>хибно</em>.</p>
+<p><em>Алгоритм введення формул такий:</em></p>
+<ol class="arabic simple">
+<li><p>Виділити комірку для введення формули.</p></li>
+<li><p>Набрати знак “=”або клацнути на значку <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAIAAAA2bnI+AAAAb0lEQVR4Xs2PwQ7AIAhD+XQ+b0cPftBcdIS1sBAvm+kBC0+q9HbsSdgq6oek3CdosQXYKFSVYbwDORj2V5etyfjDAynZk4Reac+i2lp4KybnkH1yhX5GeCN9DVhK2kJjGE5JNnEmsArYNcZWUV+QJ6Rg6BuTXXnwAAAAAElFTkSuQmCC" /> у рядку формул для введення функції, потім набрати вираз.</p></li>
+<li><p>Для збереження формули натиснути клавішу <strong>Enter</strong> або виділити нову комірку. Якщо з’явиться повідомлення про помилку, формулу редагують за допомогою клавіші <strong>F2</strong>.</p></li>
+</ol>
+<p>Для введення формули можна скористатися мишею. Для цього:</p>
+<ul class="simple">
+<li><p>виділити потрібну комірку;</p></li>
+<li><p>клацнути на ній клавішею миші;</p></li>
+<li><p>ввести знак “=”;</p></li>
+<li><p>клацнути на комірці, адреса якої повинна стати складовою формули. В результаті навколо комірки з’являється рамка, а її ім’я відтворюється у рядку формул;</p></li>
+<li><p>набрати математичний оператор, наприклад, “+” або інший, та вказати другий операнд, наприклад, адресу іншої комірки, клацнувши на ній мишею і т.д.</p></li>
+</ul>
+<p><strong>Приклади формул:</strong></p>
+<ul class="simple">
+<li><p>прості формули</p></li>
+</ul>
+<p>=125*5+ 300;<br />
+= –135^5 – 740;</p>
+<ul class="simple">
+<li><p>формула, що містить посилання на адреси комірок</p></li>
+</ul>
+<p>= (A1 + B1)*(C1 – D1);</p>
+<ul class="simple">
+<li><p>формули, що містить вбудовані функції:</p></li>
+</ul>
+<p>= PI()*A21^2,<br />
+де PI() – функція, що обчислює число <em>π</em> = 3,14…;<br />
+= A7 – 11 * SQRT(B3),<br />
+де функція SQRT(B3) обчисляє квадратний корінь вмісту комірки B3.<br />
+Зауважимо, що формули автоматично перераховуються при внесенні змін у комірки, на які вони посилаються. За замовчуванням MS Excel автоматично перераховує всі формули книги при її відкриті.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">5.2.2. </span><strong>2. Вбудовані функції</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>В програму Excel вбудований широкий набір готових формул, які називаються функціями Excel. Наскільки б не були простими чи складними ці формули, для користувача всі дії зводяться до наступного – вставити функцію в комірку аркуша і вказати для неї вихідні дані (<em>аргументи функції</em>).</p>
+<p>Перелік функцій дуже широкий – формули розрахунку різних статистичних показників, фінансових операцій, роботи з датами і текстами, проведення всеможливих математичних обчислень, перевірки властивостей і значень  та інші.</p>
+<p>Загальний вигляд будь-якої функції Excel у формулі такий: спочатку вказується назва функції, потім (без пробілу) в дужках перераховуються через крапку з комою всі її аргументи. Регістр шрифту значення на має. Програма перетворює малі букви у великі. Наприклад, функція = ROUND(D2;1) заокруглить значення з комірки D2 до одного десяткового розряду. Функція SUM(B3:C3;200) обчислить суму значень із комірок B3, C3 і числа 200.</p>
+<p>Для того, щоб правильно записати функцію, треба знати її синтаксис – назву, послідовність і тип даних її аргументів. Функцію можна ввести у формулу різними способами. Якщо набрати ім’я функції з клавіатури у рядку формул або в комірці, то Excel буде виводити підказку – назва і аргументи функцій, які починаються з уже набраних букв. Тут діє механізм автозавершення.</p>
+<p>Для роботи з формулами та функціями існує окрема закладка <strong>Формули</strong>.  Часто в розрахунках використовується сумування даних. Для вставки функції сумування на стрічці є дві кнопки: <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAIAAABLkRCkAAAAaUlEQVR4XmP4Tw3AgC5AFhhCpjBgA+iKiDTl+KHjEO6lc5fIMQWiDatOZEBAGgI2rtqI3yB8chAA9A7QiD3b9qBLIAECpkCMwO+Q/wRNgRgBd8jdW3exmohFCBlATEED6IoImkIkoI4pAFy9bqH9pBFIAAAAAElFTkSuQmCC" /> <strong>Сума</strong> на панелі <strong>Редагування</strong> вкладки <strong>Головна</strong>, друга – кнопка <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAIAAABLkRCkAAAAaUlEQVR4XmP4Tw3AgC5AFhhCpjBgA+iKiDTl+KHjEO6lc5fIMQWiDatOZEBAGgI2rtqI3yB8chAA9A7QiD3b9qBLIAECpkCMwO+Q/wRNgRgBd8jdW3exmohFCBlATEED6IoImkIkoI4pAFy9bqH9pBFIAAAAAElFTkSuQmCC" /> <strong>Автосума</strong> на панелі <strong>Бібліотека функцій</strong> закладки <strong>Формули</strong>. Обидві кнопки ідентичні.</p>
+<p>Найпростіший спосіб обчислювати суму значень в комірках такий: встановити курсор у комірку, де потрібно отримати результат сумування і натиснути кнопку <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAIAAABLkRCkAAAAaUlEQVR4XmP4Tw3AgC5AFhhCpjBgA+iKiDTl+KHjEO6lc5fIMQWiDatOZEBAGgI2rtqI3yB8chAA9A7QiD3b9qBLIAECpkCMwO+Q/wRNgRgBd8jdW3exmohFCBlATEED6IoImkIkoI4pAFy9bqH9pBFIAAAAAElFTkSuQmCC" />. Виділивши комірки сумування мишею, натиснути Enter (для виділення комірок треба протягнути по них мишею). В результаті в комірку буде вставлена функція <strong>SUM</strong> із заповненими аргументами – адресами виділених комірок. Результат обчислень з’явиться безпосередньо в комірці, а формула розрахунку – в рядку формул.</p>
+<p>Цю ж кнопку <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAOCAIAAABLkRCkAAAAaUlEQVR4XmP4Tw3AgC5AFhhCpjBgA+iKiDTl+KHjEO6lc5fIMQWiDatOZEBAGgI2rtqI3yB8chAA9A7QiD3b9qBLIAECpkCMwO+Q/wRNgRgBd8jdW3exmohFCBlATEED6IoImkIkoI4pAFy9bqH9pBFIAAAAAElFTkSuQmCC" /> можна використати для виклику інших функцій: середнє значення, максимум, мінімум та інші. Команда <strong>Інші функції</strong> викличе на екран діалогове вікно, за допомогою якого можна вибрати довільну функцію із числа більшого ніж 350 вбудованих функцій. Це ж вікно можна відкрити іншими способами:</p>
+<ul class="simple">
+<li><p>натиснути кнопку <strong>Вставити функцію</strong> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAIAAAAmKNuZAAABRUlEQVR4XmM4dP4pFREDphAlaBgYt/PoDSBaun4/phQaImzcshVrSvLKgIhbWEbf0gJTATKir3FLV29NSEhYufUEECnrmNu4BmKqQUYEjJs0e6q4gjSmOC5EF+MmzFy6AQwaGhoEOAQYwAhTGSbCbhwQTZ65CIgUJBQS0oswZXEhnMYVVVUAEQMDw9ZD1yAi249cW7n1MIS9ef+lBWv2ABGaLnoZV1JaBkTcPLxAdn3HJCCaNHlqx+RZFfVdQCQuKa1vbAFERBkHzFIBYADRsH7HaSCqamlXUFAAWgCxAyvCbtyM+asYwAA5HkICY4AiNg5uQLR6+ylMXYfoZFxFaQPcU6rqmso6WkCUU9IADDKIuLiCJqYudOMmzJiweOVuIAJqALoL4jRgbsXUhgvR0rjY6AxI9IdEJWMqJQZhDzuy0YgyDgCjoOhS4tniUQAAAABJRU5ErkJggg==" /> на панелі <strong>Бібліотека функцій</strong> вкладки <strong>Формули</strong>;</p></li>
+<li><p>клацнути по такій же кнопці на початку рядка формул;</p></li>
+<li><p>скористатися комбінацією клавіш Shift+F3.</p></li>
+</ul>
+<p>Для зручності вибору всі функції розбиті на категорії. Спочатку потрібно вибрати категорію, а потім у категорії – функцію. Якщо невідомо до якої категорії відноситься функція, то можна вибрати <strong>Усі</strong> і відшукати її в повному списку за алфавітом. Якщо невідома її назва, то можна знайти функцію, описавши її призначення у полі <strong>Пошук функції</strong> і натиснути кнопку <strong>Знайти</strong>. Функції найчастіше вживаних категорій можна вибрати й без діалогового вікна  – на закладці <strong>Формули</strong> на панелі <strong>Бібліотека функцій</strong>. Для цього є кнопки <strong>Фінансові</strong>, <strong>Логічні</strong>, <strong>Текстові</strong> та ін.</p>
+<p>Після задання імені функції на екрані з’являється вікно аргументів функції. У цьому вікні в полі <strong>Число</strong> вводимо (або редагуємо) адреси аргументів функції. У верхній частині вікна відображаються значення аргументів, значення функції – безпосередньо під ними. Результат розрахунку за формулою (яка може включати й інші функції) видно в лівому нижньому куті вікна.</p>
+<p>Всі функції і операції над ними відображаються у рядку формул. Для редагування введених функцій можна знову викликати вікно її аргументів.</p>
+<section id="id5">
+<h4><span class="section-number">5.2.2.1. </span><strong>3.1. Адресація у формулах</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>За замовчуванням посилання на адреси комірок у формулах – <em>відносне</em>. Це означає, що при копіюванні формули адреси копій комірки змістяться у відповідності з напрямом, куди була скопійована комірка. На рис. 1 можна побачити результат копіювання формули з комірки C5 у комірки C4, C6, B5, D5.<br />
+<img alt="" src="data:image/png;base64,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" /><br />
+Рис. 1. Зміна формули в результаті копіювання комірки</p>
+<p>Але часто потрібно зберігати адресу у формулі незмінною. В такому випадку використовують <em>абсолютну адресу</em>. Для цього перед іменем стовпця і номером рядка ставлять знак $ (наприклад, $B$2, $AB5, C$12). Абсолютні адреси використовують, якщо в обчисленнях приймають участь сталі величини. Наприклад, у розрахунках цін враховуються ПДВ, у розрахунку зарплат – податки, при обміні валют – курс валют.</p>
+<p>Зауважимо, що знак $  можна вставити безпосередньо з клавіатури, або за допомогою клавіші F4. Послідовне натискування цієї клавіші вставляє або вилучає знак $.</p>
+<p>Якщо в посиланні зафіксована тільки одна частина адреси, наприклад, $C5, E$11, то таке посилання називається змішаним. В цьому випадку при копіюванні формули будуть змінюватися лише незакріплені частини адреси.</p>
+</section>
+<section id="id6">
+<h4><span class="section-number">5.2.2.2. </span><strong>3.2. Імена комірок і діапазонів</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p>MS Excel дозволяє присвоїти комірці, діапазону комірок, таблиці, формулі або константі власні імена. Формули, які використовують такі імена, стають значно зрозумілішими. Наприклад, формула<br />
+= ДОХІД – РОЗХІД<br />
+значно зрозуміліша, ніж<br />
+= G10 – G14.</p>
+<p>В якості імені можуть бути використані унікальні послідовності букв, цифр, крапки, знаки підкреслення довжиною не більше 255 символів. Ім’я повинне починатися з букви, знаку підкреслення або зворотної похилої риски. Малі і великі букви не розрізняються, використання пробілів заборонено. Замість нього, як правило, використовують крапку або знак підкреслення. Імена не повинні бути подібні на адреси комірок. Наприклад, <em>Місто, Дані_про_продаж, Сума</em> тощо. Найпростіший спосіб присвоєння імені комірці або групі комірок – виділити її, ввести ім’я в полі <strong>Ім’я</strong>, розташоване зліва у рядку формул. Існує інший спосіб – викликати діалогове вікно <strong>Створення імені</strong> за допомогою кнопки <strong>Призначити ім’я</strong> на панелі <strong>Диспетчер імен</strong> закладки <strong>Формули</strong>. В цьому вікні, крім імені, можна вибрати область дії цього імені – на якому з аркушів книги, чи у всій книзі в цілому буде відоме це ім’я. Крім того, в полі <strong>Діапазон</strong> можна змінити абсолютну адресу цієї комірки (яка вказана за замовчуванням) на відносну або змішану.</p>
+<p>Вибір поіменованої комірки під час створення формули буде вставляти у формулу ім’я цієї комірки, а не її адресу. Наприклад, = SUM(Продажі_1_квартал).<br />
+Вставити ім’я комірки у формулу можна такими способами:</p>
+<ul class="simple">
+<li><p>набрати його на клавіатурі;</p></li>
+<li><p>виділити мишею відповідну комірку або діапазон;</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">5.2.3. </span><strong>4. Текстові функції</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Текстові функції використовуються для обробки послідовності символів. Для застосування вбудованих текстових функцій зручно користуватися майстром вставки функцій. Викликати його можна командою <strong>Формула</strong> ⇒ група <strong>Бібліотека функцій</strong> ⇒ <strong>Текстові</strong>. У цьому списку відшукати необхідну функцію для роботи з текстом.</p>
+<p>Розглянемо приклади деяких текстових функцій.</p>
+<ol class="arabic simple">
+<li><p>LEN(текст) – повертає кількість знаків в тексті    враховуючи пробіли.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Інформатика</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=LEN(А1). Результат 11.</p>
+<ol class="arabic simple" start="2">
+<li><p>REPT(текст; кількість повторів) – повторяє текст задану кількість разів.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>байт</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=REPT(А1;2). Результат байтбайт.</p>
+<ol class="arabic simple" start="3">
+<li><p>CONCAT(текст1; текст2; …) – об’єднує декілька текстових елементів в один. Текстовими елементами можуть бути текстові рядки (“Іноземна мова”), числа або посилання на одну комірку.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+<th class="head text-center"><p>В</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Кількість населення</p></td>
+<td class="text-center"><p>млрд</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=CONCAT(А1; “на планеті”; 6; В1).<br />
+Результат Кількість населення на планеті 6 млрд.</p>
+<ol class="arabic simple" start="4">
+<li><p>EXACT(текст1; текст2) – провіряє ідентичність двох текстів. Повертає значення TRUE, якщо тексти співпадають, інакше – значення FALSE. Функція EXACT враховує регістри.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+<th class="head"><p>В</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>слово</p></td>
+<td><p>слово</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Слово</p></td>
+<td><p>слово</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=EXACT(А1; В1). Результат TRUE.<br />
+=EXACT(А2; В2). Результат FALSE.</p>
+<ol class="arabic simple" start="5">
+<li><p>FIND(шуканий текст; проглядуваний текст; початкова позиція) – повертає позицію початку шуканого рядка тексту в проглядуваному тексті. Функція FIND враховує регістр (на відміну від функції SEARCH).<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+<th class="head text-center"><p>В</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Комп’ютер – це цифровий пристрій</p></td>
+<td class="text-center"><p>рій</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=FIND(В1; А1).  Результат 30.</p>
+<ol class="arabic simple" start="6">
+<li><p>LOWER(текст) – робить всі букви в тексті на малі.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Задача 2А</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=LOWER(А1). Результат задача 2а.</p>
+<ol class="arabic simple" start="7">
+<li><p>LEFT(текст; кількість символів) – повертає перші (най лівіші) символи текстового рядка.<br />
+Наприклад,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>А</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>текстові функції</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=LEFT(А1; 5). Результат текст.</p>
+<p>Серед текстових функцій є ще багато інших. Весь список текстових функцій можна побачити і вікні майстра вставки функцій, якщо обрати категорію <strong>Текстові</strong>. У вікні майстра можна отримати довідкову інформацію по кожній з цих функцій, якщо клікнути мишею посилання <strong>Інформація про функцію</strong>.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">5.2.4. </span><strong>5. Макроси (сценарії)</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p><em>Макроси</em> – це набір інструментів, що задають послідовність дій для їх виконання в Excel, це програма, яка працює в середині Excel.</p>
+<p>Існує два способи створення макросів: автоматичний запис послідовності операцій, що виконані користувачем, або ввід інструкцій безпосередньо в програму-макрос за допомогою мови VBA (для Google SpreadSheets – JS).</p>
+<p>В процесі запису макроса Excel зберігає інформацію про кожну дію користувача, що виконана через натискування кнопок або маніпуляції мишею. Запуск записаного макроса приводить до повторення дій користувача уже без його участі.</p>
+<p>Опишемо процес запису макроса.</p>
+<ul class="simple">
+<li><p>Активізація режиму запису макроса і присвоєння йому імені через вкладку <strong>Розробник</strong> (Автоматизація для Office 365) ⇒ <strong>Створити сценарій</strong>. На екрані з’явиться вікно <strong>Запис макросу</strong>.</p></li>
+<li><p>У цьому вікні потрібно задати ім’я макроса, комбінацію клавіш за допомогою яких макрос буде запускатися і натиснути ОК. Після натискування ОК кнопка <strong>Запис макросу</strong> на стрічці буде замінена на кнопку <strong>Зупинити макрос</strong>.</p></li>
+<li><p>Виконання дій, які будуть записуватися в макрос.</p></li>
+<li><p>Зупинка запису макросу – натиснути кнопку <strong>Зупинити запис</strong> на вкладці <strong>Розробник</strong>, або кнопку <strong>Зупинити запис</strong>, яка знаходиться в лівій частині рядка стану.</p></li>
+</ul>
+<p>Запуск макроса, який уже записаний здійснюється через діалогове вікно <strong>Макрос</strong> (<strong>Розробник</strong> ⇒ <strong>Макроси</strong>). Дальше вибрати ім’я макроса і натиснути на кнопку <strong>Запустити</strong>.</p>
+<p>Зауважимо, що у випадку коли вкладка <strong>Розробник</strong> не показана на стрічці, то необхідно в діалоговому вікні <strong>Параметри Excel</strong> в розділі <strong>Основні</strong> установити прапорець для параметра <strong>Показувати вкладку Розробник на стрічці</strong>.</p>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">5.3. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Створити таблицю, яка наведена на рис. 2. Для цього потрібно здійснити ряд кроків.</p></li>
+<li><p>Ввести дані в комірки <strong>А3:Е7</strong>  (так задається діапазон комірок таблиці). Діапазон <strong>А3:Е7</strong> відповідає прямокутному блоку комірок.</p></li>
+<li><p>Вставити з клавіатури в комірку <strong>В8</strong> формулу <strong>=SUM(В4:В7)</strong>. Інакше формулу <strong>=SUM(В4:В7)</strong> можна вставити в комірку <strong>В8,</strong> якщо  виділити діапазон <strong>В4:В7 і</strong> на панелі інструментів клацнути кнопку Автосума (<strong>∑</strong>).</p></li>
+<li><p>Скопіювати формулу з комірки <strong>В8</strong> в комірки <strong>С8</strong>, <strong>D8</strong>, <strong>Е8</strong>.</p></li>
+</ol>
+<p>I спосіб (копіювання  перетягуванням мишею):</p>
+<ul class="simple">
+<li><p>виділити комірку копіювання <strong>B8</strong>;</p></li>
+<li><p>курсор миші поставити в правий нижній кут виділеної комірки (курсор набуде вигляду чорного перехрестя <strong>+</strong>);</p></li>
+<li><p>натиснути ліву клавішу і перемістити мишу до комірки копіювання <strong>Е8</strong>;</p></li>
+<li><p>відпустити клавішу миші.</p></li>
+</ul>
+<p>Для несуміжних комірок переміщення/копіювання здійснюється таким чином:</p>
+<ul class="simple">
+<li><p>виділити комірку або діапазон;</p></li>
+<li><p>сумістити хрестоподібний курсор з межею комірки або діапазона (курсор набуде вигляду стрілки);</p></li>
+</ul>
+<p>∙ натиснути клавішу миші і перетягнути виділену комірку на нове місце (для копіювання натискують клавішу &lt;Ctrl&gt;).</p>
+<p><img alt="" src="data:image/png;base64,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" /></p>
+<p>Рис. 2.  Зразок таблиці</p>
+<ol class="arabic simple" start="7">
+<li><p>Вставити в комірку <strong>F4</strong> формулу <strong>=D4/В4*100</strong>. <em>–</em> Для цього активізувати комірку і надрукувати формулу з клавіатури.</p></li>
+<li><p>Скопіювати формулу з комірки <strong>F4</strong> в комірки <strong>F5</strong>, <strong>F6</strong>, <strong>F7</strong>, <strong>F8</strong>.</p></li>
+</ol>
+<p>II спосіб (за допомогою команд меню):</p>
+<ul class="simple">
+<li><p>виділити об’єкт копіювання – комірку <strong>F4</strong>;</p></li>
+<li><p>скопіювати об’єкт в буфер (клацнути кнопку <strong>Копировать</strong> на панелі інструментів). При цьому виділений об’єкт зобразиться в пунктирній рамці;</p></li>
+<li><p>курсор поставити у лівий верхній кут нового положення об’єкта (в комірку <strong>F5</strong>);</p></li>
+<li><p>натиснути на кнопку  <strong>Вставить из буфера</strong>;</p></li>
+<li><p>останні два пункти повторити для комірок <strong>F6</strong>, <strong>F7</strong>, <strong>F8</strong>;</p></li>
+<li><p>зняти пунктир в режимі копіювання (клавіша <strong>&lt;Esc&gt;</strong>).</p></li>
+</ul>
+<ol class="arabic simple" start="9">
+<li><p>Продивитись формули в комірках <strong>F4:F8</strong> та <strong>B8:E8</strong>.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title"><em>Зауваження.</em></p>
+<p>При копіюванні формул з адресами комірок використовуються відносні адреси, тобто відбувається автоматичне налаштування на нові адреси. Наприклад, якщо з комірки <strong>В1</strong>  копіювати формулу <strong>=А1+5</strong> в комірку <strong>С2</strong>, то в комірці <strong>С2</strong> одержимо нову формулу <strong>=В2+5</strong>. У тому випадку, коли адресу комірки при копіюванні потрібно зберегти, в комірці, яку копіюють, додають до адреси знак <strong>$</strong>, наприклад  <strong>=$А$1+5</strong>. Таку адресу називають аболютною.</p>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Перейти в таблиці в режим формул. (Команда  <strong>Формули</strong> ⇒ <strong>Показати Формули</strong>.)</p></li>
+<li><p>Виділити  робочий <strong>Аркуш2</strong>. (Внизу таблиці знайти ярлик <strong>Аркуш2</strong> і клацнути по ньому мишею.)</p></li>
+<li><p>Переглянути контекстне меню ярлика <strong>Аркуш2</strong>, перейменувати його.</p></li>
+<li><p>Повернутися на таблицю <strong>Аркуш1</strong>.</p></li>
+<li><p>Змінюйте дані в комірках <strong>В4:E7</strong>. Слідкуйте за зміною даних в комірках з формулами. <em>Автоматичне переобчислення таблиці – основний засіб автоматизації</em> <em>в Excel</em>.</p></li>
+<li><p>Поекспериментуйте із виділенням блоків таблиці:</p></li>
+</ol>
+<ul class="simple">
+<li><p>для виділення рядків натиснути ліву клавішу миші на номері рядка (або скористатись методом протягування миші);</p></li>
+<li><p>для виділення стовпчика натиснути  ліву клавішу миші на імені стовпця;</p></li>
+<li><p>для виділення блоку курсор поставити в кут блоку і при натиснутій клавіші перемістити мишу до протилежного кута блоку;</p></li>
+<li><p>для виділення всієї таблиці натиснути ліву клавішу миші на прямокутнику у лівому верхньому куті таблиці (над 1 зліва від <strong>А</strong>);</p></li>
+<li><p>для виділення декількох блоків відмічають перший блок і при натиснутій клавіші &lt;Ctrl&gt; відмічають наступні блоки;</p></li>
+<li><p>для відміни виділення натискаємо ліву клавішу миші у довільному місці таблиці.</p></li>
+</ul>
+<ol class="arabic simple" start="16">
+<li><p>Ввести заголовок таблиці в першому рядку і відцентрувати його.  Текст “Злочинність в Україні”  вводимо в комірці <strong>А1</strong>. Виділяємо блок <strong>А1:F1</strong> і натискаємо кнопку  <strong>Об’єднати і розмістити по центру</strong> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAIAAACN07NGAAAAUUlEQVR4Xq2NWw4AIQgDe/9LeTRNZGOw1A0+5gsKAyj7gIMEnwOgzsjkhZOBHboaEY5BS6MwtIO+NxIvYOX4D77Vjo1/EE4GduLVmFw7W5w4DZj/3Rz0GPuQAAAAAElFTkSuQmCC" /> на вкладці <strong>Головна</strong>. Для виділення блоку комірок протягуємо мишу по всіх комірках цього діапазону.  Виділення  несуміжних  діапазонів здійснюються при  натиснутій клавіші &lt;Ctrl &gt;. В другому рядку введіть і відцентруйте  текст „Показники стану злочинності за 2010 р.” (Для цього об’єднайте комірки <strong>А2:F2</strong> і введіть текст.)</p></li>
+<li><p>Вставити в таблицю стовпчик, що відповідає питомій вазі нерозкритих злочинів. ( Для цього в комірку <strong>G3</strong> введіть “питома вага нерозкритих злочинів” )</p></li>
+<li><p>Ввести відповідну формулу в комірку <strong>G4</strong> і скопіюйте її в комірки <strong>G5:G8</strong>.</p></li>
+<li><p>Виконати вирівнювання даних в таблиці по центру в горизонтальному і вертикальному напрямках. (Для цього необхідно скористатися командою <strong>Формат</strong> ⇒ <strong>Клітинки</strong> ⇒ вкладка <strong>Вирівнювання</strong>.)</p></li>
+<li><p>В стовпчику <strong>F</strong> для числових даних залишити два десяткових знаки. (Скористайтесь командою <strong>Формат</strong> ⇒ <strong>Клітинки</strong> ⇒ вкладка <strong>Число</strong>.)</p></li>
+<li><p>Визначити максимальну питому вагу розкритих злочинів серед різних видів злочинів. (Для цього у комірку <strong>F10</strong> уведіть формулу  <strong>=МАКС(F4:F7)</strong>.)</p></li>
+<li><p>Визначити максимальну питому вагу нерозкритих злочинів. Результат розмістити в комірці <strong>G10</strong>.</p></li>
+<li><p>Об’єднати фрагменти тексту, що знаходяться в трьох різних комірках в єдиний текст. (Використати функцію CONCAT).</p></li>
+<li><p>Перевірити ідентичність двох текстів. (Використати функцію EXACT.)</p></li>
+<li><p>Помістити в комірку С4 фрагмент тексту і визначити його довжину. (Використати функцію LEN.)</p></li>
+<li><p>Повторити текст задану кількість разів. (Використати функцію REPT.)</p></li>
+<li><p>Зробити в тексті усі букви прописними. (Використати функцію LOWER.</p></li>
+<li><p>Виділити сім правих символів в тексті. (Використати функцію RIGHT.)</p></li>
+<li><p>Зберегти таблицю. (Виконати команду <strong>Файл</strong> ⇒ <strong>Зберегти як…</strong> і задати ім`я файла.)</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2><span class="section-number">5.4. </span><strong>Контрольні питання</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Яка структура рядка формул?</p></li>
+<li><p>Що таке формула /функція? Яку структуру мають формули?</p></li>
+<li><p>Наведіть алгоритм введення формул.</p></li>
+<li><p>Як найпростіше обчислити суму значень в комірках?</p></li>
+<li><p>Як відшукати потрібну функцію при відомій назві/невідомій назві?</p></li>
+<li><p>Яке призначення вікна аргументів?</p></li>
+<li><p>Якими символами відокремлюються аргументи функцій?</p></li>
+<li><p>Як виводяться помилки при обчисленнях у формулах?</p></li>
+<li><p>Що таке абсолютна/відносна/змішана адреси комірок?</p></li>
+<li><p>Які ви знаєте текстові функції? Опишіть їх призначення.</p></li>
+<li><p>Як виділити певну кількість символів у тексті?</p></li>
+<li><p>Яке значення поверне функція IF(1&gt;2;3;4)?</p></li>
+<li><p>Як скопіювати формулу з однієї комірки в іншу (різні способи)?</p></li>
+<li><p>Як вивести всі формули, що є в таблиці на екран?</p></li>
+<li><p>Як комірці В4 присвоїти ім’я «Студент»?</p></li>
+<li><p>Наведіть приклади використання функцій.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2><span class="section-number">5.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>Microsoft Excel</strong> (настільна або веб‑версія);</p></li>
+<li><p>у <strong>Google SpreadSheets</strong>;</p></li>
+<li><p>у <strong>третьому редакторі на вибір</strong>: LibreOffice Calc / WPS Spreadsheets / OnlyOffice / Apple Numbers (для macOS).</p></li>
+</ol>
+<p><strong>Подання в Classroom:</strong> завантажте <strong>три PDF‑файли</strong> або <strong>три XLSX‑файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">редактору&gt;_&lt;група&gt;_&lt;ім'я</span> <span class="pre">та</span> <span class="pre">прізвище&gt;.pdf</span></code> або <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">редактору&gt;_&lt;група&gt;_&lt;ім'я</span> <span class="pre">та</span> <span class="pre">прізвище&gt;.xlsx</span></code></p>
+<p><strong>Приклади:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Excel_144_Алукі</span> <span class="pre">Анастасія.pdf</span></code> або <code class="docutils literal notranslate"><span class="pre">Excel_144_Алукі</span> <span class="pre">Анастасія.xlsx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GoogleSpreadSheets_143_Петренко</span> <span class="pre">Іван.pdf</span></code> або <code class="docutils literal notranslate"><span class="pre">GoogleSpreadSheets_143_Петренко</span> <span class="pre">Іван.xlsx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AppleNumbers_141_Петренко</span> <span class="pre">Іван.pdf</span></code> або <code class="docutils literal notranslate"><span class="pre">AppleNumbers_141_Петренко</span> <span class="pre">Іван.xlsx</span></code></p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title"><strong>Коментар щодо недоступних опцій:</strong></p>
+<p>якщо певної опції немає у вашому табличному процесорі, у звіті коротко вкажіть це і опишіть обраний еквівалент дії (скрін за можливості)..</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>ЛАБОРАТОРНА РОБОТА №4</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>ЛАБОРАТОРНА РОБОТА №6</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.2.1. <strong>1. Простіші розрахунки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2.2. <strong>2. Вбудовані функції</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.2.2.1. <strong>3.1. Адресація у формулах</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.2.2.2. <strong>3.2. Імена комірок і діапазонів</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.2.3. <strong>4. Текстові функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.2.4. <strong>5. Макроси (сценарії)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">5.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. ЛАБОРАТОРНА РОБОТА №2 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba2';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="3. ЛАБОРАТОРНА РОБОТА №3" href="laba3.html" />
+    <link rel="prev" title="1. ЛАБОРАТОРНА РОБОТА №1" href="laba1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba2.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba2.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-word-2013">2.2.1. <strong>1. Створення списків (Microsoft Word 2013)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1.1. 1.1. <strong>Марковані списки</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.2. 1.2. <strong>Нумеровані списки</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. 1.3. <strong>Багаторівневі списки</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.2. <strong>2. Додавання графічних елементів (Microsoft Word 2013)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2.1. 2.1. <strong>Вставка зображення</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.2.2. 2.2. <strong>Вставка знімків екрану</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#word-art">2.2.2.3. 2.3. <strong>Додавання об’єктів Word Art</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.2.4. 2.4. <strong>Вставка фігур</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.3. 3. <strong>Інші вставки</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.3.1. <strong>3.1 Вставка колонтитулів</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.3.2. <strong>3.2. Вставка номерів сторінок</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.3.3. <strong>3.3. Вставка символів</strong>,</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.4. <strong>4. Текстові вставки</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.4.1. <strong>4.1. Вставка текстових полів</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.4.2. <strong>4.2. Вставка текстових файлів у поточний документ</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.5. <strong>5. Вставка гіперпосилань</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.6. <strong>6. Примітки, виноски</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.6.1. <strong>6.1 Вставка приміток</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.6.2. <strong>6.2. Створення виносок</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.7. <strong>7. Оформлення досліджень</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.7.1. <strong>7.1. Оформлення рефератів.</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.7.2. <strong>7.2. Вставка змісту</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o2">
+<h1><span class="section-number">2. </span>ЛАБОРАТОРНА РОБОТА №2<a class="headerlink" href="#o2" title="Link to this heading">#</a></h1>
+<p><strong>Інтеграція різних об’єктів у документи</strong></p>
+<section id="id1">
+<h2><span class="section-number">2.1. </span><strong>План</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Створення списків (марковані, нумеровані, багаторівневі)</p></li>
+<li><p>Вставка графічних елементів (зображення, фігур, знімки екрану), об’єктів Word Art</p></li>
+<li><p>Вставка колонтитулів, номерів сторінок, символів</p></li>
+<li><p>Текстове поле, вставка файлів</p></li>
+<li><p>Вставка гіперпосиланнь</p></li>
+<li><p>Примітки та виноски</p></li>
+<li><p>Оформлення реферату та їх змісту</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="microsoft-word-2013">
+<h3><span class="section-number">2.2.1. </span><strong>1. Створення списків (Microsoft Word 2013)</strong><a class="headerlink" href="#microsoft-word-2013" title="Link to this heading">#</a></h3>
+<section id="id3">
+<h4><span class="section-number">2.2.1.1. </span>1.1. <strong>Марковані списки</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p><em><strong>Маркований список</strong></em> – це набір абзаців, на початку кожного з яких вказано спеціальний символ (маркер). В якості маркера може використовуватися будь-який символ: крапка, зірочка, стрілка і т.ін. Марковані списки використовуються в різних документах, технічній літературі при перерахуванні якихось параметрів чи функцій.<br />
+Для створення маркованого списку необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Натиснути праву частину кнопки <strong>Маркери</strong> у групі <strong>Абзац</strong> на вкладці <strong>Головна</strong>. З’явиться меню, в якому представлено декілька видів маркерів.</p></li>
+<li><p>Із меню вибрати потрібний маркер, наприклад прапорець («галочку»). Вибраний символ з’явиться на початку рядка.</p></li>
+<li><p>Ввести текст першого пункту створюваного списку. Текст може містити як декілька слів, так і декілька рядків. По завершенню введення тексту першого пункту списку натиснути клавішу Enter.</p></li>
+<li><p>Ввести тексти наступних пунктів списку. В кінці кожного пункту натиснути Enter.</p></li>
+<li><p>Після введення останнього пункту списку натиснути Enter, а потім – кнопку <strong>Видалити всі форматування</strong>, щоб забрати маркер, який з’явився автоматично (або двічі натиснути Enter після останнього пункту).</p></li>
+</ol>
+<p>Зауважимо, що в меню кнопки <strong>Маркери</strong> присутній пункт <strong>Визначити новий маркер</strong>. При виборі цієї команди відкривається діалогове вікно, в якому можна вибрати будь-який значок із встановлених в системі шрифтів.</p>
+</section>
+<section id="id4">
+<h4><span class="section-number">2.2.1.2. </span>1.2. <strong>Нумеровані списки</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>Нумеровані списки відрізняються від маркованих тим, що пункти списку не промарковані, а пронумеровані. Причому нумерація виконується автоматично. Списки можуть бути пронумеровані арабськими чи римськими цифрами або буквами. Нумерація списку постійно корегується, тобто якщо один із пунктів вилучається, то решта пунктів будуть перенумеровані, щоб порядок нумерації не порушився. Для створення нумерованих списків необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Натиснути праву частину кнопки <strong>Нумерація</strong> в групі <strong>Абзац</strong> на вкладці <strong>Головна</strong>. З’явиться меню, в якому представлено декілька видів нумерації списку.</p></li>
+<li><p>Із меню вибрати потрібний тип нумерації, наприклад, арабськими цифрами з крапкою. На початку рядка з’явиться номер списку (1.).</p></li>
+<li><p>Не вводячи пробілу, ввести текст першого пункту списку. Текст списку може містити декілька слів чи рядків. Після завершення введення тексту першого пункту списку натиснути клавішу Enter. Буде створений новий абзац і на його початку автоматично з’явиться наступний номер списку.</p></li>
+<li><p>Ввести текст другого пункту, після чого натиснути клавішу Enter.</p></li>
+<li><p>Аналогічно створити решту пунктів списку.</p></li>
+<li><p>Після введення останнього пункту списку потрібно натиснути Enter, а потім – кнопку <strong>Видалити все форматування</strong>, щоб вилучити автоматично створений і вже непотрібний номер списку.</p></li>
+</ol>
+<p>Часто між пунктами списку потрібно ввести один або декілька абзаців без нумерації. Для цього необхідно відмінити форматування, натиснувши кнопку <strong>Видалити все форматування</strong>. Але якщо ми хочемо продовжити нумерований список після звичайного абзацу, то нумерація почнеться спочатку. Якщо ж нам потрібно продовжити раніше початий список, то необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Клацнути правою клавішею миші по «першому» пункту списку, який йде за звичайним абзацом. З’явиться контекстне меню.</p></li>
+<li><p>Із меню вибрати команду <strong>Продовжити нумерація</strong>. Номер пункту буде змінений з урахуванням раніше створених пунктів.</p></li>
+</ol>
+<p>Буває і обернена ситуація, коли при створенні нумерованих списків нам потрібно з певного пункту створити нумерацію заново. В цьому випадку потрібно клацнути правою клавішею миші по пункту, з якого ми хочемо «обнулити» нумерацію і в контекстному меню, що з’явиться, вибрати команду <strong>Почати заново з 1</strong> або <strong>почати заново  А</strong>, якщо список нумерується буквами.<br />
+В будь-який момент нумерований список можна перетворити на маркований і навпаки. Для цього потрібно встановити курсор в будь-який пункт списку, натиснути відповідно кнопку <strong>Маркери</strong> (список стає маркованим) або <strong>Нумерація</strong> (список стає нумерованим) в групі <strong>Абзаци</strong> вкладки <strong>Головна</strong>.</p>
+</section>
+<section id="id5">
+<h4><span class="section-number">2.2.1.3. </span>1.3. <strong>Багаторівневі списки</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>Існує і складніший варіант нумерованого списку. Він називається багаторівневим. У багаторівневому списку кожний пункт може мати підпункти, які також нумеруються. Вони можуть теж мати нумеровані підпункти. Як правило, більше двох рівнів не використовується, щоб не робити список складним для сприйняття (рис. 1.1).</p>
+<figure class="align-default" id="id27">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQcd88CgzXAI6Zf-ga-gyHGQpqNpQ9BLf_Q6Y__bM6a2BUVxEslgBDwNLC999-0Dup_JLrqGfbFoW6S/pub?w=960&amp;h=720"><img alt="" src="https://docs.google.com/drawings/d/e/2PACX-1vQcd88CgzXAI6Zf-ga-gyHGQpqNpQ9BLf_Q6Y__bM6a2BUVxEslgBDwNLC999-0Dup_JLrqGfbFoW6S/pub?w=960&amp;h=720" style="width: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.1 </span><span class="caption-text">Рис. 1.1. Приклади багаторівневих списків</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для створення багаторівневого списку, необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Натиснути кнопку <strong>Багаторівневий список</strong> у групі <strong>Абзац</strong> на вкладці <strong>Головна</strong>.</p></li>
+<li><p>Із меню вибрати тип нумерації (або маркування). На початку рядка з’явиться номер (маркер) першого пункту списку.</p></li>
+<li><p>Ввести текст першого пункту списку, після чого натиснути Enter. На початку нового рядка з’явиться номер другого пункту списку.</p></li>
+<li><p>Переконатися, що текстовий курсор знаходиться в створеному рядку.</p></li>
+<li><p>Натиснути кнопку <strong>Багаторівневий список</strong>, з меню вибрати команду <strong>змінити рівень списку</strong>, а потім у вкладеному меню – пункт, що відповідає другому рівню списку. Створений пункт списку буде переведений на другий рівень.</p></li>
+<li><p>Ввести текст пункту другого рівня і натиснути клавішу Enter.</p></li>
+<li><p>Аналогічно ввести потрібну кількість пунктів другого рівня.</p></li>
+<li><p>Після того, як всі пункти створені, створити новий пункт списку і в меню кнопки <strong>Багаторівневий список</strong> вибрати для нього перший рівень.</p></li>
+</ol>
+<p>Зауважимо, що понизити рівень елементів списку можна за допомогою клавіші Таb, а підвищити – Shift Tab.</p>
+</section>
+</section>
+<section id="id6">
+<h3><span class="section-number">2.2.2. </span><strong>2. Додавання графічних елементів (Microsoft Word 2013)</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>У документи Microsoft Office можна добавляти графічні елементи: фотографії, картинки, геометричні фігури, а також відео. Ми розглянемо способи добавлення графічних елементів, а також інструменти для налаштування параметрів графічних об’єктів.</p>
+<section id="id7">
+<h4><span class="section-number">2.2.2.1. </span>2.1. <strong>Вставка зображення</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<p>У документи Office можна вставляти растрові та векторні зображення, які розташовані як на локальних дисках, так і таких, що зберігаються в колекції Microsoft у інтернеті. В останньому варіанті вибрані зображення копіюються на локальний диск.</p>
+<p>Щоб вставити в документ зображення, яке розташоване на локальному чи зйомному диску, треба виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>На вкладці <strong>Вставка</strong> натиснути кнопку <strong>Малюнки</strong>. На екрані з’явиться діалогове вікно <strong>Вставка малюнка</strong>.</p></li>
+<li><p>В одноіменному діалоговому вікні перейти в папку, яка містить потрібний графічний файл.</p></li>
+<li><p>Знайти графічний файл, який хочемо вставити в документ, після чого клацнути по ньому мишею. Файл буде виділений.</p></li>
+<li><p>Натиснути кнопку <strong>Вставити</strong>. Діалогове вікно закриється, а вибране графічне зображення буде вставлено в документ.</p></li>
+</ol>
+<p>У програмі Word, на відміну від інших програм Office, рисунок вставляється на один шар з текстом. Тому важливо правильно вибрати положення рисунка відносно тексту. Це можна зробити за допомогою команд, які з’являються при натискуванні кнопки <strong>Розташування</strong> на вкладці <strong>Формат</strong>, яка виникає при виділенні зображення в документі (рис. 2.1).<br />
+<strong>![][image1]</strong><br />
+Рис. 2.1. Вибір положення зображення на сторінці документу</p>
+<p>Графічні ескізи в меню кнопки <strong>Розташування</strong> показують, як зображення буде розташоване на сторінці документа відносно тексту.<br />
+Тепер розглянемо, як добавити рисунок із колекції Microsoft Office. Колекція Office містить багато різних зображень, які можна використати в якості ілюстрацій. Колекція картинок, на відміну від попередніх версій Office, не встановлюється на диск разом з пакетом, а розташовується в інтернеті.<br />
+Пошук потрібного зображення здійснюється за ключовими словами. Алгоритм пошуку:</p>
+<ol class="arabic simple">
+<li><p>На вкладці <strong>Вставка</strong> натиснути кнопку <strong>Зображення з Інтернету</strong>. З’явиться діалогове вікно <strong>Вставка</strong>. Це вікно дозволяє шукати зображення в колекції Office на різних ресурсах у Iнтернеті, використовуючи пошукову систему Bing, а також в папках хмарного диску SkyDrive. Розглянемо вставку картинок із колекції Office.</p></li>
+<li><p>У полі <strong>Кліпи Office.com</strong> ввести ключове слово для пошуку картинки. Наприклад, знайдемо картинку, пов’язану з комп’ютерами. Для цього введемо в полі слово <strong>Комп’ютер</strong>.</p></li>
+<li><p>Натиснути кнопку із зображенням лупи в правій частині поля. Буде виконано пошук картинок за вказаним ключовим словом, після  чого ескізи знайдених зображень з’являться в діалоговому вікні <strong>Вставка картинок</strong></p></li>
+<li><p>Виділити потрібну картинку в діалоговому вікні <strong>Вставка картинки</strong>, клацнувши по її ескізу мишею.</p></li>
+<li><p>Натиснути кнопку <strong>Вставити</strong>. Зображення буде скопійовано і встановлено в поточний документ.</p></li>
+</ol>
+<p>Аналогічно здійснюється пошук картинок і за допомогою системи Bing.</p>
+</section>
+<section id="id8">
+<h4><span class="section-number">2.2.2.2. </span>2.2. <strong>Вставка знімків екрану</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<p>В документ Office можна вставити в якості зображення вікно будь-якої відкритої програми. Іноді це необхідно, щоб написати інструкцію до програми і проілюструвати її.<br />
+Звичайно можна скопіювати зображення на екрані в буфер обміну, використовуючи клавішу PrintScreen, а потім вставити вміст буфера обміну в документ, використовуючи комбінацію клавіш Ctrl+V.<br />
+Але в програмах Office передбачено простіший спосіб, який дозволяє перенести в документ не весь знімок екрану, а його частину. Для цього необхідно:</p>
+<ol class="arabic">
+<li><p>На вкладці <strong>Вставка</strong> натиснути кнопку <strong>Знімок</strong>. З’явиться меню, яке містить ескізи всіх відкритих програм і вікон.</p></li>
+<li><p>У цьому меню клацнути мишею по ескізу потрібного вікна. Зображення вибраного вікна буде вставлено в документ.</p>
+<p>Для вставки в документ тільки фрагменту знімка необхідно виконати такі дії:</p>
+</li>
+<li><p>Згорнути всі вікна, крім вікна поточного документу та вікна, знімок якого потрібно зробити.</p></li>
+<li><p>На вкладці <strong>Вставка</strong> натиснути кнопку <strong>Зробити знімок</strong> . З’явиться вікно, яке містить ескізи всіх відкритих програм і вікон.</p></li>
+<li><p>У меню, що з’явиться, вибрати команду <strong>Обрізати екран</strong>. З’явиться вікно, яке розташоване під вікном документу (тобто вікно, яке не згорнуте на панель задач).</p></li>
+<li><p>Установити вказівник миші, який набув форму хрестика, в лівий верхній кут фрагменту, що буде вирізатися.</p></li>
+<li><p>Натиснувши і утримуючи кнопку миші, перемістити вказівник вправо і вниз до діагоналі у правий нижній кут фрагменту, який буде вирізатися. В результаті утвориться прямокутна рамка, яка є межею даного фрагменту.</p></li>
+<li><p>Коли в рамку попаде все зображення, яке хочемо вирізати, відпустити мишку. В документ буде вставлено те, що було всередині рамки виділення.</p></li>
+</ol>
+</section>
+<section id="word-art">
+<h4><span class="section-number">2.2.2.3. </span>2.3. <strong>Додавання об’єктів Word Art</strong><a class="headerlink" href="#word-art" title="Link to this heading">#</a></h4>
+<p>Для оформлення заголовків тексту використовують спеціальні  текстові ефекти – об’єкти Word Art. Для цього потрібно виконати команду <strong>Вставка⇒</strong>група <strong>Текст ⇒ Word Art.</strong></p>
+</section>
+<section id="id9">
+<h4><span class="section-number">2.2.2.4. </span>2.4. <strong>Вставка фігур</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<p>Фігури – це вкладені в програму рисунки певної форми – геометричні фігури, блок-схеми, лінії, прості й фігурні стрілки та інші значки. Фігури доступні на панелі <strong>Вставка.</strong> Після натискування кнопки <strong>Фігури</strong> обирають фігуру, клацають у відповідному місці документа і переміщають вказівник щоб нарисувати фігуру. Фігури можна об’єднувати, добавляти до них надписи, виконувати заливку, змінювати колір. Усі дії з фігурами доступні по команді <strong>Формат ⇒ Фігури,</strong> яка викликається правою клавішею миші. На вкладці <strong>Формат</strong> в групі <strong>Стилі фігур</strong> можна змінювати контур фігур, здійснювати заливку та задавати ефекти фігур.<br />
+Для повороту зображення потрібно виділити об’єкт і перетягнути маркер повороту об’єкта. Щоб крок кута повороту був кратний 15°, потрібно при перетягуванні маркера утримувати натиснутою клавішу Schift.</p>
+</section>
+</section>
+<section id="id10">
+<h3><span class="section-number">2.2.3. </span>3. <strong>Інші вставки</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h4><span class="section-number">2.2.3.1. </span><strong>3.1 Вставка колонтитулів</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
+<p><em><strong>Колонтитули</strong></em> – це області в верхній і нижній полях документа, на яких розташовується постійна інформація про документ. Це може бути назва розділу, ім’я автора, назва файла документу, номер сторінки, дата, зображення. Колонтитул створюється один на всі сторінки. Причому в Word передбачено додавання «лівих» і «правих» колонтитулів. Вони добавляються відповідно на непарні і парні сторінки. В результаті на розвороті документу на колонтитулі лівої сторінки буде відображена одна інформація (наприклад, назва книги), а на колонтитулі правої сторінки – інша інформація (наприклад, назва розділу).<br />
+Для того, щоб добавити колонтитул в документ, потрібно.</p>
+<ol class="arabic simple">
+<li><p>Перейти на вкладку <strong>Вставка</strong> стрічки.</p></li>
+<li><p>Натиснути кнопку <strong>Верхній колонтитул</strong>.</p></li>
+<li><p>В меню вибрати будь-який зразок. У верхній частині сторінки з’явиться колонтитул з полем <strong>Введіть текст</strong>.</p></li>
+</ol>
+<p>Одночасно з появою колонтитула на сторінці стрічки з’явиться вкладка <strong>Конструктор</strong>, яка призначена для налаштування зовнішнього вигляду колонтитула і розміщення на ньому потрібної інформації.<br />
+Щоб вийти з режиму редагування колонтитула потрібно двічі клацнути мишею по довільній частині сторінки під колонтитулом.<br />
+Щоб повернутися в режим редагування колонтитула, потрібно двічі клацнути мишею по колонтитулу.<br />
+Аналогічно можна добавити в документ і нижні колонтитули. Для цього використовується кнопка <strong>Нижній колонтитул</strong> на вкладці <strong>Вставка</strong>. Колонтитули можна добавити, якщо два рази клацнути мишею по верхньому або нижньому полі документа.<br />
+Якщо потрібно вилучити колонтитул, то необхідно натиснути кнопку <strong>Верхній колонтитул</strong> або <strong>Нижній колонтитул</strong> і в меню кнопки вибрати команду <strong>Видалити верхній колонтитул</strong> або <strong>Видалити нижній колонтитул</strong>.</p>
+</section>
+<section id="id12">
+<h4><span class="section-number">2.2.3.2. </span><strong>3.2. Вставка номерів сторінок</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<p>здійснюється за допомогою команди <strong>Вставка⇒Номера сторінок</strong></p>
+</section>
+<section id="id13">
+<h4><span class="section-number">2.2.3.3. </span><strong>3.3. Вставка символів</strong>,<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<p>що відсутні на клавіатурі (наприклад ϕ, ⊗, ⇒) здійснюється вибором на панелі <strong>Вставка⇒Символи</strong>/Символ.</p>
+</section>
+</section>
+<section id="id14">
+<h3><span class="section-number">2.2.4. </span><strong>4. Текстові вставки</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<section id="id15">
+<h4><span class="section-number">2.2.4.1. </span><strong>4.1. Вставка текстових полів</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>Текстове поле – це окремі, не зв’язані з основним текстом на сторінці, блоки, які встановляються в різні місця сторінки.<br />
+В таких блоках зручно розміщувати текстові врізки, примітки, доповнення, поради, рекламу, тощо.<br />
+Для добавлення в документ текстового блоку необхідно:</p>
+<ol class="arabic simple">
+<li><p>Перейти на вкладку <strong>Вставка</strong> стрічки.</p></li>
+<li><p>Натиснути кнопку <strong>Текстове поле</strong>. З’явиться меню, яке містить графічні зразки текстових полів.</p></li>
+<li><p>Вибрати потрібний зразок, наприклад, <strong>Цитата семафор</strong>. На сторінку буде добавлено сірий прямокутник з одним зрізаним кутом. На даному прямокутнику буде розміщений зразок тексту.</p></li>
+<li><p>Замінити текст у блоці своїм текстом.</p></li>
+</ol>
+<p>Текстовий блок можна переміщувати по сторінці. За замовчуванням для нього задано режим обтікання <strong>навколо рамки</strong>, що приводить до перерозподілу тексту на сторінці так, щоб текст обтікав текстовий блок з усіх сторін.<br />
+У текстовому блоці діють ті ж правила редагування і форматування, що і в основному тексті.<br />
+При виділенні текстового блоку на стрічці з’являється вкладка <strong>Формат</strong>. На ній знаходяться інструменти, які призначені для зміни дизайну текстового блоку. Можна змінити колір і контур підкладки текстового блоку, змінити стиль тексту в блоці.<br />
+Щоб знищити текстове поле потрібно навести курсор на ліву межу текстового поля так щоб він змінив зображення на двонаправлену стрілку і клацнути клавішу Del.</p>
+</section>
+<section id="id16">
+<h4><span class="section-number">2.2.4.2. </span><strong>4.2. Вставка текстових файлів у поточний документ</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<p>Інколи виникає необхідність повністю вставити в документ вмістиме іншого текстового файла. Для цього потрібно поставити курсор в позицію вставки і задати команду <strong>Вставка ⇒Текст⇒ Об’єкт.</strong>  В меню, що з’явиться обрати обрати команду <strong>Текст з файлу.</strong> В діалоговому вікні <strong>Вставка файлу</strong> знайти і виділити ім’я файла, який потрібно вставити і натиснути кнопку <strong>Вставити</strong>.</p>
+</section>
+</section>
+<section id="id17">
+<h3><span class="section-number">2.2.5. </span><strong>5. Вставка гіперпосилань</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p>Під посиланнями в Word розуміють не тільки посилання на різні вебресурси, але також на локальні файли, документи, конкретні місця в поточному документі. Також в документ можна вставляти виноски і примітки.<br />
+<em><strong>Гіперпосилання</strong></em> – це об’єкти, які посилаються на вебресурси, локальні файли, адресу електронної пошти або конкретне місце в поточному документі, наприклад, на якийсь розділ. Найчастіше в якості гіперпосилання використовується фрагмент тексту (наприклад, слово або вебадреса), але гіперпосиланням може бути і інший об’єкт – хоча б й рисунок.<br />
+Розглянемо приклад створення гіперпосилання на вебресурс. Всі вебадреси, внесені в документ в їх істинному форматі (наприклад, <a class="reference external" href="http://www.microsoft.com">www.microsoft.com</a>) автоматично стають гіперпосиланнями. Така адреса в документі підкреслюється, і, якщо клацнути по ній мишею, відкриється веббраузер, в якому буде завантажений вказаний сайт. Гіперпосиланням може бути і будь-який інший текст. Для цього необхідно:</p>
+<ol class="arabic simple">
+<li><p>Виділити в документі слово, яке ми хочемо зробити гіперпосиланням.</p></li>
+<li><p>Перейти на вкладку <strong>Вставка</strong>.</p></li>
+<li><p>На цій вкладці натиснути кнопку <strong>Гіперпосилання</strong> Відкриється одноіменне діалогове вікно.</p></li>
+<li><p>В полі <strong>Адрес</strong> ввести потрібну вебадресу.</p></li>
+<li><p>Натиснути <strong>ОК</strong>. Діалогове вікно закриється, а виділене слово перетвориться на гіперпосилання.</p></li>
+</ol>
+<p>На наявність гіперпосилання вказує синій колір його шрифта і лінія підкреслення. Гіперпосилання можна вилучати. Для цього потрібно:</p>
+<ol class="arabic simple">
+<li><p>Клацнути правою клавішею миші по гіперпосиланню.</p></li>
+<li><p>Із контекстного меню вибрати команду <strong>Видалити гіперпосилання</strong>.</p></li>
+</ol>
+<p>В результаті слово чи текст залишаються в документі, проте даний текст втрачає властивість гіперпосилання.</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">2.2.6. </span><strong>6. Примітки, виноски</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<section id="id19">
+<h4><span class="section-number">2.2.6.1. </span><strong>6.1 Вставка приміток</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<p>До будь-якого фрагмента тексту можна добавити примітку. Примітка може містити будь-який текст, який пояснює або рецензує даний фрагмент. Перегляд приміток можливий тільки в електронній версії документу. Примітка до тексту відображається на полі сторінки, при цьому вона графічно зв’язана з відповідним йому фрагментом у основному блоці. Примітку може добавити будь-який читач документу, при цьому в заголовку примітки вказується ім’я його облікового запису.<br />
+Щоб створити примітку до тексту, необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Виділити фрагмент тексту, для якого потрібно створити примітку.</p></li>
+<li><p>На вкладці <strong>Рецензування</strong> стрічки натиснути кнопку <strong>Створити зауваження</strong> (або кнопку <strong>Зауваження</strong> на вкладці <strong>Вставка</strong>). У правій частині сторінки з’явиться панель приміток, в заголовку якої буде вказано ім’я облікового запису користувача (особи, яка створює примітку).</p></li>
+<li><p>На панелі, що з’явиться, ввести текст примітки.</p></li>
+</ol>
+<p>Зауважимо, що примітки можуть рецензуватися, тобто в одній і тій же примітці можуть залишати коментарі всі читачі даного документу.<br />
+Примітки в тексті відображаються при натискуванні кнопки <strong>Показати зауваження</strong> на вкладці <strong>Рецензування</strong> стрічки. Щоб зв’язати примітку із відповідним їй фрагментом, потрібно навести на текст примітки вказівник миші. Примітка буде з’єднана лінією з відповідним фрагментом.</p>
+<p>При необхідності примітку можна вилучити. Для цього необхідно:</p>
+<ol class="arabic simple">
+<li><p>Клацнути правою клавішею миші по примітці на полі документа.</p></li>
+<li><p>Із контекстного меню вибрати команду <strong>Видалити зауваження</strong>.</p></li>
+</ol>
+</section>
+<section id="id20">
+<h4><span class="section-number">2.2.6.2. </span><strong>6.2. Створення виносок</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
+<p>Виноски використовуються для пояснення або розшифрування якого-небудь слова чи словосполучення в документі. Текст виноски розташовується в нижній частині сторінки документу або в кінці документу, а слово чи словосполучення, для якого створена виноска, помічається цифрою у верхньому індексі. Щоб вставити виноску в документ, необхідно:</p>
+<ol class="arabic simple">
+<li><p>Встановити курсор зразу після слова (без пробілу), для якого буде добавлена виноска.</p></li>
+<li><p>На вкладці <strong>Посилання</strong> стрічки натиснути кнопку <strong>Виноска</strong>. В нижній частині сторінки з’явиться цифра виноски і текстовий курсор.</p></li>
+<li><p>Ввести текст виноски, після чого повернутися в робоче поле сторінки.</p></li>
+</ol>
+<p>Зауважимо, що справа від слова, для якого добавлена виноска, з’явилася цифра 1 у верхньому індексі. Наступні виноски будуть пронумеровані по порядку: 2, 3 й т.д. Розшифрування виноски за замовчуванням проводиться на тій же сторінці, на якій розташовується текст, для якого створена виноска. І, якщо текст з певних причин буде переміщений на іншу сторінку, разом з текстом буде переміщена виноска.<br />
+Для вилучення виноски потрібно вилучити її цифру з тексту документу.</p>
+</section>
+</section>
+<section id="id21">
+<h3><span class="section-number">2.2.7. </span><strong>7. Оформлення досліджень</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<section id="id22">
+<h4><span class="section-number">2.2.7.1. </span><strong>7.1. Оформлення рефератів.</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<p>Реферат – це науково-технічний документ, який містить вичерпну, систематизовану інформацію за обраною темою, передбачає виклад матеріалу на основі спеціально підібраної літератури та самостійних досліджень.<br />
+Структура реферату:</p>
+<ul class="simple">
+<li><p>титульний аркуш (перша сторінка документа),</p></li>
+<li><p>зміст;</p></li>
+<li><p>вступ;</p></li>
+<li><p>суть реферату (основна частина);</p></li>
+<li><p>висновки;</p></li>
+<li><p>список використаних джерел;</p></li>
+<li><p>додатки (за необхідністю).</p></li>
+</ul>
+<p>Титульний аркуш містить:</p>
+<ul class="simple">
+<li><p>найменування вищого навчального закладу, факультету, кафедри, де виконана робота;</p></li>
+<li><p>назву роботи;</p></li>
+<li><p>прізвище, ім’я, по-батькові автора;</p></li>
+<li><p>прізвище, ім’я, по-батькові керівника, його статус;</p></li>
+<li><p>місто та рік.</p></li>
+</ul>
+<p>Для швидкого створення титульної сторінки у Word є декілька готових шаблонів. Для додавання титульної сторінки необхідно виконати команду <strong>Вставка⇒Сторінки⇒Титульна сторінка</strong> вибрати один з шаблонів. В титульну сторінку, що з’явилася, потрібно ввести необхідні дані.</p>
+</section>
+<section id="id23">
+<h4><span class="section-number">2.2.7.2. </span><strong>7.2. Вставка змісту</strong><a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p>Зміст у Word створюється автоматично, але для цього текст повинен бути відформатований у відповідності з одним правилом. А саме, розділи документу повинні мати абзаци (заголовки), розмічені стилем <strong>Заголовок</strong>. Щоб оформити фрагмент тексту обраним стилем потрібно виділити цей фрагмент і в групі <strong>Головна⇒Стилі</strong> вибрати ім’я потрібного стилю (в даному випадку Заголовок 1, Заголовок 2 і т.д.) Рівнів заголовків може бути декілька (зазвичай, не більше трьох). Всі рівні заголовків поміщаються у зміст. Тобто в нього включається список заголовків у документі із зазначенням сторінок, на яких ці заголовки знаходяться.<br />
+Щоб сформувати зміст документу, необхідно:</p>
+<ol class="arabic simple">
+<li><p>На вкладці <strong>Посилання</strong> стрічки натиснути кнопку <strong>Зміст</strong>. З’явиться меню, яке містить графічні зразки стилів змісту. Зауважимо, що у вікні <strong>Зміст</strong> можна створити і свій стиль змісту.</p></li>
+<li><p>Із меню вибрати підходящий зразок. Зміст буде сформовано і вставлено в кінець документу.</p></li>
+</ol>
+<p>При цьому кожний пункт змісту має властивість гіперпосилання. Якщо клацнути по пункту змісту, утримуючи кнопку миші, то ми перемістимося до відповідного заголовку в документі.<br />
+Слід враховувати, що зміст не обновлюється автоматично. Якщо текст був відредагований так, що заголовки перемістилися на інші сторінки, то відповідні зміни у зміст внесені не будуть. Щоб обновити зміст із урахуванням змін у документі необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Клацнути мишею по будь-якому пункту змісту. В результаті по периметру змісту з’явиться рамка, в лівій частині якої відобразиться невелика панель з кнопками.</p></li>
+<li><p>На панелі натиснути кнопку <strong>Оновити таблицю</strong>. З’явиться діалогове вікно <strong>Оновлення змісту</strong>.</p></li>
+<li><p>У цьому вікні встановити перемикач у потрібне положення: <strong>Оновити тільки номери сторінок</strong> або <strong>Оновити повністю</strong>.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="id24">
+<h2><span class="section-number">2.3. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Розбити документ на розділи – Команда <strong>Вставка⇒</strong> група <strong>Сторінки ⇒Розрив сторінки⇒Новий розділ</strong>, або <strong>Розмітка сторінки</strong> <strong>⇒Розриви</strong>. Для усунення розриву потрібно виділити маркер розриву і клацнути клавішу Del.</p></li>
+<li><p>По різному відформатувати кожний з розділів. Один з розділів оформити у вигляді колонок. – Команда <strong>Розмітка сторінки⇒ Колонки.</strong> Далі указати параметри колонок.</p></li>
+<li><p>Вставити в документ поточні дату й час. –  Команда <strong>Вставка⇒</strong> група <strong>Текст⇒Дата і час.</strong></p></li>
+<li><p>Вставити зображення в документ. – Команда <strong>Вставка⇒Малюнки</strong>, або <strong>Вставка⇒Зображення з Інтернету</strong>.</p></li>
+<li><p>Вибрати положення рисунка відносно тексту (обтікання рисунка текстом). – Виділити рисунок. Команда <strong>Формат⇒</strong>група <strong>Впорядкувати⇒ Розташування.</strong></p></li>
+<li><p>Розмістити рисунок перед чи позаду тексту. – Виділити рисунок. Команда <strong>Формат⇒</strong>група <strong>впорядкувати⇒Обрамлення текстом.</strong></p></li>
+<li><p>Вирізати фрагмент вставленого рисунка. – Виділити рисунок. Команда <strong>Формат</strong> <strong>⇒</strong>група <strong>Розмір</strong> <strong>⇒Обрізка.</strong> Після зміни форми курсора помістити вказівку миші на маркер рисунка і лівою кнопкою миші методом протягування відрізати непотрібний фрагмент.</p></li>
+<li><p>Вставити в документ декілька фігур. Згрупувати рисунки так, щоб група об’єктів розглядалась як один новий об’єкт. – Виділити рисунки які потрібно згрупувати. Команда <strong>Формат⇒</strong>група <strong>Впорядкувати⇒</strong> <strong>Групувати.</strong> Аналогічно можна розгрупувати об’єкти.</p></li>
+<li><p>Вставити в документ  зображення вікна відкритої програми. –Команда <strong>Вставка⇒Знімок</strong> і клацнути мишею ескіз вікна.</p></li>
+<li><p>Вставити в документ фрагмент знімка екрану. – Команда <strong>Вставка⇒Зробити знімок екрану⇒Обрізка екрану.</strong></p></li>
+<li><p>Відобразити блок-схему для класифікації а) приголосних, б) прикметників, в) числівників, г) іменників. – Команда <strong>Вставка</strong>  <strong>⇒ Фигури.</strong></p></li>
+<li><p>Оформити заголовки спеціальними текстовими ефектами (об’єктами WordArt). – Команда <strong>Вставка⇒Текст⇒ WordArt</strong>.</p></li>
+<li><p>Добавити колонтитули в документ. – Команда <strong>Вставка⇒ Верхній колонтитул.</strong></p></li>
+<li><p>Вставити в документ номера сторінок. – Команда <strong>Вставка⇒ Номери сторінок.</strong></p></li>
+<li><p>Вставити в документ декілька грецьких букв. Призначити їм комбінацію клавіш. – Команда <strong>Вставка⇒ Символ</strong>.</p></li>
+<li><p>Створити назви об’єктів. – Курсор поставити на місце, де має з’явитися назва, наприклад підпис під рисунком. Виконати команду <strong>Ссилки⇒Назва⇒Вставити назву.</strong> В діалоговому вікні <strong>Назва</strong> вибрати потрібний підпис об’єкта.</p></li>
+<li><p>Вставити в документ текстове поле. – Команда <strong>Вставка⇒ Текстове поле.</strong></p></li>
+<li><p>Вставити в документ повністю вмістиме іншого файла. – Команда <strong>Вставка⇒</strong>група <strong>Текст⇒Об’єкт⇒Текст з файлу.</strong></p></li>
+<li><p>Вставити в документ вираз<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA3CAYAAACCayPpAAAA60lEQVR4Xu2USw6EMAxDuf+lZ8QiEhPZkE8DYZQnsaib2qZCbNswrOOjhSeYEkKLEkMbWnwPrylhmUlxFaD39XoJZ6Z6b19rbQnMFOm3lmBhSCsDhbFiZaCwx0uUFmDGEnoMZ7Npzoz1nl4vo8zYw5QQWpQYGPr/cPX8By3e5NYSLIzpS5EQFsb0EtiXjLRSUCDSSokGslsMkTHKnP0h+kbRc5CoWfQc5WhmNbbOmcmUkBtJ34y3BApEmoujgcWIzTDdRIsSO9YS7NqZ7sJqwMKQ5sZqguZYMTdWIzSDtDBWMylsnXdRYjq05As0j4J+50FKmQAAAABJRU5ErkJggg==" />. – Команда <strong>Вставка⇒Текст⇒ Об’єкт ⇒ Math Type 6.0</strong> і вибрати символи кореня та дробу.</p></li>
+<li><p>Зробіть слово гіперпосиланням. – Виділити слово. Команда <strong>Вставка⇒ Гіперпосилання</strong> (або контекстне меню слова). В полі <strong>Адрес</strong> ввести потрібну веб-адресу.</p></li>
+<li><p>До фрагменту тексту добавити примітку. – Виділити фрагмент. Команда <strong>Рецензування⇒Створити зауваження</strong>, або <strong>Вставка⇒ Зауваження</strong>.</p></li>
+<li><p>Продивитись примітки. – Команда <strong>Рецензування ⇒Показати зауваження.</strong></p></li>
+<li><p>Сформувати зміст документа. – Команда <strong>Посилання⇒Зміст.</strong></p></li>
+<li><p>Обновити зміст. – Клацнути мишею по пункту змісту. З’явиться панель з кнопками. Натиснути кнопку <strong>Оновити таблицю</strong>.</p></li>
+<li><p>Створити нумерований список <em>студентів у підгрупі</em>. – Команда <strong>Головна</strong>⇒група <strong>Абзац</strong>⇒<strong>Нумерація</strong>. Ввести перший елемент списку, натиснути Еnter.</p></li>
+<li><p>Створити маркований список навчальних <em>предметів у поточному семестрі</em>. – Команда <strong>Головна</strong>⇒ група <strong>Абзац</strong>⇒<strong>Маркери</strong>. Ввести перший елемент списку, натиснути Еnter.</p></li>
+<li><p>Підібрати відповідний маркер. – Натиснути праву частину кнопки <strong>Маркери</strong> у групі <strong>Абзац</strong> на вкладці <strong>Головна</strong>. З’явиться меню, в якому представлено декілька видів маркерів. Із меню вибрати потрібний маркер,</p></li>
+<li><p>Змініть тип останнього списку.</p></li>
+<li><p>Створіть багаторівневий список “Розклад”.– Команда <strong>Головна</strong>⇒група <strong>Абзац</strong>⇒<strong>Багаторівневий список</strong>. Ввести перший елемент списку, натиснути Еnter. Для введення другого рівня списку натиснути кнопку <strong>Багаторівневий список</strong> і в меню вибрати команду <strong>Змінити рівень списку.</strong></p></li>
+</ol>
+</section>
+<section id="id25">
+<h2><span class="section-number">2.4. </span><strong>Контрольні питання</strong><a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Як розбити документ на розділи?</p></li>
+<li><p>Як оформити текст у вигляді колонок?</p></li>
+<li><p>Як вставити в документ поточні дату й час?</p></li>
+<li><p>Як вставити зображення в документ?</p></li>
+<li><p>Як вибрати положення рисунка відносно тексту?</p></li>
+<li><p>Як вставити в документ  зображення вікна відкритої програми?</p></li>
+<li><p>Як оформити заголовки спеціальними текстовими ефектами (об’єктами WordArt)?</p></li>
+<li><p>Як добавити колонтитули в документ?</p></li>
+<li><p>Як вставити в документ номера сторінок?</p></li>
+<li><p>Як вставити в документ символи, яких нема на клавіатурі? Як призначити їм комбінацію клавіш?</p></li>
+<li><p>Як вставити в документ текстове поле?</p></li>
+<li><p>Як вставити в документ повністю вмістиме іншого файла?</p></li>
+<li><p>Як зробити слово гіперпосиланням?</p></li>
+<li><p>Як до фрагменту тексту добавити примітку?</p></li>
+<li><p>Як продивитись примітки?</p></li>
+<li><p>Як вставити виноску?</p></li>
+<li><p>Як створити нумерований список?</p></li>
+<li><p>Як сформувати зміст документа/оновити зміст документа?</p></li>
+<li><p>Як створити маркований список?</p></li>
+<li><p>Як підібрати відповідний маркер?</p></li>
+<li><p>Як змінити  тип списку?</p></li>
+<li><p>Як створити багаторівневий список “Розклад”?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id26">
+<h2><span class="section-number">2.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>Microsoft Word</strong> (настільна або веб‑версія);</p></li>
+<li><p>у <strong>Google Docs</strong>;</p></li>
+<li><p>у <strong>третьому редакторі на вибір</strong>: LibreOffice Writer / Pages / WPS / OnlyOffice.</p></li>
+</ol>
+<p><strong>Подання в Classroom:</strong> завантажте <strong>три PDF‑файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">текстового</span> <span class="pre">редактору&gt;_&lt;група&gt;_&lt;ім'я</span> <span class="pre">та</span> <span class="pre">прізвище&gt;.pdf</span></code></p>
+<p><strong>Приклади:</strong>
+<code class="docutils literal notranslate"><span class="pre">Word_144_Алукі</span> <span class="pre">Анастасія.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">GoogleDocs_143_Петренко</span> <span class="pre">Іван.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">LibreOffice_141_Петренко</span> <span class="pre">Іван.pdf</span></code></p>
+<div class="note admonition">
+<p class="admonition-title"><strong>Коментар щодо недоступних опцій:</strong></p>
+<p>якщо певної опції немає у вашому редакторі, у звіті коротко вкажіть це і опишіть обраний еквівалент дії (скрін за можливості)..</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>ЛАБОРАТОРНА РОБОТА №1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>ЛАБОРАТОРНА РОБОТА №3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-word-2013">2.2.1. <strong>1. Створення списків (Microsoft Word 2013)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1.1. 1.1. <strong>Марковані списки</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.2. 1.2. <strong>Нумеровані списки</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. 1.3. <strong>Багаторівневі списки</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.2. <strong>2. Додавання графічних елементів (Microsoft Word 2013)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2.1. 2.1. <strong>Вставка зображення</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.2.2. 2.2. <strong>Вставка знімків екрану</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#word-art">2.2.2.3. 2.3. <strong>Додавання об’єктів Word Art</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.2.4. 2.4. <strong>Вставка фігур</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.3. 3. <strong>Інші вставки</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.3.1. <strong>3.1 Вставка колонтитулів</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.3.2. <strong>3.2. Вставка номерів сторінок</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.3.3. <strong>3.3. Вставка символів</strong>,</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.4. <strong>4. Текстові вставки</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.4.1. <strong>4.1. Вставка текстових полів</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.4.2. <strong>4.2. Вставка текстових файлів у поточний документ</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.5. <strong>5. Вставка гіперпосилань</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.6. <strong>6. Примітки, виноски</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.6.1. <strong>6.1 Вставка приміток</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.6.2. <strong>6.2. Створення виносок</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.7. <strong>7. Оформлення досліджень</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.7.1. <strong>7.1. Оформлення рефератів.</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.7.2. <strong>7.2. Вставка змісту</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

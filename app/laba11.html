@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11. ЛАБОРАТОРНА РОБОТА №11 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba11';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="12. ЛАБОРАТОРНА РОБОТА №12" href="laba12.html" />
+    <link rel="prev" title="10. ЛАБОРАТОРНА РОБОТА №10" href="laba10.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba11.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba11.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba11.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba11.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №11</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.1.1. <strong>Основні поняття візуалізації текстових даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">11.1.2. <strong>Хмара слів: сутність, переваги та обмеження</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">11.1.3. <strong>Інструменти для створення хмар слів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">11.1.4. <strong>Ментальні карти: основні поняття</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">11.1.5. <strong>Інструменти для створення ментальних карт</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">11.1.6. <strong>Використання хмар слів та ментальних карт у лінгвістиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">11.1.7. <strong>Візуалізація текстів та когнітивні процеси</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">11.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">11.3. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o11">
+<h1><span class="section-number">11. </span>ЛАБОРАТОРНА РОБОТА №11<a class="headerlink" href="#o11" title="Link to this heading">#</a></h1>
+<p><strong>Хмари слів та Ментальні карти</strong></p>
+<p><strong>План</strong></p>
+<ol class="arabic simple">
+<li><p>Основні поняття візуалізації текстових даних</p></li>
+<li><p>Хмара слів: сутність, переваги та обмеження</p></li>
+<li><p>Інструменти для створення хмар слів</p></li>
+<li><p>Ментальні карти: основні поняття</p></li>
+<li><p>Інструменти для створення ментальних карт</p></li>
+<li><p>Використання хмар слів та ментальних карт у лінгвістиці</p></li>
+<li><p>Візуалізація текстів та когнітивні процеси</p></li>
+</ol>
+<section id="id1">
+<h2><span class="section-number">11.1. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">11.1.1. </span><strong>Основні поняття візуалізації текстових даних</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Зі зростанням обсягів текстової інформації (книги, статті, пости в соцмережах, новини, наукові публікації) виникає потреба не лише читати тексти «рядок за рядком», але й <strong>швидко бачити структуру, домінантні теми та ключові слова</strong>. Одним із напрямів сучасних інформаційних технологій є <strong>візуалізація текстів</strong>.</p>
+<p><em><strong>Візуалізація даних</strong></em> – це представлення інформації у вигляді графіків, схем, карт, діаграм, що полегшує сприйняття, аналіз та інтерпретацію даних. Для текстів особливо важливі дві форми візуалізації:</p>
+<ul class="simple">
+<li><p><em><strong>Хмара слів</strong></em> (<em>word cloud, tag cloud</em>);</p></li>
+<li><p><em><strong>Ментальна карта</strong></em> (<em>mind map, concept map</em>).</p></li>
+</ul>
+<p>Ці інструменти не замінюють повноцінний аналіз, але дозволяють:</p>
+<ul class="simple">
+<li><p>швидко побачити <strong>ключові терміни</strong>;</p></li>
+<li><p>виокремити <strong>тематику тексту</strong>;</p></li>
+<li><p>структурувати поняття та зв’язки між ними;</p></li>
+<li><p>підготувати <strong>наочні матеріали</strong> для презентацій, уроків, доповідей.</p></li>
+</ul>
+<p>У комп’ютерній лінгвістиці та прикладній лінгвістиці візуалізація текстових даних використовується:</p>
+<ul class="simple">
+<li><p>при створенні <strong>частотних словників</strong>;</p></li>
+<li><p>для аналізу <strong>корпусів текстів</strong>;</p></li>
+<li><p>у <strong>дискурсивному аналізі</strong>;</p></li>
+<li><p>для дослідження <strong>лексичних полів, термінології, стилістики</strong>.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><span class="section-number">11.1.2. </span><strong>Хмара слів: сутність, переваги та обмеження</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><em><strong>Хмара слів</strong></em> – це візуальне представлення слів із тексту, де <strong>розмір слова</strong> пропорційний <strong>частоті його появи</strong> або іншому числовому показнику (важливість, вага тощо).</p>
+<p>Основні характеристики хмари слів:</p>
+<ul class="simple">
+<li><p>слова розташовуються у довільному або спеціальному (фігурному) порядку;</p></li>
+<li><p>частотні слова мають <strong>більший шрифт</strong>;</p></li>
+<li><p>можна налаштовувати <strong>кольори, шрифт, форму хмари</strong>;</p></li>
+<li><p>часто застосовується <strong>фільтрація стоп-слів</strong> (<em>і, та, але, що, the, and</em> тощо).</p></li>
+</ul>
+<p>Переваги хмар слів:</p>
+<ul class="simple">
+<li><p>швидке виявлення <strong>основних тем</strong> тексту;</p></li>
+<li><p>наочне представлення <strong>лексичного складу</strong>;</p></li>
+<li><p>привабливість для презентацій, плакатів, постерів;</p></li>
+<li><p>простота створення навіть без програмування.</p></li>
+</ul>
+<p>Обмеження:</p>
+<ul class="simple">
+<li><p>не показує <strong>порядок слів</strong> і контекст;</p></li>
+<li><p>не розрізняє <strong>частини мови</strong> (за замовчуванням);</p></li>
+<li><p>омонімія та полісемія не враховуються;</p></li>
+<li><p>може переоцінювати окремі частини тексту (наприклад, заголовки чи списки).</p></li>
+</ul>
+<p>Тому хмара слів – це <strong>оглядовий інструмент</strong>, який має сенс доповнювати більш детальним аналізом (частотні таблиці, контекстні приклади, граматичний розбір).</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">11.1.3. </span><strong>Інструменти для створення хмар слів</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Для створення хмар слів існує багато онлайн-сервісів і програм. Найпоширеніші:</p>
+<ul class="simple">
+<li><p><strong>WordArt</strong> – зручний сервіс, що дозволяє задавати <strong>форму</strong> хмари (серце, коло, силует, текст, фігури), налаштовувати кольори та шрифти.</p></li>
+<li><p><strong>WordClouds.com</strong> – онлайн-генератор, що вміє:</p>
+<ul>
+<li><p>імпортувати текст із файлу (.txt, .docx, .pdf);</p></li>
+<li><p>автоматично визначати мову;</p></li>
+<li><p>видаляти стоп-слова;</p></li>
+<li><p>змінювати форму та колірну схему.</p></li>
+</ul>
+</li>
+<li><p><strong>Voyant Tools (Word Cloud)</strong> – інструмент для корпусного аналізу текстів, який, крім хмари слів, дає:</p>
+<ul>
+<li><p>частотні списки;</p></li>
+<li><p>графіки частот;</p></li>
+<li><p>контекстні приклади.</p></li>
+</ul>
+</li>
+</ul>
+<p>Для користувачів, знайомих із програмуванням, є бібліотеки:</p>
+<ul class="simple">
+<li><p>у <strong>Python</strong> – пакет <code class="docutils literal notranslate"><span class="pre">wordcloud</span></code> (у поєднанні з <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>);</p></li>
+<li><p>у <strong>R</strong> – пакети <code class="docutils literal notranslate"><span class="pre">wordcloud</span></code> і <code class="docutils literal notranslate"><span class="pre">ggwordcloud</span></code>.</p></li>
+</ul>
+<p>Загальна схема роботи:</p>
+<ol class="arabic simple">
+<li><p>Підбір або підготовка тексту (очищення, кодування).</p></li>
+<li><p>Завантаження тексту в сервіс.</p></li>
+<li><p>Налаштування зовнішнього вигляду (мова, стоп-слова, кольори, форма).</p></li>
+<li><p>Збереження хмари у форматі <strong>PNG, JPG, SVG</strong>.</p></li>
+<li><p>Вставка зображення у звіт, презентацію, сайт.</p></li>
+</ol>
+<p>При роботі зі стоп-словами важливо враховувати <strong>мову тексту</strong>: для української та англійської застосовуються різні списки службових слів.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">11.1.4. </span><strong>Ментальні карти: основні поняття</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><em><strong>Ментальна карта</strong></em> (<em>mind map</em>) – це графічне представлення інформації у вигляді <strong>схеми</strong>, де від центральної ідеї розходяться <strong>гілки</strong> з ключовими поняттями, підтемами та деталями.</p>
+<p>Основні елементи ментальної карти:</p>
+<ul class="simple">
+<li><p><strong>Центральний вузол</strong> – слово, поняття або коротка фраза, яка позначає основну тему.</p></li>
+<li><p><strong>Основні гілки</strong> – великі блоки інформації (підтематики, аспекти теми).</p></li>
+<li><p><strong>Підгілки</strong> – деталізація (приклади, терміни, факти, визначення).</p></li>
+<li><p><strong>Зв’язки</strong> – лінії, стрілки, що показують відношення між поняттями.</p></li>
+</ul>
+<p>Ментальні карти:</p>
+<ul class="simple">
+<li><p>допомагають структурувати інформацію;</p></li>
+<li><p>дозволяють підготувати <strong>план виступу, статті, розділу дипломної роботи</strong>;</p></li>
+<li><p>відображають <strong>логіку теми</strong> краще, ніж лінійний список;</p></li>
+<li><p>активізують <strong>візуальне, асоціативне та просторове мислення</strong>.</p></li>
+</ul>
+<p>У лінгвістиці ментальні карти використовують:</p>
+<ul class="simple">
+<li><p>для вивчення <strong>лексичних полів</strong>;</p></li>
+<li><p>для представлення <strong>словотвірних гнізд</strong>;</p></li>
+<li><p>для візуалізації <strong>граматичних категорій</strong>;</p></li>
+<li><p>для опису <strong>структури мови</strong> (фонетика, морфологія, синтаксис, прагматика).</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><span class="section-number">11.1.5. </span><strong>Інструменти для створення ментальних карт</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Сьогодні існує багато онлайн-платформ для побудови ментальних карт і концептуальних схем:</p>
+<ul class="simple">
+<li><p><strong>Miro</strong> – онлайн-дошка для спільної роботи; підтримує ментальні карти, діаграми, стікери.</p></li>
+<li><p><strong>Canva</strong> – сервіс для дизайну; має шаблони <em>Mind Map</em>, дозволяє створювати привабливі схеми з піктограмами та кольоровим кодуванням.</p></li>
+<li><p><strong>MindMeister</strong> – спеціалізований інструмент для ментальних карт; підтримує спільне редагування та експорт у PDF, PNG.</p></li>
+<li><p><strong>MindMup</strong> – простий онлайн-сервіс з експортом карти у вигляді зображення чи документу.</p></li>
+</ul>
+<p>Принцип роботи схожий на ручне малювання схем, але:</p>
+<ul class="simple">
+<li><p>можна легко переміщувати вузли;</p></li>
+<li><p>змінювати кольори та шрифти;</p></li>
+<li><p>використовувати піктограми й емодзі;</p></li>
+<li><p>експортувати результат у потрібному форматі.</p></li>
+</ul>
+<p>Структура карти має бути <strong>читабельною</strong>:</p>
+<ul class="simple">
+<li><p>не перевантажуйте центральний вузол;</p></li>
+<li><p>розміщуйте основні гілки симетрично;</p></li>
+<li><p>використовуйте <strong>кольори для групування</strong> споріднених понять;</p></li>
+<li><p>уникайте речень – краще використовувати <strong>ключові слова</strong> й короткі словосполучення.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3><span class="section-number">11.1.6. </span><strong>Використання хмар слів та ментальних карт у лінгвістиці</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>У лінгвістиці та прикладній лінгвістиці хмари слів та ментальні карти застосовують для:</p>
+<ul class="simple">
+<li><p>аналізу <strong>стилю автора</strong> (які слова переважають у його текстах);</p></li>
+<li><p>порівняння <strong>лексики різних жанрів</strong> (науковий текст, газетна стаття, розмовна мова);</p></li>
+<li><p>дослідження <strong>частотності термінів</strong> у певній галузі (комп’ютерна лінгвістика, соціолінгвістика);</p></li>
+<li><p>побудови <strong>класифікацій мовних явищ</strong> (частини мови, види підрядних речень, типи перекладацьких трансформацій);</p></li>
+<li><p>візуалізації <strong>результатів корпусного аналізу</strong>;</p></li>
+<li><p>підготовки <strong>дидактичних матеріалів</strong> для уроків, лекцій, семінарів.</p></li>
+</ul>
+<p>Наприклад:</p>
+<ul class="simple">
+<li><p>хмара слів для роману чи повісті може показати <strong>ключові образи й мотиви</strong>;</p></li>
+<li><p>ментальна карта «Частини мови в українській / англійській» – структуру <strong>морфологічних категорій</strong>.</p></li>
+</ul>
+<p>Поєднання двох інструментів в одній роботі має особливу цінність:</p>
+<ul class="simple">
+<li><p>хмара слів дає <strong>«загальне враження»</strong> про текст;</p></li>
+<li><p>ментальна карта показує <strong>структуру і зв’язки</strong> між поняттями.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3><span class="section-number">11.1.7. </span><strong>Візуалізація текстів та когнітивні процеси</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Людський мозок краще запам’ятовує:</p>
+<ul class="simple">
+<li><p><strong>образи</strong>,</p></li>
+<li><p><strong>схеми</strong>,</p></li>
+<li><p><strong>кольорові акценти</strong>,
+ніж довгі «стіни тексту».</p></li>
+</ul>
+<p>Ментальні карти й хмари слів:</p>
+<ul class="simple">
+<li><p>активізують <strong>праву півкулю</strong>, відповідальну за образне мислення;</p></li>
+<li><p>допомагають формувати <strong>асоціативні зв’язки</strong>;</p></li>
+<li><p>полегшують <strong>повторення та узагальнення матеріалу</strong>;</p></li>
+<li><p>можуть бути опорою для <strong>усних відповідей, презентацій, конспектів</strong>.</p></li>
+</ul>
+<p>У контексті <strong>лінгвістики</strong> це особливо важливо, оскільки:</p>
+<ul class="simple">
+<li><p>мовні явища часто мають <strong>ієрархічну структуру</strong>;</p></li>
+<li><p>існує багато <strong>термінів</strong>, які легше засвоювати в системі, а не окремо;</p></li>
+<li><p>візуалізація допомагає <strong>бачити мову як систему</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">11.2. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Обрати <strong>текст українською або англійською мовою</strong> (150–300 слів) на мовознавчу або гуманітарну тематику (наприклад, стаття про комп’ютерну лінгвістику, опис мовної сім’ї, біографія мовознавця).</p></li>
+<li><p>Скопіювати текст у текстовий редактор, <strong>очистити його</strong> від зайвих символів, подвійних пробілів, фрагментів коду тощо.</p></li>
+<li><p>Завантажити текст у сервіс <strong>WordArt або WordClouds.com</strong>.</p></li>
+<li><p>Побудувати <strong>хмару слів</strong>:</p>
+<ul class="simple">
+<li><p>задати мову тексту (якщо є така опція);</p></li>
+<li><p>ввімкнути або налаштувати фільтрацію <strong>стоп-слів</strong>;</p></li>
+<li><p>обрати <strong>форму, шрифт, кольори</strong>.</p></li>
+</ul>
+</li>
+<li><p>Зберегти отриману хмару слів як зображення (<strong>PNG або JPG</strong>).</p></li>
+<li><p>Побудувати другу хмару слів за <strong>іншим текстом</strong> (наприклад, порівняти два різні жанри: науковий текст та художній уривок).</p></li>
+<li><p>Порівняти дві хмари слів:</p>
+<ul class="simple">
+<li><p>які слова є домінантними у першому тексті;</p></li>
+<li><p>які – у другому;</p></li>
+<li><p>що це говорить про <strong>стиль і тематику</strong>.</p></li>
+</ul>
+</li>
+<li><p>Обрати <strong>лінгвістичну тему</strong> для ментальної карти (наприклад: «Частини мови англійської/української», «Види перекладу», «Мовні сім’ї Європи», «Мовні контакти та запозичення»).</p></li>
+<li><p>У сервісі <strong>Miro / Canva / MindMeister / MindMup</strong> створити <strong>ментальну карту</strong>, де:</p>
+<ul class="simple">
+<li><p>у центрі – основне поняття;</p></li>
+<li><p>4–6 основних гілок – великі підтематики;</p></li>
+<li><p>на підгілках – приклади, терміни, визначення.</p></li>
+</ul>
+</li>
+<li><p>Оформити карту (кольори, шрифти, піктограми), забезпечивши <strong>чіткість і читабельність</strong>.</p></li>
+<li><p>Зберегти ментальну карту як зображення (<strong>PNG, JPG</strong>) або експортувати у PDF.</p></li>
+<li><p>Створити невелику <strong>веб-сторінку</strong> (на Tilda, Google Sites, Notion або іншій платформі), де розмістити:</p>
+<ul class="simple">
+<li><p>короткий опис обраного тексту чи теми;</p></li>
+<li><p>одну хмару слів;</p></li>
+<li><p>ментальну карту;</p></li>
+<li><p>короткий коментар (2–3 абзаци) щодо отриманих результатів.</p></li>
+</ul>
+</li>
+<li><p>Згенерувати <strong>QR-код</strong> до веб-сторінки з результатами, зберегти його як зображення.</p></li>
+<li><p>Додати QR-код до звіту (з підписом).</p></li>
+<li><p>Виконати аналіз:</p>
+<ul class="simple">
+<li><p>які слова виявилися <strong>неочікувано частотними</strong>;</p></li>
+<li><p>чи відображає ментальна карта <strong>логічну структуру</strong> теми;</p></li>
+<li><p>як хмара слів і карта <strong>доповнюють одна одну</strong>.</p></li>
+</ul>
+</li>
+<li><p>Для одного з текстів (з хмари слів) скласти <strong>список 10 найчастотніших слів</strong> (можна використати статистику сервісу чи власний підрахунок).</p></li>
+<li><p>Класифікувати ці 10 слів за <strong>частинами мови</strong> (іменник, дієслово, прикметник тощо).</p></li>
+<li><p>Зробити висновок, які частини мови домінують у тексті і чому.</p></li>
+<li><p>За бажанням: побудувати <strong>другу ментальну карту</strong> – план власної доповіді або презентації за цією темою.</p></li>
+<li><p>Підготувати <strong>1–2 абзаци висновків</strong>: як використання хмар слів та ментальних карт може допомогти у навчанні іноземних мов, перекладі, лінгвістичних дослідженнях.</p></li>
+</ol>
+<p><em><strong>Контрольні питання</strong></em></p>
+<ol class="arabic simple">
+<li><p>Що таке візуалізація даних? Які види візуалізації текстової інформації ви знаєте?</p></li>
+<li><p>Дайте визначення <strong>хмари слів</strong>. У чому її основний принцип?</p></li>
+<li><p>Які переваги та недоліки має використання хмар слів у лінгвістичних дослідженнях?</p></li>
+<li><p>Чому важливо враховувати <strong>стоп-слова</strong> при побудові хмар слів? Наведіть приклади стоп-слів для української та англійської мов.</p></li>
+<li><p>Які онлайн-інструменти для створення хмар слів ви знаєте?</p></li>
+<li><p>Що таке ментальна карта? Чим вона відрізняється від звичайного конспекту?</p></li>
+<li><p>Яка структура ментальної карти (центральний вузол, гілки, підгілки)?</p></li>
+<li><p>Назвіть інструменти для створення ментальних карт.</p></li>
+<li><p>Як ментальні карти можуть бути використані в лінгвістиці (навчання, дослідження, переклад)?</p></li>
+<li><p>Чому вважають, що ментальні карти підтримують <strong>асоціативне та візуальне мислення</strong>?</p></li>
+<li><p>Чим доповнюють одна одну хмара слів і ментальна карта?</p></li>
+<li><p>Які обмеження має хмара слів як інструмент аналізу тексту?</p></li>
+<li><p>Як можна інтерпретувати домінантні слова у хмарі слів?</p></li>
+<li><p>Наведіть приклади лінгвістичних тем, які зручно подавати у вигляді ментальної карти.</p></li>
+<li><p>Що таке QR-код? Як його можна використати у навчальному процесі?</p></li>
+<li><p>Які етапи потрібно виконати, щоб створити та вставити QR-код у звіт?</p></li>
+<li><p>Чому важливо зазначати джерело тексту для хмари слів і теми для ментальної карти?</p></li>
+<li><p>Які вимоги до якості зображень при вставці їх у звіт (.docx / .pdf)?</p></li>
+<li><p>Які приклади використання хмар слів ви можете навести з власного досвіду (уроки, сайти, презентації)?</p></li>
+<li><p>Як ви вважаєте, чи можуть хмари слів і ментальні карти замінити традиційні текстові конспекти? Чому?</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2><span class="section-number">11.3. </span><strong>Вимоги до виконання і подання</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Виконати <strong>практичні завдання 1–20</strong>.</p>
+<ul class="simple">
+<li><p>Для основних етапів (створення хмар слів, ментальних карт, QR-коду, веб-сторінки) зробити <strong>скріншоти</strong> або вставити готові зображення.</p></li>
+</ul>
+</li>
+<li><p>Дати відповіді на <strong>контрольні питання</strong> у кінці роботи.</p></li>
+<li><p>Оформити все у вигляді <strong>одного документа (.docx або .pdf)</strong>, який містить:</p>
+<ul class="simple">
+<li><p>титульну сторінку (тема, ПІБ, група);</p></li>
+<li><p>короткий опис обраного тексту / теми;</p></li>
+<li><p>зображення хмар слів (з підписами та коротким аналізом);</p></li>
+<li><p>зображення ментальної карти (з поясненням структури);</p></li>
+<li><p>зображення QR-коду (за наявності) з підписом;</p></li>
+<li><p>результати практичних завдань (коментарі, таблиці за потреби);</p></li>
+<li><p>відповіді на контрольні питання;</p></li>
+<li><p>висновки.</p></li>
+</ul>
+</li>
+<li><p>Подати звіт у <strong>Google Classroom</strong> до встановленого дедлайну.</p></li>
+<li><p><strong>Схема імені файлу:</strong>
+<code class="docutils literal notranslate"><span class="pre">&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР11.pdf</span></code></p>
+<p><em>Приклад: <code class="docutils literal notranslate"><span class="pre">143_ПетренкоІван_ЛР11.pdf</span></code></em></p>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba10.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>ЛАБОРАТОРНА РОБОТА №10</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba12.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>ЛАБОРАТОРНА РОБОТА №12</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.1.1. <strong>Основні поняття візуалізації текстових даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">11.1.2. <strong>Хмара слів: сутність, переваги та обмеження</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">11.1.3. <strong>Інструменти для створення хмар слів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">11.1.4. <strong>Ментальні карти: основні поняття</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">11.1.5. <strong>Інструменти для створення ментальних карт</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">11.1.6. <strong>Використання хмар слів та ментальних карт у лінгвістиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">11.1.7. <strong>Візуалізація текстів та когнітивні процеси</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">11.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">11.3. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

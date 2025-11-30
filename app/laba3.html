@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. ЛАБОРАТОРНА РОБОТА №3 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba3';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="4. ЛАБОРАТОРНА РОБОТА №4" href="laba4.html" />
+    <link rel="prev" title="2. ЛАБОРАТОРНА РОБОТА №2" href="laba2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba3.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba3.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.1. <strong>1. Створення таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.2. <strong>2. Додавання та вилучення рядків і стовпців</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.3. <strong>3. Зміна ширини стовпців і висоти рядків</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.4. <strong>4. Рисування таблиць</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.5. <strong>5. Межі та заливка таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.6. <strong>6. Введення даних у таблицю</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.7. <strong>7. Сортування даних у таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.2.8. <strong>8. Вставка діаграм в текст документу.</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o3">
+<h1><span class="section-number">3. </span>ЛАБОРАТОРНА РОБОТА №3<a class="headerlink" href="#o3" title="Link to this heading">#</a></h1>
+<p><strong>Робота з таблицями</strong></p>
+<section id="id1">
+<h2><span class="section-number">3.1. </span><strong>План</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Створення таблиці</p></li>
+<li><p>Добавлення та вилучення рядків та стовпців</p></li>
+<li><p>Зміна ширину стовпців та висоти рядків</p></li>
+<li><p>Рисування таблиці</p></li>
+<li><p>Зміна меж та заливка таблиці</p></li>
+<li><p>Введення даних у таблицю</p></li>
+<li><p>Сортування даних у таблиці</p></li>
+<li><p>Вставка діаграм в документ</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Таблицю в документі можна створити двома способами: вказати потрібну кількість рядків і стовпців або нарисувавши таблицю спеціальними інструментами. Найшвидший такий спосіб: основа таблиці створюється заданням необхідної кількості рядків і стовпців, а додаткові комірки при необхідності домальовуються (або витираються).</p>
+<section id="id3">
+<h3><span class="section-number">3.2.1. </span><strong>1. Створення таблиці</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>В якості прикладу створимо таблицю із 4-х стовпців і 5-ти рядків. Для цього необхідно:</p>
+<ol class="arabic simple">
+<li><p>Перейти на вкладку стрічки <strong>Вставлення</strong>.</p></li>
+<li><p>Натиснути кнопку <strong>Таблиця</strong>. З’явиться меню кнопки (рис. 1). У верхній частині меню цієї кнопки розташовано багато квадратиків, які схематично представляють комірки таблиці.</p></li>
+</ol>
+<figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSGMs_O7dopZzMraF31_RZcB7tgqxWcSVQec25LfmvbLrdI-2cxoBelDAblML8WJokXFVME00KJHonk/pub?w=960&amp;h=720"><img alt="" src="https://docs.google.com/drawings/d/e/2PACX-1vSGMs_O7dopZzMraF31_RZcB7tgqxWcSVQec25LfmvbLrdI-2cxoBelDAblML8WJokXFVME00KJHonk/pub?w=960&amp;h=720" style="width: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.1 </span><span class="caption-text">Рис. 1. Меню кнопки <strong>Таблиця</strong></span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>В цьому меню встановити вказівник миші на п’ятий квадрат у четвертому стовпці.</p></li>
+<li><p>Переконатися, що у верхній частині меню відобразилося повідомлення <strong>Таблиця 4х5</strong> і клацнути мишею. В документ буде вставлено таблицю, яка міститиме п’ять рядків і чотири стовпці.</p></li>
+</ol>
+<p>За замовчуванням таблиця розташовується від поля до поля сторінки документу і має стовпці рівної ширини. При створенні таблиці на стрічці з’явилися дві додаткові вкладки <strong>Конструктор</strong> і <strong>Макет</strong>.<br />
+Вкладка <strong>Конструктор</strong> містить інструменти для зміни дизайну оформлення таблиці, а на вкладці <strong>Макет</strong> розташовані інструменти для зміни параметрів таблиці.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">3.2.2. </span><strong>2. Додавання та вилучення рядків і стовпців</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Кількість рядків і стовпців у таблиці може змінюватися. Добавимо в таблицю один стовпчик і вилучимо один рядок. Для цього треба виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Переконатися, що текстовий курсор знаходиться в одній із комірок таблиці (інакше вкладки <strong>Конструктор</strong> і <strong>Макет</strong> будуть відсутні на стрічці).</p></li>
+<li><p>Перейти на вкладку <strong>Макет</strong>.</p></li>
+<li><p>На вкладці <strong>Макет</strong> натиснути кнопку <strong>Вставити зліва</strong>. В таблицю буде добавлено новий стовпець, який розташується зліва від стовпця, в комірці якого був установлений текстовий курсор.</p></li>
+</ol>
+<p>Зауважимо, що аналогічно можна добавити рядок над чи під тим з них, в якому знаходиться текстовий курсор за допомогою кнопок <strong>Вставити вище</strong> чи <strong>Вставити нижче</strong> в групі <strong>Рядки і стовпці</strong> на вкладці <strong>Макет</strong>.<br />
+Вилучення рядка (наприклад, 2-го), здійснюється в такий спосіб:</p>
+<ol class="arabic simple">
+<li><p>Установити текстовий курсор в одну з комірок у другому рядку, клацнути мишею.</p></li>
+<li><p>Натиснути кнопку <strong>Видалити</strong> на вкладці <strong>Макет</strong>. З’явиться меню кнопки.</p></li>
+<li><p>Із меню вибрати команду <strong>Видалити рядки</strong>.</p></li>
+</ol>
+<p>Аналогічно можна вилучити стовпець, вибравши команду <strong>Видатити стовпці</strong> в меню кнопки <strong>Видалити</strong>.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">3.2.3. </span><strong>3. Зміна ширини стовпців і висоти рядків</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Висота рядків установлюється автоматично в залежності від розміру шрифта тексту в комірках і кількості рядків у комірках. Але стовпці мають фіксовану ширину. Налаштування ширини можна виконати двома способами. Перший спосіб полягає в наступному:</p>
+<ol class="arabic simple">
+<li><p>Встановити курсор миші на праву границю будь-якої із комірок даного стовпця так, щоб він набув форми двонапрямленої стрілки.</p></li>
+<li><p>Натиснувши та утримуючи кнопку миші, перемістити його вправо (вліво). Із вказівником буде переміщатися і межа стовпця. Відпустити кнопку миші, коли доб’ємося бажаної ширини стовпця.</p></li>
+</ol>
+<p>Зауважимо, що загальна ширина таблиці залишилася незмінною. Зменшення ширини одного стовпця (наприклад, першого) компенсовано збільшенням ширини іншого стовпця (2-го).<br />
+Згідно з другим способом ширину стовпця задаємо точно в сантиметрах або процентах від загальної ширини таблиці. Для цього:</p>
+<ol class="arabic simple">
+<li><p>Клацнути правою клавішею миші по довільній комірці в стовпці. З’явиться контекстне меню.</p></li>
+<li><p>Вибрати команду <strong>Властивості таблиці</strong>.</p></li>
+<li><p>Перейти на вкладку <strong>Стовпчик</strong> у діалоговому вікні <strong>Властивості таблиці</strong>.</p></li>
+<li><p>У полі <strong>Ширина</strong> на вкладці <strong>Стовпчик</strong> ввести потрібну ширину стовпця (за замовчуванням у см).</p></li>
+<li><p>Натиснути кнопку <strong>ОК</strong>. Ширина стовпця зміниться до вказаного розміру.</p></li>
+</ol>
+<p>За замовчуванням висота рядків динамічно змінюється в залежності від кількості рядків у комірці і розміру шрифта тексту. Проте при необхідності ми можемо задати фіксовану висоту рядків. Це виконується на вкладці <strong>Рядок</strong> діалогового вікна <strong>Властивості таблиці</strong>. Щоб відключити режим автоматичного регулювання висоти рядків, потрібно встановити прапорець <strong>Висота</strong>, а потім у полі справа вказати потрібну висоту рядка. Зміни застосовуються до рядка, в якому в момент виклику діалогового вікна <strong>Властивості таблиці</strong> знаходився курсор.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">3.2.4. </span><strong>4. Рисування таблиць</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Не зважаючи на те, що будь-які операції з таблицями можна виконати за допомогою кнопок на стрічці, в Word передбачена можливість рисування таблиць (переробки вже створених таблиць).<br />
+Розглянемо приклад створення додаткової комірки.</p>
+<ol class="arabic simple">
+<li><p>На вкладці <strong>Макет</strong> стрічки натиснути кнопку <strong>Намалювати таблицю</strong>. Вказівник миші прийме форму олівця.</p></li>
+<li><p>Встановити вказівник миші, наприклад, посередині верхньої межі другої комірки в першому рядку.</p></li>
+<li><p>Натиснувши та утримуючи кнопку миші, перемістити вказівник до нижньої межі цієї ж комірки, після чого відпустити кнопку миші. Друга комірка в першому рядку буде розбита на дві комірки.</p></li>
+</ol>
+<p>Тепер витремо межу між першою і другою комірками в першому стовпці.</p>
+<ol class="arabic simple">
+<li><p>На вкладці <strong>Макет</strong> стрічки натиснути кнопку <strong>Ластик</strong>.</p></li>
+<li><p>Встановити вказівник миші на лівий нижній кут першої комірки в першому стовпці.</p></li>
+<li><p>Натиснувши та утримуючи кнопку миші, перемістити вказівник вправо до правого нижнього кута тієї ж комірки, після чого відпустити кнопку миші. Межа між першою і другою комірками першого стовпця буде витерта, в результаті чого ці комірки об’єднаються в одну.</p></li>
+</ol>
+<p>В такий спосіб, об’єднуючи і розділяючи комірки, можна створювати таблицю будь-якої складності.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">3.2.5. </span><strong>5. Межі та заливка таблиці</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>За замовчуванням у документі створюється таблиця, яка має тонкі межі, які розділяють комірки, рядки і стовпці. Проте іноді для надання таблиці закінченого вигляду потрібно змінити тип або колір меж рядка, стовпця чи окремої комірки. Нехай у комірках першого рядка таблиці наведені заголовки стовпців. У останніх рядках містяться дані, які потрібно візуально відділити від інших даних. Один із способів зробити це – змінити тип і (або) товщину межі, яка відділяє перший рядок від другого.</p>
+<ol class="arabic simple">
+<li><p>Перейти на вкладку <strong>Конструктор</strong> стрічки.</p></li>
+<li><p>Із списку <strong>Товщина пера</strong> вибрати пункт <strong>4,5 пт</strong>. Вказівник миші набуде вигляд пензля.</p></li>
+<li><p>Встановити вказівник миші на лівий край нижньої межі першого рядка таблиці.</p></li>
+<li><p>Натиснувши і утримуючи кнопку миші, провести вказівником по нижній межі до її правого краю, після чого відпустити кнопку миші. Товщина нижньої межі першого рядка буде збільшено до 4,5 пт (рис. 2).</p></li>
+</ol>
+<figure class="align-default" id="id15">
+<img alt="" src="https://docs.google.com/drawings/d/e/2PACX-1vRy931dyF0CcXMzijZt545eS41n14n2xVUu_GvfkC4W6YqdWrbUutdayakI3D47AtPb_6-8AWOKkbsL/pub?w=960&amp;h=720" />
+<figcaption>
+<p><span class="caption-number">Рис. 3.2 </span><span class="caption-text">Рис. 2. Товщину нижньої межі верхнього рядка змінено</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Аналогічно можна змінити тип лінії межі. Тип лінії вибирається із списку <strong>Стиль пера</strong>, який розташований в групі <strong>Межа</strong> на вкладці <strong>Конструктор</strong>. Колір лінії межі можна вибрати в меню кнопки <strong>Колір пера</strong>.<br />
+За замовчуванням всі комірки прозорі, тобто мають колір фону документа. Можна залити всі або деякі комірки кольором. Для цього потрібно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Встановити текстовий курсор у довільну комірку.</p></li>
+<li><p>Натиснути кнопку <strong>Заливка</strong> на вкладці <strong>Конструктор</strong>. З’явиться меню із зразками кольорів.</p></li>
+<li><p>Вибрати потрібний колір (наприклад, жовтий). Комірка буде залита жовтим кольором.</p></li>
+<li><p>Встановити курсор в іншу комірку.</p></li>
+<li><p>В меню кнопки <strong>Заливка</strong> вибрати інший колір, наприклад, червоний. Комірка буде залита вибраним кольором.</p></li>
+</ol>
+<p>Зауважимо, що на вкладці <strong>Конструктор</strong> міститься колекція <strong>Стилі таблиць</strong>, в якій зібрані готові стилі оформлення таблиць.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">3.2.6. </span><strong>6. Введення даних у таблицю</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Кожна комірка таблиці має властивість сторінки. При введенні даних у комірку текст автоматично переноситься на новий рядок комірки. Щоб ввести текст в іншу комірку, потрібно попередньо в неї встановити курсор. Це можна зробити двома способами:</p>
+<ul class="simple">
+<li><p>клацнути мишею по потрібній комірці;</p></li>
+<li><p>натиснути клавішу <strong>Tab</strong>. Текстовий курсор переходить в комірку справа від поточної. Якщо курсор знаходиться в комірці крайнього правого стовпця, він переходить у першу комірку наступного рядка. Якщо курсор знаходиться в правій комірці нижнього рядка, то при натискуванні клавіші <strong>Tab</strong> у таблиці створюється новий рядок, в першу комірку якого переміститься курсор.</p></li>
+</ul>
+<p>На рис. 3 наведений приклад таблиці.</p>
+<figure class="align-default" id="id16">
+<img alt="" src="https://docs.google.com/drawings/d/e/2PACX-1vQzMBGXjCk_G1C0tvpwR0Byug54WABjzt94-aT8zgEvdVQ3FbrdyiRaOi-Bly1leQmtSmhFaF3RS-ao/pub?w=960&amp;h=720" />
+<figcaption>
+<p><span class="caption-number">Рис. 3.3 </span><span class="caption-text">Рис. 3. Приклад заповнення таблиці</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Форматування тексту в комірках виконується так само, як форматування тексту в документі. Для цього можна використати будь-які інструменти, доступні на вкладці <strong>Головна</strong>. В той же час слід звернути увагу на інструменти, які розташовані в групі <strong>Вирівнювання</strong> на вкладці <strong>Макет</strong>. Текст у комірці може бути вирівняний не тільки по горизонталі, але й по вертикалі.<br />
+Кнопка <strong>Напрям тексту</strong> в групі <strong>Вирівнювання</strong> вкладки <strong>Макет</strong> дозволяє змінити напрямок тексту.<br />
+Кнопка <strong>Поля</strong> відкриває діалогове вікно для задання розмірів полів комірки.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">3.2.7. </span><strong>7. Сортування даних у таблиці</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Дані в таблиці можна сортувати за зростанням і за спаданням. Сортування може мати багаторівневий характер, при якому спочатку будуть сортуватися дані, вказані в першому стовпці, а потім додаткове сортування даних в другому стовпці (наприклад, Прізвище, Ім’я).<br />
+Для виконання сортування необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Установити текстовий курсор в будь-яку комірку таблиці.</p></li>
+<li><p>Натиснути кнопку <strong>Сортування</strong> в групі <strong>Дані</strong> вкладки <strong>Макет</strong>. З’явиться діалогове вікно <strong>Сортування</strong>. В цьому вікні задаються параметри сортування даних у таблиці. Сортування може містити до трьох рівнів.</p></li>
+<li><p>У списку <strong>Спочатку за</strong> вибрати заголовок стовпця, за яким буде виконуватися сортування.</p></li>
+<li><p>У списку <strong>Тип</strong> вибрати тип даних, які містяться в даному стовпці.</p></li>
+<li><p>Встановити перемикач <strong>За зростанням</strong> чи <strong>За спаданням</strong>.</p></li>
+<li><p>Для того, щоб заголовок стовпця не включався в сортування, потрібно перемикач <strong>Список</strong> встановити в положення <strong>Без заголовка</strong>.</p></li>
+<li><p>Якщо є багаторівневе сортування, то аналогічно заповнюємо ще два поля <strong>Потім за</strong>.</p></li>
+<li><p>Натискуємо <strong>ОК</strong>. Діалогове вікно закриється, а дані в таблиці будуть відсортовані.</p></li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">3.2.8. </span><strong>8. Вставка діаграм в текст документу.</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Указати курсором місце вставки і виконати команду <strong>Вставка ⇒ Зображення ⇒ Діаграма</strong>. Відкриється вікно таблиці на основі якої будується діаграма. Вводимо в таблицю свої дані, діаграма зразу ж перебудовується. Після внесення даних вікно таблиці можна закрити. Щоб повторно відкрити вікно з таблицею для редагування потрібно виділити діаграму і виконати команду <strong>Работа з діаграмами ⇒ Конструктор ⇒ Змінити Дані</strong>.</p>
+</section>
+</section>
+<section id="id11">
+<h2><span class="section-number">3.3. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Вставте таблицю 3×4. Команда <strong>Вставка ⇒ Таблиця</strong>.</p></li>
+<li><p>Добавте в таблицю ще один стовпчик. Курсор поставити в комірку таблиці. Команда <strong>Макет ⇒ Вставити зліва</strong>.</p></li>
+<li><p>Вилучити з таблиці один рядок. – Курсор поставити в коміку рядка. Команда <strong>Макет ⇒ Видалення ⇒ Видалити рядки</strong>.</p></li>
+<li><p>Змінити ширину стовпців. – Курсор поставити на праву межу будь-якої комірки стовпця і перетягнути її мишею, або команда <strong>Макет⇒</strong> <strong>Ширина стовпця</strong>.</p></li>
+<li><p>Виставити ширину стовпця у см. – Викликати контекстне меню комірки цього стовпця. Команда <strong>Властивості ⇒ Таблиця</strong>. У вікні, що з’явилось ввести потрібну ширину стовпця у см.</p></li>
+<li><p>Нарисувати нову нестандартну таблицю. – Команда <strong>Макет ⇒ Намалювати таблицю</strong>.</p></li>
+<li><p>Усунути межу між комірками. – Команда <strong>Макет ⇒ Ластик</strong>.</p></li>
+<li><p>Змінити товщину нижньої межі першого рядка. – Команда <strong>Конструктор ⇒ Товщина пера</strong>. Вибрати товщину і мишею протягнути по цій межі.</p></li>
+<li><p>Змінити тип та колір лінії межі. – Команда <strong>Конструктор⇒Стиль пера</strong> та <strong>Конструктор⇒Цвет пера</strong>.</p></li>
+<li><p>Залити вибрані комірки кольором. – Команда <strong>Конструктор⇒ Заливка</strong>.</p></li>
+<li><p>Вирівняти текст в комірці по вертикалі. – Команда <strong>Макет⇒ Вирівнювання</strong>.</p></li>
+<li><p>Створити таблицю з рис. 3.</p></li>
+<li><p>Відсортувати дані в таблиці. – Команда <strong>Макет⇒Дані⇒ Сортування</strong>.</p></li>
+<li><p>Підготувати таблицю, яка містить список навчальних дисциплін у вигляді:</p></li>
+</ol>
+<figure class="align-default" id="id17">
+<img alt="" src="https://docs.google.com/drawings/d/e/2PACX-1vRXFv3zFM5sJnYE7ADalJZ7gWS8Fy6k1gH52foBvEmLSoZF1kpmEbDlt_tUw7qDDZmoOJAtOPNs35pr/pub?w=960&amp;h=720" />
+<figcaption>
+<p><span class="caption-number">Рис. 3.4 </span><span class="caption-text">Рис. 4.</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="15">
+<li><p>Для цього створити таблицю: 7 стовпчиків, n рядків – команда   <strong>Вставка⇒ Таблиця</strong>.</p></li>
+<li><p>Об`єднати необхідні комірки для задання заголовків таблиці та стовпців. – Команда <strong>Макет ⇒ Об’єднання</strong>. Відокремити заголовок жирною лінією.</p></li>
+<li><p>Об’єднати відповідні комірки для другого рядка таблиці.</p></li>
+<li><p>Установити відповідну  ширину стовпчиків. Ввести текст та дані в таблицю. Задатити шрифт Times New Roman, кегль 12.</p></li>
+<li><p>Заголовок відцентрувати, виділити  жирним курсивом і задати розмір символів 14 пунктів.</p></li>
+<li><p>Зберегти файл, виконавши команду <strong>Файл ⇒ Зберегти як …</strong>.</p></li>
+<li><p>Ввести формули для розрахунку загального числа годин. – Для цього встановити курсор у відповідну комірку  і ввести формулу <strong>=SUM(Аbove)</strong>. Команда <strong>Макет ⇒ Формула</strong>.</p></li>
+<li><p>Скопіювати цю формулу  в іншу комірку. Для  цього користуються командами <strong>Головна ⇒ Копіювати</strong>, <strong>Головна ⇒ Вставити</strong>.</p></li>
+<li><p>Ввести нові значення даних у таблицю і виконати  повторно нові розрахунки. – Для цього в контекстному меню результуючої комірки з формулою обрати команду <strong>Оновити поле</strong>.</p></li>
+<li><p>Вставити порожні рядки в таблицю. – Команда <strong>Макет ⇒ Рядки і Стовпці</strong>.</p></li>
+<li><p>Змінити орієнтацію тексту в деякій комірці таблиці. – Команда <strong>⇒Макет ⇒ Вирівнювання</strong>.</p></li>
+<li><p>Затінити указані курсором комірки таблиці. Використайте команду <strong>Формат ⇒ Межі і заливка</strong>. Змініть колір рамок таблиці.</p></li>
+<li><p>Вставити назву таблиці. – Команда <strong>Посилання ⇒ Назви ⇒ Вставити назву</strong>.</p></li>
+<li><p>Сформувати документ, який містить текст і окрему сторінку з таблицею альбомної орієнтації.</p></li>
+<li><p>Створити діаграму успішності. – Команда <strong>Вставка ⇒ Діаграма</strong>. У вікні, що з’явилося, заповнити таблицю даними про успішність. Одночасно зміниться вигляд діаграми. Змінювати тип діаграми можна командами меню або контекстним меню. Закривши вікно, діаграма розміститься в документі за місцем текстового курсору.</p></li>
+<li><p>Здійснити над діаграмою операції масштабування, переміщення.</p></li>
+</ol>
+</section>
+<section id="id12">
+<h2><span class="section-number">3.4. </span><strong>Контрольні питання</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Як вставити таблицю?</p></li>
+<li><p>Як добавити в таблицю ще один стовпчик?</p></li>
+<li><p>Як вилучити з таблиці один рядок?</p></li>
+<li><p>Як змінити ширину стовпців?</p></li>
+<li><p>Як виставити ширину стовпця у см?</p></li>
+<li><p>Як нарисувати нову нестандартну таблицю?</p></li>
+<li><p>Як усунути межу між комірками?</p></li>
+<li><p>Як змінити товщину нижньої межі першого рядка?</p></li>
+<li><p>Як змінити тип та колір лінії межі?</p></li>
+<li><p>Як залити вибрані комірки кольором?</p></li>
+<li><p>Як вирівняти текст в комірці по вертикалі?</p></li>
+<li><p>Як відсортувати дані в таблиці?</p></li>
+<li><p>Як виконати простіші обчислення в таблиці?</p></li>
+<li><p>Як вставити діаграму?</p></li>
+<li><p>Як відредагувати діаграму?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2><span class="section-number">3.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>Microsoft Word</strong> (настільна або веб‑версія);</p></li>
+<li><p>у <strong>Google Docs</strong>;</p></li>
+<li><p>у <strong>третьому редакторі на вибір</strong>: LibreOffice Writer / Pages / WPS / OnlyOffice.</p></li>
+</ol>
+<p><strong>Подання в Classroom:</strong> завантажте <strong>три PDF‑файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">текстового</span> <span class="pre">редактору&gt;_&lt;група&gt;_&lt;ім'я</span> <span class="pre">та</span> <span class="pre">прізвище&gt;.pdf</span></code></p>
+<p><strong>Приклади:</strong>
+<code class="docutils literal notranslate"><span class="pre">Word_144_Алукі</span> <span class="pre">Анастасія.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">GoogleDocs_143_Петренко</span> <span class="pre">Іван.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">LibreOffice_141_Петренко</span> <span class="pre">Іван.pdf</span></code></p>
+<div class="note admonition">
+<p class="admonition-title"><strong>Коментар щодо недоступних опцій:</strong></p>
+<p>якщо певної опції немає у вашому редакторі, у звіті коротко вкажіть це і опишіть обраний еквівалент дії (скрін за можливості)..</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>ЛАБОРАТОРНА РОБОТА №2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>ЛАБОРАТОРНА РОБОТА №4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. <strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.1. <strong>1. Створення таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.2. <strong>2. Додавання та вилучення рядків і стовпців</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.3. <strong>3. Зміна ширини стовпців і висоти рядків</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.4. <strong>4. Рисування таблиць</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.5. <strong>5. Межі та заливка таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.6. <strong>6. Введення даних у таблицю</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.7. <strong>7. Сортування даних у таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.2.8. <strong>8. Вставка діаграм в текст документу.</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.3. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.4. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
