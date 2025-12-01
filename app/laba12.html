@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>12. ЛАБОРАТОРНА РОБОТА №12 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba12';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="13. ЛАБОРАТОРНА РОБОТА №13" href="laba13.html" />
+    <link rel="prev" title="11. ЛАБОРАТОРНА РОБОТА №11" href="laba11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba12.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba12.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba12.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba12.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №12</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">12.1.1. <strong>Поняття візуалізації даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">12.1.2. <strong>Інфографіка: сутність, переваги та види</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">12.1.3. <strong>Онлайн-сервіси для створення інфографіки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piktochart">12.1.4. <strong>Сервіс Piktochart: інтерфейс та можливості</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">12.1.4.1. Вхід та створення проєкту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">12.1.4.2. Основні розділи інтерфейсу</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">12.1.5. <strong>Створення інфографіки на лінгвістичну або гуманітарну тему</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">12.1.6. <strong>Експорт, публікація та поширення інфографіки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">12.1.7. <strong>Інфографіка в лінгвістиці</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">12.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">12.3. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o12">
+<h1><span class="section-number">12. </span>ЛАБОРАТОРНА РОБОТА №12<a class="headerlink" href="#o12" title="Link to this heading">#</a></h1>
+<p><strong>Візуалізація інформації. Інфографіка</strong></p>
+<p><strong>План</strong></p>
+<ol class="arabic simple">
+<li><p>Поняття візуалізації даних</p></li>
+<li><p>Інфографіка: сутність, переваги та види</p></li>
+<li><p>Онлайн-сервіси для створення інфографіки</p></li>
+<li><p>Сервіс <strong>Piktochart</strong>: інтерфейс та можливості</p></li>
+<li><p>Створення інфографіки на лінгвістичну або гуманітарну тему</p></li>
+<li><p>Експорт, публікація та поширення інфографіки</p></li>
+<li><p>Використання інфографіки в лінгвістиці й освіті</p></li>
+</ol>
+<section id="id1">
+<h2><span class="section-number">12.1. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">12.1.1. </span><strong>Поняття візуалізації даних</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Зі зростанням обсягів інформації (числової, текстової, змішаної) особливо важливо <strong>не лише володіти даними, а й уміти їх показати</strong>. Традиційні таблиці й суцільні фрагменти тексту часто важкі для сприйняття, тоді як візуальні форми подання інформації дають змогу:</p>
+<ul class="simple">
+<li><p>швидко помітити <strong>тенденції й закономірності</strong>;</p></li>
+<li><p>підкреслити <strong>головне</strong>;</p></li>
+<li><p>зробити матеріал більш <strong>доступним і наочним</strong>.</p></li>
+</ul>
+<p><em><strong>Візуалізація даних</strong></em> – це подання інформації у вигляді графіків, діаграм, карт, схем, образів, піктограм, інфографіки тощо, що полегшує її розуміння, аналіз та інтерпретацію.</p>
+<p>У контексті лінгвістики візуалізують:</p>
+<ul class="simple">
+<li><p><strong>частоти слів і граматичних форм</strong> (стовпчикові діаграми, хмари слів);</p></li>
+<li><p><strong>структуру тексту</strong> (схеми, таймлайни);</p></li>
+<li><p><strong>класифікації мовних явищ</strong> (дерева, ментальні карти, інфографіка);</p></li>
+<li><p><strong>мовні сім’ї, ареали, діалекти</strong> (карти, схеми, картосхеми).</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><span class="section-number">12.1.2. </span><strong>Інфографіка: сутність, переваги та види</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><em><strong>Інфографіка</strong></em> – це візуалізація даних, тобто <strong>передача числових, текстових даних і знань мовою графіки</strong>. Це може бути плакат, постер, слайд, довга вертикальна схема або набір блоків, де об’єднано текст, числа, діаграми, іконки, ілюстрації.</p>
+<p>Основні риси інфографіки:</p>
+<ul class="simple">
+<li><p>поєднання <strong>тексту</strong> та <strong>зображень</strong> в одному цілому;</p></li>
+<li><p>виділення <strong>ключових фактів, чисел, висновків</strong>;</p></li>
+<li><p>логічна структура, розбита на <strong>блоки</strong>;</p></li>
+<li><p>використання <strong>кольору, розміру, шрифтів</strong> для акцентування уваги.</p></li>
+</ul>
+<p>Переваги інфографіки:</p>
+<ul class="simple">
+<li><p>дає змогу <strong>швидко зрозуміти суть</strong> складного матеріалу;</p></li>
+<li><p>підвищує <strong>запам’ятовуваність</strong> інформації;</p></li>
+<li><p>добре підходить для <strong>презентацій, лекцій, плакатів, соціальних мереж</strong>;</p></li>
+<li><p>дозволяє поєднати <strong>дані + пояснення + ілюстрації</strong> в єдиній композиції.</p></li>
+</ul>
+<p>Основні види інфографіки:</p>
+<ul class="simple">
+<li><p><strong>Статистична</strong> – акцент на числах, відсотках, порівняннях;</p></li>
+<li><p><strong>Хронологічна (timeline)</strong> – події в часі;</p></li>
+<li><p><strong>Порівняльна</strong> – зіставлення двох-трьох об’єктів;</p></li>
+<li><p><strong>Процесна (step-by-step)</strong> – кроки, алгоритми, інструкції;</p></li>
+<li><p><strong>Інфографіка-карта</strong> – географічне розташування, ареали;</p></li>
+<li><p><strong>Структурна</strong> – частини цілого, класи, підкласи тощо.</p></li>
+</ul>
+<p>Обмеження:</p>
+<ul class="simple">
+<li><p>некоректний добір візуальних елементів може <strong>спотворити сприйняття даних</strong>;</p></li>
+<li><p>надлишок декоративних елементів заважає <strong>бачити головне</strong>;</p></li>
+<li><p>інфографіка не замінює <strong>повноцінний текстовий аналіз</strong>, а доповнює його.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">12.1.3. </span><strong>Онлайн-сервіси для створення інфографіки</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Для створення інфографіки існує багато веб-сервісів:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.canva.com"><strong>Canva</strong></a> – універсальний онлайн-редактор із шаблонами для презентацій, постерів, інфографіки, соціальних мереж. Має вбудовані шрифти, іконки, діаграми.</p></li>
+<li><p><a class="reference external" href="https://www.visme.com"><strong>Visme</strong></a> – орієнтований на бізнес-презентації, інфографіку, звіти, інтерактивні матеріали.</p></li>
+<li><p><a class="reference external" href="https://creately.com/"><strong>Creately</strong></a> – платформа для діаграм, схем, інфографіки та спільної роботи.</p></li>
+<li><p><a class="reference external" href="https://piktochart.com/"><strong>Piktochart</strong></a> – спеціалізований конструктор інфографіки, який буде основним у цій лабораторній роботі.</p></li>
+</ul>
+<p>Більшість сервісів працюють за схемою:</p>
+<ol class="arabic simple">
+<li><p>Реєстрація або вхід через <strong>Google / Facebook / e-mail</strong>;</p></li>
+<li><p>Вибір <strong>типу проєкту</strong> (інфографіка, презентація, постер, звіт);</p></li>
+<li><p>Вибір готового <strong>шаблону</strong> або «порожнього» макета;</p></li>
+<li><p>Редагування тексту, кольорів, шрифтів, зображень;</p></li>
+<li><p><strong>Експорт / завантаження / публікація</strong>.</p></li>
+</ol>
+</section>
+<section id="piktochart">
+<h3><span class="section-number">12.1.4. </span><strong>Сервіс Piktochart: інтерфейс та можливості</strong><a class="headerlink" href="#piktochart" title="Link to this heading">#</a></h3>
+<p><strong>Piktochart</strong> – зручний та нескладний конструктор інфографіки. Він дозволяє створювати:</p>
+<ul class="simple">
+<li><p><strong>інфографіки</strong> (довгі вертикальні схеми);</p></li>
+<li><p><strong>презентації</strong>;</p></li>
+<li><p><strong>плакати, постери</strong>;</p></li>
+<li><p><strong>звіти</strong> та <strong>прості веб-сторінки</strong>.</p></li>
+</ul>
+<p>Доступні режими:</p>
+<ul class="simple">
+<li><p><strong>Free (безкоштовний)</strong>;</p></li>
+<li><p><strong>Pro (платний)</strong>;</p></li>
+<li><p><strong>Corporate (корпоративний)</strong>.</p></li>
+</ul>
+<p>У рамках лабораторної роботи достатньо <strong>безкоштовного акаунта</strong>.</p>
+<section id="id5">
+<h4><span class="section-number">12.1.4.1. </span>Вхід та створення проєкту<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Перейдіть на <a class="reference external" href="https://piktochart.com">https://piktochart.com</a> або <a class="reference external" href="https://magic.piktochart.com">https://magic.piktochart.com</a>.</p></li>
+<li><p>Зареєструйтесь або увійдіть через <strong>Google / Facebook</strong> (часто Facebook працює стабільніше).</p></li>
+<li><p>Оберіть, що створюєте: <strong>Infographic / Presentation / Poster / Report</strong>.</p></li>
+<li><p>Можна взяти <strong>готовий шаблон</strong> або обрати пункт <strong>Create Your Own Infographic</strong> (створити власну інфографіку). Безкоштовний акаунт відкриває обмежену кількість шаблонів (приблизно 5–7), але для навчальних цілей цього досить.</p></li>
+</ol>
+</section>
+<section id="id6">
+<h4><span class="section-number">12.1.4.2. </span>Основні розділи інтерфейсу<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p>Ліворуч знаходиться вертикальне меню з основними інструментами для створення інфографіки.</p>
+<ul>
+<li><p><strong>AI Tools (AI-інструменти)</strong>
+Генерація дизайну, автоматичні шаблони, швидке створення макетів за допомогою ШІ.
+У безкоштовній версії функції обмежені.</p></li>
+<li><p><strong>Graphics (Графіка)</strong>
+Містить елементи, які можна додавати на полотно:</p>
+<ul class="simple">
+<li><p>фігури, лінії, стрілки</p></li>
+<li><p>рамки</p></li>
+<li><p>іконки</p></li>
+<li><p>декоративні графічні об’єкти</p></li>
+</ul>
+<p>Це головний розділ для додавання «візуальних цеглинок».</p>
+</li>
+<li><p><strong>Text (Текст)</strong></p>
+<p>Вставка текстових блоків:</p>
+<ul class="simple">
+<li><p>заголовки</p></li>
+<li><p>підзаголовки</p></li>
+<li><p>абзаци</p></li>
+<li><p>попередньо стилізовані текстові блоки</p></li>
+</ul>
+<p>При виборі тексту з’являється панель форматування (шрифт, розмір, колір).</p>
+</li>
+<li><p><strong>Design Components (Компоненти дизайну)</strong></p>
+<p>Готові набори елементів:</p>
+<ul class="simple">
+<li><p>блоки оформлення</p></li>
+<li><p>комбіновані елементи (іконки + текст)</p></li>
+<li><p>стилізовані секції</p></li>
+<li><p>елементи інтерфейсу</p></li>
+</ul>
+<p>Це допомагає швидко створити гармонійний стиль.</p>
+</li>
+<li><p><strong>Colors (Палітра / Кольори)</strong></p>
+<p>Тут можна вибрати:</p>
+<ul class="simple">
+<li><p>готові палітри</p></li>
+<li><p>фірмові кольори</p></li>
+<li><p>автоматичне узгодження кольорів</p></li>
+</ul>
+<p>Змінює кольорову схему всього дизайну.</p>
+</li>
+<li><p><strong>Charts (Діаграми)</strong></p>
+<p>Можливість додати:</p>
+<ul class="simple">
+<li><p>стовпчикові діаграми</p></li>
+<li><p>кругові</p></li>
+<li><p>лінійні</p></li>
+<li><p>таблиці-схеми</p></li>
+<li><p>візуалізації даних</p></li>
+</ul>
+<p>Дані вводяться вручну або імпортуються з CSV.</p>
+</li>
+<li><p><strong>Maps (Карти)</strong></p>
+<p>Додати карту із доступних:</p>
+<ul class="simple">
+<li><p>світу</p></li>
+<li><p>континентів</p></li>
+<li><p>окремих країн</p></li>
+</ul>
+<p>Можна позначати області та додавати підписи.</p>
+</li>
+<li><p><strong>My Uploads (Мої завантаження)</strong></p>
+<p>Завантаження своїх:</p>
+<ul class="simple">
+<li><p>фото</p></li>
+<li><p>логотипів</p></li>
+<li><p>скріншотів</p></li>
+<li><p>ілюстрацій</p></li>
+</ul>
+<p>Усі файли зберігаються в особистій бібліотеці.</p>
+</li>
+<li><p><strong>More (Більше інструментів)</strong></p>
+<p>Містить:</p>
+<ul class="simple">
+<li><p><strong>Videos</strong> – вставка відео з YouTube або Vimeo</p></li>
+<li><p><strong>Tables</strong> – вставка таблиць (2×3, 3×3, 4×4, 5×5)</p></li>
+<li><p>інші додаткові інструменти, які не входять до основних категорій</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">12.1.5. </span><strong>Створення інфографіки на лінгвістичну або гуманітарну тему</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Для прикладної лінгвістики й мовознавства особливо корисні такі теми інфографіки:</p>
+<ul class="simple">
+<li><p><strong>Мовні сім’ї світу / Європи</strong>;</p></li>
+<li><p><strong>Частоти частин мови в тексті</strong>;</p></li>
+<li><p><strong>Життєвий шлях мовознавця</strong> (timeline);</p></li>
+<li><p><strong>Етапи розвитку певної мови</strong>;</p></li>
+<li><p><strong>Типологія перекладацьких стратегій</strong>;</p></li>
+<li><p><strong>Структура корпусу текстів / словника</strong>.</p></li>
+</ul>
+<p>Типова послідовність роботи:</p>
+<ol class="arabic simple">
+<li><p>Вибрати <strong>тему</strong> (наприклад, «Мовні сім’ї Європи»).</p></li>
+<li><p>Підібрати <strong>дані</strong> (таблиця, список фактів, хронологія подій, статистика).</p></li>
+<li><p>Розподілити матеріал на <strong>логічні блоки</strong> (вступ, класифікація, приклади, висновки).</p></li>
+<li><p>У Piktochart:</p>
+<ul class="simple">
+<li><p>створити <strong>фон</strong> (Background);</p></li>
+<li><p>додати <strong>заголовок</strong> (Text);</p></li>
+<li><p>вставити <strong>іконки, діаграми, карти</strong> (Graphics, Tools);</p></li>
+<li><p>розмістити текстові пояснення <strong>короткими блоками</strong>, а не суцільними абзацами.</p></li>
+</ul>
+</li>
+</ol>
+<p>Добра інфографіка має:</p>
+<ul class="simple">
+<li><p>мінімум «зайвого» тексту;</p></li>
+<li><p>чіткі підписи до діаграм;</p></li>
+<li><p>виразні <strong>кольорові акценти</strong>;</p></li>
+<li><p>логічний порядок блоків згори донизу.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3><span class="section-number">12.1.6. </span><strong>Експорт, публікація та поширення інфографіки</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Після завершення роботи можна:</p>
+<ul class="simple">
+<li><p><strong>Save</strong> – зберегти проєкт у Piktochart (доступний для подальшого редагування).</p></li>
+<li><p><strong>Preview</strong> – переглянути результат.</p></li>
+<li><p><strong>Download</strong> – завантажити у форматі <strong>PNG / PDF</strong> (у безкоштовній версії – з обмеженнями у кількостьі завантажень).</p></li>
+<li><p><strong>Share</strong> – поділитись посиланням (публічний або приватний доступ).</p></li>
+</ul>
+<p>Часто зручно:</p>
+<ul class="simple">
+<li><p>завантажити <strong>зображення</strong> інфографіки для вставки у звіт;</p></li>
+<li><p>згенерувати <strong>URL-посилання</strong> на онлайн-версію і вмонтувати у свій сайт;</p></li>
+<li><p>створити <strong>QR-код</strong>, який веде на цю інфографіку (для презентацій, роздаткових матеріалів, звіту).</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3><span class="section-number">12.1.7. </span><strong>Інфографіка в лінгвістиці</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Інфографіка все активніше застосовується:</p>
+<ul class="simple">
+<li><p>у <strong>навчанні іноземних мов</strong> (наочні схеми часів, видів речень, частин мови);</p></li>
+<li><p>у <strong>перекладознавстві</strong> (класифікації видів перекладу, приклади трансформацій);</p></li>
+<li><p>у <strong>корпусній лінгвістиці</strong> (показ частот, розподілу жанрів, авторів, стилів);</p></li>
+<li><p>у <strong>соціолінгвістиці</strong> (карти діалектів, статистика мовної поведінки);</p></li>
+<li><p>у <strong>лексикографії</strong> (структура словників, типологія словникових статей).</p></li>
+</ul>
+<p>Перевага інфографіки в лінгвістиці – можливість:</p>
+<ul class="simple">
+<li><p>швидко <strong>пояснити структуру</strong> мовного явища;</p></li>
+<li><p><strong>зіставити</strong> кількісні показники (частоти, відсотки, розподіли);</p></li>
+<li><p>залучити студентів до <strong>проєктної діяльності</strong> (створення власних інфографік за результатами аналізу текстів).</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">12.2. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Обрати <strong>тему інфографіки</strong>, пов’язану з мовознавством або гуманітарними науками. Приклади тем:</p>
+<ul class="simple">
+<li><p>«Мовні сім’ї Європи / світу»;</p></li>
+<li><p>«Частини мови англійської / української мови»;</p></li>
+<li><p>«Види перекладацьких трансформацій»;</p></li>
+<li><p>«Життєвий шлях відомого мовознавця»;</p></li>
+<li><p>«Типи словників (тлумачні, перекладні, частотні, корпусні тощо)».</p></li>
+</ul>
+</li>
+<li><p>Підібрати <strong>джерело даних</strong> (стаття, розділ підручника, фрагмент наукової роботи, статистика, таблиця). Обсяг тексту – орієнтовно 1–2 сторінки, або компактна таблиця / список фактів.</p></li>
+<li><p>Підготувати <strong>короткий конспект</strong> для інфографіки:</p>
+<ul class="simple">
+<li><p>4–6 основних блоків (розділів);</p></li>
+<li><p>для кожного блока – кілька ключових тез або числових показників.</p></li>
+</ul>
+</li>
+<li><p>За потреби створити <strong>таблицю даних</strong> (у Google Sheets / Excel / LibreOffice Calc), якщо планується використання діаграм (частоти, відсотки, порівняння).</p></li>
+<li><p>Зареєструватися або увійти до <strong>Piktochart</strong> (через Google / Facebook / e-mail).</p></li>
+<li><p>Створити новий проєкт типу <strong>Infographic / Poster / Presentation</strong> (на вибір, але бажано Infographic або Poster).</p></li>
+<li><p>Вибрати:</p>
+<ul class="simple">
+<li><p>або <strong>готовий шаблон</strong>, який підходить до вашої теми;</p></li>
+<li><p>або <strong>порожній макет</strong> (<em>Create Your Own Infographic</em>).</p></li>
+</ul>
+</li>
+<li><p>Налаштувати <strong>фон</strong> (Background):</p>
+<ul class="simple">
+<li><p>обрати колір чи текстуру, що відповідають темі;</p></li>
+<li><p>уникати занадто яскравих фонових зображень, які заважають читати текст.</p></li>
+</ul>
+</li>
+<li><p>Додати <strong>заголовок інфографіки</strong> та, за потреби, підзаголовок (назва теми, джерело даних, автор).</p></li>
+<li><p>Розбити макет на <strong>блоки</strong> (секції), що відповідають структурі теми. У кожному блоці:</p>
+<ul class="simple">
+<li><p>розмістити короткі текстові фрагменти (ключові слова, визначення, тези);</p></li>
+<li><p>додати <strong>ікони, фігури, лінії</strong> (Graphics) для візуального оформлення.</p></li>
+</ul>
+</li>
+<li><p>Якщо тема містить статистику, створити <strong>1–2 діаграми</strong> (Tools → Charts):</p>
+<ul class="simple">
+<li><p>внести дані вручну або імпортувати з таблиці;</p></li>
+<li><p>налаштувати підписи осей, легенду, кольори;</p></li>
+<li><p>додати короткий текстовий коментар (що показує діаграма).</p></li>
+</ul>
+</li>
+<li><p>Якщо тема має географічний аспект (мовні ареали, регіони, країни), використати <strong>карту</strong> (Map), позначити на ній потрібні країни / регіони, додати підписи.</p></li>
+<li><p>Уважно перевірити <strong>мову та орфографію</strong>:</p>
+<ul class="simple">
+<li><p>в українському тексті – відсутність «суржику», помилок у термінах;</p></li>
+<li><p>коректність латинської транслітерації (якщо використовується).</p></li>
+</ul>
+</li>
+<li><p>Завершити композицію:</p>
+<ul class="simple">
+<li><p>вирівняти елементи;</p></li>
+<li><p>забезпечити достатні відступи;</p></li>
+<li><p>уникнути «накладання» тексту на зображення;</p></li>
+<li><p>забезпечити, щоб головні блоки були добре помітні.</p></li>
+</ul>
+</li>
+<li><p>Зберегти проєкт (<strong>Save</strong>), переглянути (<strong>Preview</strong>), за потреби – відредагувати.</p></li>
+<li><p>Завантажити інфографіку у форматі <strong>PNG / JPG / PDF</strong> (дозволений у вашому акаунті формат).</p></li>
+<li><p>За можливості опублікувати інфографіку онлайн (через <strong>Share</strong>) і отримати <strong>URL-посилання</strong> на неї.</p></li>
+<li><p>Створити <strong>QR-код</strong>, який веде:</p>
+<ul class="simple">
+<li><p>або на опубліковану інфографіку;</p></li>
+<li><p>або на папку / сторінку, де збережено інфографіку (Google Drive, Google Sites, Tilda тощо).</p></li>
+</ul>
+<p>Зберегти QR-код як зображення.</p>
+</li>
+<li><p>Оформити <strong>короткий текстовий коментар</strong> (1–2 абзаци), у якому:</p>
+<ul class="simple">
+<li><p>пояснити, які дані використано;</p></li>
+<li><p>які висновки можна зробити з інфографіки;</p></li>
+<li><p>чому саме такий формат подання (діаграми, іконки, блоки) є доречним.</p></li>
+</ul>
+</li>
+<li><p>Зібрати всі матеріали у звіт:</p>
+<ul class="simple">
+<li><p>скріншоти окремих етапів роботи (інтерфейс Piktochart, редагування діаграм, карти тощо);</p></li>
+<li><p>фінальне зображення інфографіки;</p></li>
+<li><p>QR-код;</p></li>
+<li><p>текстовий коментар та висновки.</p></li>
+</ul>
+</li>
+</ol>
+<p><em><strong>Контрольні питання</strong></em></p>
+<ol class="arabic simple">
+<li><p>Що таке візуалізація даних? Які її цілі в лінгвістиці й гуманітарних науках?</p></li>
+<li><p>Дайте визначення <strong>інфографіки</strong>. Чим вона відрізняється від звичайної діаграми чи таблиці?</p></li>
+<li><p>Назвіть основні види інфографіки (статистична, хронологічна, процесна тощо) та наведіть приклади для кожного виду.</p></li>
+<li><p>Які переваги має інфографіка порівняно з «суцільним текстом»?</p></li>
+<li><p>Які можливі обмеження та недоліки використання інфографіки в наукових текстах?</p></li>
+<li><p>Які онлайн-сервіси для створення інфографіки ви знаєте? Чим вони відрізняються між собою?</p></li>
+<li><p>Які можливості надає сервіс <strong>Piktochart</strong> для створення інфографіки?</p></li>
+<li><p>Які основні розділи інтерфейсу Piktochart та для чого вони призначені?</p></li>
+<li><p>Які вимоги слід враховувати при оформленні фону й кольорової гами інфографіки?</p></li>
+<li><p>Чому небажано перевантажувати інфографіку текстом або декоративними елементами?</p></li>
+<li><p>Як у Piktochart додати й налаштувати діаграму? Які типи діаграм є найбільш зручними для лінгвістичних даних?</p></li>
+<li><p>Як можна використати карти (Maps) в інфографіці на лінгвістичну тему? Наведіть приклад.</p></li>
+<li><p>У чому специфіка роботи з шрифтами в інфографіці (розмір, тип, читабельність, підтримка кирилиці)?</p></li>
+<li><p>Чому важливо чітко продумати структуру блоків інфографіки перед її створенням?</p></li>
+<li><p>Як інфографіка може бути використана в навчанні іноземних мов (наведіть 2–3 приклади)?</p></li>
+<li><p>Як інфографіка може відобразити результати лінгвістичного дослідження (частоти, порівняння, класифікації)?</p></li>
+<li><p>Що таке <strong>QR-код</strong> і як його можна використати для поширення інфографіки чи доступу до додаткових матеріалів?</p></li>
+<li><p>Які кроки необхідно виконати, щоб створити інфографіку в Piktochart і вставити її у звіт?</p></li>
+<li><p>Які вимоги до якості зображень (роздільна здатність, формат) слід враховувати при підготовці документа (.docx / .pdf) із вбудованою інфографікою?</p></li>
+<li><p>Чи може інфографіка повністю замінити текстовий опис і науковий аналіз? Чому так / чому ні?</p></li>
+</ol>
+</section>
+<section id="id11">
+<h2><span class="section-number">12.3. </span><strong>Вимоги до виконання і подання</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Виконати <strong>практичні завдання 1–20</strong>. Для ключових етапів (створення макета, діаграм, карт, експорту, QR-коду) зробити <strong>скріншоти</strong> або зберегти відповідні зображення.</p></li>
+<li><p>Дати <strong>письмові відповіді</strong> на контрольні питання (1–20) у кінці звіту.</p></li>
+<li><p>Оформити все у вигляді <strong>одного документа (.docx або .pdf)</strong>, який містить:</p>
+<ul class="simple">
+<li><p>титульну сторінку (дисципліна, тема лабораторної, ПІБ, група, дата);</p></li>
+<li><p>короткий опис обраної теми й джерела даних;</p></li>
+<li><p>зображення створеної інфографіки (з підписом і коротким поясненням);</p></li>
+<li><p>зображення QR-коду (з підписом, куди він веде);</p></li>
+<li><p>скріншоти основних етапів роботи (за можливості);</p></li>
+<li><p>результати практичних завдань (коментарі, міні-аналіз);</p></li>
+<li><p>відповіді на контрольні питання;</p></li>
+<li><p>загальні <strong>висновки</strong> (1–2 абзаци) про роль інфографіки в лінгвістиці та навчальному процесі.</p></li>
+</ul>
+</li>
+<li><p>Подати звіт у <strong>Google Classroom</strong> до встановленого дедлайну.</p></li>
+<li><p><strong>Схема імені файлу:</strong>
+<code class="docutils literal notranslate"><span class="pre">&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР12.pdf</span></code></p>
+<ul class="simple">
+<li><p>Приклад: <code class="docutils literal notranslate"><span class="pre">143_ПетренкоІван_ЛР12.pdf</span></code>*</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>ЛАБОРАТОРНА РОБОТА №11</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba13.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>ЛАБОРАТОРНА РОБОТА №13</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">12.1.1. <strong>Поняття візуалізації даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">12.1.2. <strong>Інфографіка: сутність, переваги та види</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">12.1.3. <strong>Онлайн-сервіси для створення інфографіки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#piktochart">12.1.4. <strong>Сервіс Piktochart: інтерфейс та можливості</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">12.1.4.1. Вхід та створення проєкту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">12.1.4.2. Основні розділи інтерфейсу</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">12.1.5. <strong>Створення інфографіки на лінгвістичну або гуманітарну тему</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">12.1.6. <strong>Експорт, публікація та поширення інфографіки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">12.1.7. <strong>Інфографіка в лінгвістиці</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">12.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">12.3. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

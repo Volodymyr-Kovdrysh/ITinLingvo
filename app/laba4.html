@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. ЛАБОРАТОРНА РОБОТА №4 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba4';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="5. ЛАБОРАТОРНА РОБОТА №5" href="laba5.html" />
+    <link rel="prev" title="3. ЛАБОРАТОРНА РОБОТА №3" href="laba3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba14.html">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba4.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba4.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ms-excel-2010">4.1.1. <strong>1.1. Завантаження програми MS Excel 2010</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.1.2. <strong>1.2. Інтерфейс MS Excel 2010</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.1.3. <strong>2.1. Створення, відкриття та збереження файлів робочих книг</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.1.4. <strong>2.2. Основні об’єкти робочих книг та їх характеристика</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4.1.5. <strong>2.3.  Закриття робочої книги</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.1.6. <strong>3.1. Типи даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.1.7. <strong>3.2.</strong> <strong>Введення числових значень та даних типу часу і дати</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">4.1.8. <strong>3.3. Введення текстових значень та формул</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.1.9. <strong>4.1. Виділення та переміщення даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.1.10. <strong>4.2. Вилучення й очистка комірок, рядків, стовпців та аркушів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.1.11. <strong>4.3. Створення рядів даних та автозаповнення</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.1.12. <strong>5.1. Найпоширеніші інструменти оформлення таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4.1.13. <strong>5.2. Форматування комірок</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">4.1.14. <strong>5.3. Форматування та вирівнювання даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">4.1.15. <strong>5.4. Збереження і відображення даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">4.1.16. <strong>5.5. Застосування стилів і тем оформлення таблиць</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">4.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4.3. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">4.4. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o4">
+<h1><span class="section-number">4. </span>ЛАБОРАТОРНА РОБОТА №4<a class="headerlink" href="#o4" title="Link to this heading">#</a></h1>
+<p><strong>Створення, редагування та форматування таблиць</strong></p>
+<p><strong>План</strong></p>
+<ol class="arabic simple">
+<li><p>Інтерфейс програми MS Excel 2010</p></li>
+<li><p>Робоча книга. Створення та її структура</p></li>
+<li><p>Типи даних</p></li>
+<li><p>Дії над даними</p></li>
+<li><p>Форматування даних та таблиць</p></li>
+</ol>
+<section id="id1">
+<h2><span class="section-number">4.1. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="ms-excel-2010">
+<h3><span class="section-number">4.1.1. </span><strong>1.1. Завантаження програми MS Excel 2010</strong><a class="headerlink" href="#ms-excel-2010" title="Link to this heading">#</a></h3>
+<p>Запуск програми здійснюється стандартними способами Windows:</p>
+<ul class="simple">
+<li><p>натиснути кнопку головного меню Windows <strong>Пуск</strong> і з меню <strong>Усі програми</strong> вибрати пункт <strong>Microsoft Office</strong>, а потім – <strong>Microsoft Excel 2010</strong>;</p></li>
+<li><p>відкрити будь-який файл з розширенням .xlsx (або .xls);</p></li>
+<li><p>запустити виконуючий файл програми у вікні <strong>Мій комп’ютер</strong>, який має назву excel.exe й, за замовчуванням, розташований у папці: C:\Program Files\Microsoft Office\Office14.</p></li>
+</ul>
+<p>Після завантаження програми на екрані  монітора з’явиться спочатку заставка програми, а потім основне робоче вікно програми з новою робочою книгою і декількома чистими аркушами</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">4.1.2. </span><strong>1.2. Інтерфейс MS Excel 2010</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Вікно програми Microsoft Excel має стандартний вигляд.<br />
+Основними елементами даного вікна є: меню <strong>Файл</strong>, панель швидкого доступу, кнопки керування вікном програми, стрічка, рядок формул, робоче поле, рядок стану, режим відображення, міні-панель і контекстне меню (з’являється у випадку натискування правої клавіші миші).</p>
+<p>За замовчуванням, у вікні програми відображається 7 основних закладок стрічки: <strong>Головна</strong>, <strong>Вставка</strong>, <strong>Разміткa сторінки</strong>, <strong>Формули</strong>, <strong>Дані</strong>, <strong>Рецензування</strong>, <strong>Вигляд</strong>. Кожна з них містить групи команд певної тематики. Так, кнопки закладки <strong>Головна</strong> призначені для основних дій по введенню та редагуванню даних (включаючи роботу з буфером обміну, форматування, пошук та відбір даних). Закладка <strong>Вставка</strong> дозволяє добавляти в документ різні об’єкти – таблиці, діаграми, рисунки, надписи, гіперпосилання та ін. На закладці <strong>Разміткa сторінки</strong> зібрані команди налаштування параметрів сторінки. Закладка <strong>Формули</strong> містить кнопки вставки функцій, налаштування параметрів обчислень. На закладці <strong>Дані</strong> зібрані інструменти аналізу даних. Закладка <strong>Рецензування</strong> призначена для перевірки правопису, вставки приміток, захисту документа. Кнопки закладки <strong>Вигляд</strong> дозволяють налаштувати параметри відображення книги на екрані.</p>
+<p>Крім постійних,  існує цілий ряд контекстних закладок, які  з’являються на стрічці автоматично при роботі з діаграмами, рисунками та іншими об’єктами, при переході в інший режим (наприклад, попереднього перегляду) та ін.<br />
+На багатьох панелях кнопок закладки є маленький квадрат в правому нижньому куті – значок (кнопка) панелі. Він дозволяє отримати доступ до додаткових інструментів,  які раніше викликалися через пункти меню. Стрічку можна згорнути так, щоб на екрані залишилися лише назви закладок. В такому випадку для виконання деякої дії потрібно клацнути на назві закладки й вибрати на стрічці, що відобразиться, потрібну кнопку. Після чого стрічка знову буде згорнута. Згорнути або відобразити стрічку можна двічі клацнувши на назві активної закладки.</p>
+<p><em>Панель швидкого доступу</em>  призначена для оперативного доступу до найвживаніших функцій: спочатку вона включає три кнопки – збереження файла, відміна й повернення останньої дії. Для добавлення на цю панель команди необхідно вибрати її із випадаючого списку панелі. У випадку відсутності потрібної команди в списку необхідно скористатися пунктом <strong>Інші команди</strong> і вибрати її із повного списку всіх команд. Крім того, на панелі можна помістити будь-які кнопки, що є на стрічці, – для цього в контекстному меню цих кнопок є команда <strong>Додати на панель швидкого доступу</strong>.</p>
+<p><em>Міні-панель форматування</em> включає основні інструменти форматування даних. Для виведення міні-панелі на екран досить клацання правої клавіші миші в довільному місці робочого поля.</p>
+<p><em>Рядок стану</em>, як і в попередніх версіях, містить інформацію про режими роботи з документами. Однак, в даній версії його можна налаштувати. Для цього потрібно клацнути по ньому правою клавішею миші й вибрати елементи, що відображаються в рядку. Наприклад, досить зручно вивести в рядку стану результат обчислень для поточного діапазону даних: суми, середнього, максимум тощо. Можна також легко змінити масштаб відображення документа за допомогою кнопок і повзунка <strong>Масштаб</strong> у правій частині рядка стану. Зліва від повзунка масштабування розміщений блок кнопок, які змінюють режими перегляду (відображення) документа. Найчастіше ведеться робота в режимі <strong>Звичайний</strong>. Режим <strong>Размітка сторінки</strong> дозволяє побачити розбиття документа на  друкованій сторінці, вивести на екран горизонтальну та вертикальну лінійки. Режим <strong>Сторінки</strong> надає можливість налаштувати число друкованих сторінок документа. Режим розмітки сторінки відображає документ в тому вигляді, як він буде надрукований, одночасно дозволяє продовжити роботу з таблицею.<br />
+Зауважимо, що майбутній вигляд надрукованого документа можна переглянути у вікні команди <strong>Друк</strong> із меню меню <strong>Файл</strong>.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">4.1.3. </span><strong>2.1. Створення, відкриття та збереження файлів робочих книг</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Основний документ Excel (файл з розширенням .xls) називається робочою книгою. Для роботи з файлами необхідно використати меню <strong>Файл</strong>. Команди меню, яке вона відкриває, ідентичні меню MS Word. Вони дозволяють виконати всі основні операції над файлами: створити новий, відкрити існуючий, зберегти зміни в файлі, роздрукувати, закрити його  т. ін.</p>
+<p>При запуску програми Excel автоматично створює новий робочий документ, який має назву <strong>Книга1</strong>. Для створення самостійного документа призначена команда <strong>Створити</strong> з меню <strong>Файл.</strong> Користувачу пропонується вибрати шаблон, на базі якого буде створена нова електронна таблиця. Для створення чистого документа, як правило, досить вибрати шаблон <strong>Нова книга</strong>, який є шаблоном за замовчуванням. Щоб створити новий документ без запиту про шаблон (тобто на основі шаблону <strong>Нова книга</strong>), можна скористатися комбінацією клавіш Ctrl+N.</p>
+<p>Діалогові вікна відкриття та збереження файлів (команд <strong>Відкрити</strong> та <strong>Зберегти як…</strong> в меню <strong>Файл</strong>) ідентичні таким як у програмі MS Word. Меню <strong>Файл</strong> допомагає також отримати швидкий доступ  до файлів, з якими недавно вже працювали, – тут міститься список останніх документів, що відкривалися.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">4.1.4. </span><strong>2.2. Основні об’єкти робочих книг та їх характеристика</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Основними об’єктами робочих книг Microsoft Excel є аркуші, рядки, стовпчики і комірки аркушів.</p>
+<p>Кількість аркушів, що може мати кожна робоча книга, обмежена оперативною пам’яттю комп’ютера, на якому встановлена програма Microsoft Excel.</p>
+<p>Імена робочих аркушів відображаються на ярликах аркушів. Назва поточного аркуша виділена напівжирним шрифтом на контрастному фоні.</p>
+<p>За замовчуванням, книга містить три аркуші, які іменуються <strong>Аркуш1, Аркуш2, Аркуш3.</strong> В книгу можна  добавити довільну кількість аркушів. Аркуші можна вилучати, переміщати, копіювати в межах однієї книги або з однієї книги в іншу. Для переходу до іншого аркуша потрібно клацнути мишею на його ярлику (можна скористатися комбінаціями клавіш: Ctrl + PgDn – перейти на наступний аркуш, Ctrl + PgUp – перейти на попередній аркуш).</p>
+<p>Для операцій з аркушами книги (добавлення, вилучення, перейменування, копіювання, переміщення та ін.) служить контекстне меню ярлика цього аркуша.</p>
+<p>Кожна робоча таблиця MS Excel 2010 складається з 1048576 рядків і 16384 стовпчиків. Рядки нумеруються від 1 до 1048576, а стовпчики за замовчуванням  позначаються латинськими літерами: від A до Z перші 26 стовпчиків; від AA до AZ – другі 26 стовпчиків; від BA до BZ – наступні 26 стовпчиків і т.д.</p>
+<p>На перетині стовпчика і рядка знаходиться  комірка, яка є елементарною структурною одиницею аркуша і призначена для введення та відображення даних.</p>
+<p>Існують три стилі адресації комірок:</p>
+<ul class="simple">
+<li><p>стиль A1, при якому адреса комірки складається з назви стовпчика та номера рядка;</p></li>
+<li><p>стиль тривимірної адресації, у якому до адреси комірки додається ім’я аркуша робочої книги з позначкою &lt;!&gt;, наприклад, Аркуш1!А1. Тривимірна адресація використовується, наприклад, під час аналізу даних в однакових діапазонах з кількох аркушів робочої книги. Повна адресація [ім’я_книги]ім’я_аркушу!адреса_комірки включає також назву робочої книги (наприклад, [фінанси.xlsx]Аркуш1!B20);</p></li>
+<li><p>стиль R1C1, за яким нумеруються не тільки рядки, але й стовпчики. У стилі адресації R1C1 MS Excel позначає адресу комірки буквою R, за якою наведений номер рядка, і буквою C, за якою наведений номер стовпчика.</p></li>
+</ul>
+<p>Для вмикання або вимикання стилю адресації R1C1 необхідно в меню <strong>Файл</strong> вибрати команду <strong>Параметри  ⇒ Формули ⇒ Робота з формулами ⇒</strong> встановити або зняти прапорець <strong>Стиль посилань R1C1</strong>.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">4.1.5. </span><strong>2.3.  Закриття робочої книги</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Для закриття книги потрібно виконати одну з таких дій:</p>
+<ul class="simple">
+<li><p>обрати команду <strong>Закрити</strong> з меню <strong>Файл</strong>;</p></li>
+<li><p>натиснути кнопку <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAIAAACQKrqGAAAAPElEQVR4XmO4cuEEkYgBUwgXorVSBjBAkUMVwSmHRScyB64CUx0WpXDVWMTR+USaiqwCUzW5IYAf0UYpAIglm8iBeHkzAAAAAElFTkSuQmCC" /> <strong>Закрити</strong> у рядку заголовка вікна книги (програми).</p></li>
+</ul>
+<p>В обох випадках Excel перевіряє чи було збережено проведені в документі зміни. Якщо документ не був збережений, то буде виданий запит на збереження.</p>
+<p>Для виходу з програми крім команди <strong>Вихід</strong> із меню закладки <strong>Файл</strong>, можна використати стандартні прийоми: за допомогою кнопки закриття вікна програми, комбінації клавіш Alt + F4.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">4.1.6. </span><strong>3.1. Типи даних</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Табличний процесор MS Excel підтримує дані чотирьох основних типів: числа, дати, тексти,  та формули.</p>
+<p><em>Текстові дані</em> – будь-яка комбінація літер, знаків пунктуації тощо, тобто все, що не бере участі у числових обчисленнях. Текстові дані не обмежуються межею комірки. Якщо сусідня комірка не порожня, відображення тексту „обрізається” тільки на екрані, але не в пам’яті комп’ютера.</p>
+<p><em>Числові дані</em> використовуються двох типів: числа, які відображають кількісні величини, та числа, подані як дата. Числа відображаються в дійсному та експоненціальному форматах. У дробових числах використовують кому як десятковий розділювач. Знак долара перед числом автоматично відображає кому між тисячами. Простий дріб вводиться як мішане число з нулем попереду, наприклад, 0 2/7. Для чисел, які відображають відсоткове відношення, можна використовувати знак процента, наприклад – 30%.</p>
+<p><em>Дані типу дата</em> вводяться в комірку ЕТ як числа і можуть використовуватись у формулах, але за умови, що був вибраний формат дати для їх інтерпретації. Дані типу дата зберігаються в пам’яті як послідовності чисел, що відображають кількість днів від початкової дати календаря. Час зберігається як десятковий дріб, тобто як частина доби. В MS Excel вбудований календар, що містить дати з 1 січня 1890 року.</p>
+<p><em>Дані типу формула</em> є виразами, за якими виконуються обчислення на аркуші. Формула складається: зі знака рівності; адрес комірок з числовими значеннями, розділеними знаками арифметичних дій (^, *, /, +, -); чисел; вбудованих функцій. Не всі зазначені складові даних типу формул обов’язкові, наприклад, існують формули і без вбудованих функцій та адрес комірок: = 10 + (–)29^7*45.</p>
+<p>Пріоритети виконання арифметичних дій такі самі, як і в математиці: зліва направо, в ієрархічній послідовності. Дужки () допомагають змінити послідовність виконання обчислень.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">4.1.7. </span><strong>3.2.</strong> <strong>Введення числових значень та даних типу часу і дати</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Дані можна вводити в поточну комірку безпосередньо в ній або в рядку формул, який розташований над таблицею. Рядок формул завжди містить фактичне значення поточної комірки. За замовчуванням, будь-яким даним присвоюється <strong><em>загальний</em></strong> тип. Це означає, що якщо в комірку буде текстова інформація, то вона обробляється як текстові дані, якщо введені числа, то як числові дані. Зазначимо, що Excel автоматично розпізнає тип даних і за замовчуванням вирівнює числові значення по правому краю комірки, а текст – по лівому.</p>
+<p>Для введення числа у комірку необхідно:</p>
+<ul class="simple">
+<li><p>виділити комірку за допомогою миші або клавіатури;</p></li>
+<li><p>ввести число;</p></li>
+<li><p>натиснути клавішу <strong>Enter</strong>.</p></li>
+</ul>
+<p>Під час введення число поступово відображається в поточній комірці та в <em>рядку формул</em>, який служить для редагування вмісту комірок. У разі виникнення помилки під час набору даних досить клацнути лівою клавішею миші у рядку формул, поставити текстовий курсор у потрібну позицію і відредагувати дані.</p>
+<p>Якщо формат комірки не відповідає введеному числу, тоді відображаються символи ######. Це вказує на необхідність зміни формату комірки (за допомогою розтягу комірки) або розрядності введеного числа.</p>
+<p>Для введення в ЕТ даних <em>типу дати і часу</em> потрібно виконати такі дії:</p>
+<ul class="simple">
+<li><p>виділити комірки, у яких повинні зберігатись дати або час, для чого необхідно клацнути лівою клавішею миші на першій комірці і протягти курсор у потрібному діапазоні комірок або виконати виділення комірок, використовуючи клавіші <strong>Shift + →, ↑, ←, ↓</strong>;</p></li>
+<li><p>ввести значення дати або часу в одному з форматів. Щоб ввести поточну дату, потрібно натиснути клавіші <strong>Ctrl + ;</strong>;</p></li>
+<li><p>після введення дати або часу натиснути клавішу <strong>Enter</strong> або виділити іншу комірку.</p></li>
+</ul>
+<p>Для введення чисел у стандартному форматі дати використовують комбінацію клавіш <strong>Ctrl + Shift + #</strong>, а для введення у стандартному форматі часу – <strong>Ctrl + Shift + &#64;</strong>.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">4.1.8. </span><strong>3.3. Введення текстових значень та формул</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Для введення текстових значень або формули необхідно:</p>
+<ul class="simple">
+<li><p>виділити комірку за допомогою миші або клавіатури;</p></li>
+<li><p>набрати текстове значення або формулу. Перед числовим значенням, яке має інтерпретуватися як текст, обов’язково вказати апостроф « ’ », запис формули починається зі знака «=»</p></li>
+<li><p>для збереження тексту чи формули натиснути клавішу <strong>Enter</strong> або виділити нову комірку.</p></li>
+</ul>
+<p>Для введення даних відразу в декілька комірок необхідно:</p>
+<ul class="simple">
+<li><p>виділити комірки, в які вводяться дані. Для виділення комірок, які не мають спільної межі, треба утримувати натиснутою клавішу <strong>Ctrl</strong>;</p></li>
+<li><p>ввести необхідні дані і натиснути комбінацію клавіш <strong>Ctrl + Enter</strong>.</p></li>
+</ul>
+<p>Для того, щоб відредагувати дані в комірці необхідно активізувати її і двічі клацнути по ній мишею, або натиснути клавішу F2. можна також активізувати комірку і виправлення зробити в рядку формул.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">4.1.9. </span><strong>4.1. Виділення та переміщення даних</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Для здійснення різноманітних дій над даними їх спочатку потрібно виділити. Виділені дані позначаються інверсним кольором у жирній рамці. В тій комірці, з якої розпочинається виділення, фоновий колір не змінюється.</p>
+<p>Для виділення комірки необхідно клацнути у ній лівою клавішею миші або перейти до неї, використовуючи клавіші зі стрілками на клавіатурі.</p>
+<p>Для виділення діапазону комірок необхідно протягнути покажчик миші від одного кута діапазону до протилежного.</p>
+<p>Для виділення діапазонів комірок, що не мають спільної межі, потрібно під час їх виділення утримувати клавішу <strong>Ctrl</strong>.</p>
+<p>Для виділення великого діапазону комірок досить клацнути на першу комірку діапазону, а потім, утримуючи фіксованою клавішу <strong>Shift</strong>, клацнути лівою клавішею миші по останній комірці діапазону. Для переміщення на останню комірку можна використовувати смуги прокручування.</p>
+<p>Для виділення всього аркуша електронної таблиці досить клацнути лівою клавішею миші по кнопці на аркуші в його лівому верхньому куті.</p>
+<p>Для виділення стовпчика потрібно клацнути на його назві, для виділення рядка – клацнути на номері цього рядка.</p>
+<p>Для зняття виділення потрібно клацнути мишею за межею виділення.</p>
+<p>Для переміщення даних в ЕТ використовують процедуру вирізання та вставки, копіювання діапазонів комірок та перетягування виділених фрагментів таблиці за допомогою маніпулятора миші.</p>
+<p>Щоб швидко перемістити комірки в межах вікна, необхідно їх виділити й перенести мишею границю виділеного діапазону в потрібну позицію. При захваті границі до форми курсора буде добавлена чотиринаправлена стрілка.</p>
+<p>Щоб скопіювати комірки, потрібно перетягнути границю виділеного діапазону при натиснутій клавіші Ctrl. При цьому під час виділення, копіювання до форми курсора добавляється невеликий знак «+».</p>
+<p>Перемістити або скопіювати комірки за межі вікна чи в інший аркуш, книгу або додаток можна за допомогою <em>буфера обміну</em>. Для цього використовують комбінації клавіш (Ctrl + C або Ctrl + Ins  для копіювання, Ctrl + X або Shift + Del для вирізання), а також одноіменні кнопки <strong>Копіювати</strong> і <strong>Вирізати</strong> на панелі <strong>Буфер обміну</strong> закладки <strong>Головна</strong>. Вставка останнього скопійованого / вирізаного в буфер обміну об’єкта здійснюється аналогічно (Ctrl + V, Shift + Ins або кнопка <strong>Вставити</strong> на панелі <strong>Буфер обміну</strong> закладки <strong>Головна</strong>).</p>
+<p>Зауважимо, що при копіюванні / вирізанні в буфер обміну наступна їх вставка повинна відбуватися відразу, поки ще видно біжучу пунктирну рамку довкола вихідних даних. У протилежному випадку буфер буде очищено.</p>
+<p>При вставці з буфера скопійованих (але не вирізаних) даних, пунктирна рамка зберігається. Це означає, що скопійований фрагмент можна вставити ще раз в іншу позицію. Щоб забрати біжучий пунктир, потрібно натиснути клавішу Esc.</p>
+</section>
+<section id="id10">
+<h3><span class="section-number">4.1.10. </span><strong>4.2. Вилучення й очистка комірок, рядків, стовпців та аркушів</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>При <em>вилученні</em> комірок вони щезають з аркуша і комірки, які до них прилягають, пересуваються, щоб заповнити простір, який звільнився. При <em>очистці</em> комірок їх вміст, формати знищуються, а самі комірки залишаються на аркуші.</p>
+<p>Для вилучення використовується команда <strong>Видалити</strong> на панелі <strong>Клітинки</strong> закладки <strong>Головна</strong> і пункти із списку, що спливає: <strong>Видалити клітинки, Видалити рядки з акркуша, Видалити стовпці з акушу, Видалити аркуш.</strong> При вилученні комірок потрібно за допомогою перемикача <strong>Видалити</strong> задати напрямок, в якому потрібно перемістити комірки, що прилягають: <strong>клітинки зі зміщенням вліво, клітинки зі зміщенням вверх, рядок, стовпець</strong>.</p>
+<p>Щоб очистити комірки, потрібно виділити їх і у групі <strong>Редагування</strong> закладки <strong>Головна</strong> вибрати кнопку <strong>Очистити</strong>, а потім один із пунктів: <strong>Очистити все, Очистити формати, Очистити зміст</strong> або <strong>Очистити примітку</strong>. Якщо очищено вміст комірки, то її значення дорівнює нулю.</p>
+</section>
+<section id="id11">
+<h3><span class="section-number">4.1.11. </span><strong>4.3. Створення рядів даних та автозаповнення</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Для введення в сусідні комірки даних, які повторюються за певними правилами, зокрема, – це послідовності календарних значень, чисел або комбінації чисел та тексту, в MS Excel передбачено механізм автозаповнення. Він дозволяє ввести лише перше значення, а потім автоматично заповнити решту комірок із вказаного діапазону певною послідовністю.</p>
+<p>До вбудованих послідовностей відносяться списки назв (повних і коротких) місяців і днів тижня, кварталів, дат, часу.</p>
+<p>Для створення послідовності (ряду) потрібно виділити помірку з першим значенням списку й потягнути мишею в заданому напрямі за <em>маркер заповнення</em> – маленький чорний квадрат у правому нижньому кутку виділеної комірки (маркер ■). Курсор миші при цьому прийме форму чорного хрестика і при протягуванні буде видно спливаючу підказку з наступним значенням ряду.</p>
+<p>При протягуванні курсора вправо й вниз значення календарних послідовностей і комбінацій тексту і чисел буде нарощуватися, вліво й вверх – зменшуватися. Збільшення / зменшення проходить зі стандартним кроком.</p>
+<p>Після автозаповнення на екрані ненадовго з’явиться кнопка <strong>Параметри автозаповнення</strong>, за допомогою якої можна вибрати різні варіанти заповнення даних. Для дат це можуть бути варіанти <strong>по днях, по рабочих днях, по місяцах, по роках</strong>. Можна також використати при протягуванні праву клавішу миші й вибрати потрібний варіант із контекстного меню.</p>
+<p>Зауважимо, що для текстових і числових комірок нарощування не відбувається – дані копіюються в суміжні комірки. Для організації числових рядів (наприклад, послідовної нумерації), необхідно вибрати в параметрах автозаповнення (або в контекстному меню) варіант <strong>Заповнити</strong>.</p>
+<p>Послідовну нумерацію (з кроком 1) легко організувати, якщо ввести в комірку перше число ряду, а потім протягнути маркер заповнення цієї комірки при натиснутій клавіші Ctrl. Якщо крок не дорівнює 1, то потрібно ввести два початкових значення в суміжні комірки, виділити їх і протягнути маркер заповнення в напрямку виділення. Два початкових значення зададуть крок подальшої зміни даних.</p>
+<p>Крім вбудованих рядів даних, користувач може створити й свої, користувацькі списки автозаповнення. Для цього потрібно ввести список значень в суміжні комірки й викликати вікно налаштування програми, вибравши пункт <strong>Параметри</strong> на закладці <strong>Файл</strong>. Потім на закладці <strong>Додатково</strong> в групі <strong>Загальні</strong> натиснути кнопку <strong>Змінит списки</strong>. Переконавшись, що у вікні в полі <strong>Імпорт списку з клітинок</strong> вказана адреса виділеного діапазону, натиснути кнопку <strong>Імпорт</strong>, а потім <strong>OK.</strong></p>
+<p>Зауважимо, що замість протягування маркера автозаповнення вниз по стовпцю можна двічі клацнути по цьому маркеру – відбудеться автозаповнення даних стовпця на таку ж кількість комірок вниз, скільки є заповнених підряд комірок у сусідньому стовпці.</p>
+</section>
+<section id="id12">
+<h3><span class="section-number">4.1.12. </span><strong>5.1. Найпоширеніші інструменти оформлення таблиці</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>винесені на спливаючу міні-панель форматування – вона легко викликається клацанням правої клавіші миші на комірках. Всі засоби оформлення  таблиць в  Excel зручно зібрані на декількох панелях кнопок закладки <strong>Головна</strong></p>
+</section>
+<section id="id13">
+<h3><span class="section-number">4.1.13. </span><strong>5.2. Форматування комірок</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Відображення вмістимого комірок залежить від його формату. Можна використовувати числові формати для зміни зовнішнього вигляду чисел, наприклад число 0,08 можна відідобразити як 8%.</p>
+<p>Більшість операцій по оформленню комірок електронних таблиць легко провести за допомогою кнопок стрічки. Кожна з них відповідає деяким опціям діалогового вікна <strong>Формат клітинок</strong>. У цьому вікні на декількох закладках зосереджені всі можливості форматів даних, шрифтового оформлення, вирівнювання, кольорової заливки, обрамлення і захисту комірок.</p>
+<p>Для виклику вікна <strong>Формат клітинок</strong> можна використати однойменну команду із списку кнопки <strong>Формат</strong> закладки <strong>Головна</strong> на панелі <strong>Клітинки</strong>. Це вікно можна викликати і за допомогою кнопок виклику  <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAAfElEQVR4XsWLWwqAMAwEc/97Cj6wbdoeQEoU0sSARsUyH93NDmCpbkBX1wHMlQP2E8s2ltl+J3LKlUM7UVrI3U0ZK2eX+9ICIhYOyfpPUY5lfkvmje7bKaTCoZFudN9OMqvRh3K24Noh94M1Zjcwr+jmR3lcoptn8jAFNxtj3edgcOSO+QAAAABJRU5ErkJggg==" /> в правому нижньому куті панелі <strong>Шрифт, Вирівнювання, Число</strong> закладки <strong>Головна</strong>. Причому вікно буде відкрито кожний раз на відповідній закладці.</p>
+<p>Вікно форматування легко викликати також за допомогою комбінації клавіш Ctrl + 1 або команди <strong>Формат клітинок</strong> контекстного меню комірки.</p>
+<p>Розглянемо різні опції форматування комірок: шрифтове оформлення, обрамлення й заливка. Зазначимо, що попередньо необхідно виділити комірку або групу комірок, до яких буде застосоване форматування.</p>
+<p>Шрифтове оформлення вмісту комірок електронних таблиць аналогічне роботі зі шрифтами в MS Word 2010. Кнопки вибору гарнітури, кегля й накреслення шрифту, кольору тексту і заливки зосереджені на панелі <strong>Шрифт</strong> закладки <strong>Головна</strong>. Там же розташовані кнопки збільшення / зменшення розміру шрифту. Кнопка <strong>Формат клітинок</strong> на цій панелі відкриє однойменне вікно налаштувань на закладці <strong>Шрифт</strong>.</p>
+<p>Серед опцій шрифту, які доступні тільки в цьому вікні, – різні види підкреслення даних у списку <strong>Підкреслення</strong> та прапорці групи <strong>Видозміни</strong>.</p>
+<p>Різні види обрамлення комірок можна вибрати за допомогою списку кнопки <strong>Межі</strong> на панелі <strong>Шрифт</strong> закладки <strong>Головна</strong>. Спочатку треба вибрати в цьому списку колір і тип лінії майбутньої рамки і лише потім вказати обрамлення границі комірки.</p>
+<p>Остання команда цього списку – <strong>Інші межі</strong> викликає вікно <strong>Формат клітинок</strong>. Послідовність установки опцій на цій закладці така: спочатку потрібно вказати тип майбутньої границі та її колір, а потім позиціонувати лінії за допомогою кнопок навколо поля зразка в розділі <strong>Окремі</strong>. В полі зразка буде показано майбутній результат обрамлення.</p>
+<p>Суцільну заливку комірок вибраним кольором можна задати за допомогою кнопки <strong>Колір заливки</strong> на панелі <strong>Шрифт</strong> закладки <strong>Головна</strong> або області <strong>Колір фону</strong> на закладці <strong>Заливка</strong> діалогового вікна форматування. Вікно містить ще й додаткові можливості заливки – фоновий узор для комірок (з використанням полів <strong>Колір узору</strong> та <strong>Узор</strong>) і градієнтну або текстурну заливки (з використанням кнопки <strong>Способи заливки</strong>). Градієнтна заливка забезпечує різні плавні переходи одного з двох вибраних кольорів, а текстурна дозволяє залити комірки вибраною заготовкою («мармур», «циновка», «пергамент»  т. ін.).</p>
+<p>Зауважимо, що потрібно контролювати стан комірок у момент виклику вікна форматування. Якщо в комірку не було завершено введення даних (не натиснута клавіша Enter), то із усіх закладок форматування доступною виявиться тільки одна – налаштування шрифтів</p>
+</section>
+<section id="id14">
+<h3><span class="section-number">4.1.14. </span><strong>5.3. Форматування та вирівнювання даних</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>У комірки таблиці можуть бути введені числа, текстові дані та дати (дати, по суті, є числами). Для вибору представлення цих даних на екрані існує ряд вбудованих форматів. На початку для всіх комірок таблиці встановлений формат <strong>Звичайний</strong>.</p>
+<p>Основні формати даних можуть бути вибрані із списку кнопки <strong>Звичайний</strong> на панелі <strong>Число</strong> закладки <strong>Головна</strong>. Серед цих форматів основні формати – текстовий, числовий, грошовий, фінансовий, процентний, дробовий, експоненціальний, часу, дати. Параметри цих форматів у випадку їх вибору встановлюються за замовчуванням. Деякі параметри форматів можна відрегулювати за допомогою кнопок панелі <strong>Число</strong> закладки <strong>Головна</strong>. Так, можна вказати іншу грошову одиницю за допомогою списку кнопки <strong>Фінансовой числовий формат</strong>, виділити розділювачами групи цифр у числі і встановити два десяткових знаки після коми – кнопка <strong>Формат з розділювачами</strong>, збільшити або зменшити кількість десяткових знаків у дробовій частині числа за допомогою однойменних кнопок.</p>
+<p>Для установки інших параметрів, у тому числі і користувацьких, необхідно викликати діалогове вікно <strong>Формат клітинок</strong> і вибрати закладку <strong>Число</strong>.</p>
+<p>Для налаштування формату спочатку потрібно вибрати категорію в лівому полі <strong>Числові формати</strong>, а потім встановити параметри справа від списку категорій.</p>
+<p>Зауважимо, що при введенні грошових сум потрібно вводити лише їх числові значення, а потім встановлювати для них грошовий формат.</p>
+<p>Якщо потрібно ввести числа як текстові величини (коди, шифри квитків  тощо), то спочатку для комірок встановлюють текстовий формат, а потім вводять дані, або перед введенням таких числових даних набрати апостроф.</p>
+<p>Для <em>вирівнювання</em> даних у комірках використовується панель кнопок <strong>Вирівнювання</strong> на закладці <strong>Головна</strong>.</p>
+<p>За замовчуванням текстові дані в комірках вирівнюються по лівому краю, числові – по правому. Кнопки на стрічці дозволяють провести три способи горизонтального вирівнювання даних (лівосторонне, правосторонне, центроване) і тільки три – вертикального (притиснути вміст комірки до верхнього або нижнього краю чи розмістити посередині).</p>
+<p>Величина абзацних відступів всередині комірки регулюється за допомогою кнопок <strong>Зменшити відступ / Збільшити відступ</strong> на панелі <strong>Вирівнювання</strong> закладки <strong>Головна</strong>.</p>
+<p>Якщо текстовий рядок не поміщається в комірці, то можна організувати перенесення тексту по рядках в рамках однієї комірки. Для цього служить кнопка <strong>Перенесення тексту</strong>.</p>
+<p>Часто доводиться розташовувати заголовок таблиці по її центру. Для цього текст назви набирають у першій комірці рядка заголовка, потім виділяють всі потрібні комірки в цьому рядку, об’єднують їх  в одну і центрують назву. Для виконання цієї операції в групі <strong>Вирівнювання</strong> призначена кнопка <strong>Об’єднати і розмістити в центрі</strong>. Для відміни операції об’єднання треба повторно натиснути цю ж кнопку або з її списку команд вибрати <strong>Скасувати об’єднання</strong>.</p>
+<p>Додаткові можливості для вирівнювання тексту є на закладці <strong>Вирівнювання</strong>  діалогового вікна <strong>Формат клітинок</strong>. У цьому вікні, крім зазначеного вище, можна встановити довільний кут повороту тексту в комірці. Для цього потрібно захопити мишею слово <strong>Надпис</strong> в полі <strong>Ориєнтація</strong> і повернути його на бажаний кут. Можна також вказати точне значення кута повороту в полі <strong>Градусів</strong>.</p>
+</section>
+<section id="id15">
+<h3><span class="section-number">4.1.15. </span><strong>5.4. Збереження і відображення даних</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Незалежно від кількості розрядів, що відображаються на екрані, числа в Excel зберігаються з точністю до 15 розрядів. Якщо було введено або отримано число більше ніж з 15 значущими знаками, то розряди після 15-го перетворюються в нулі. Для перегляду точнішого значення результатів обчислень необхідно збільшити розрядність даних, скориставшись кнопкою <strong>Збільшити розрядність</strong> на панелі <strong>Число</strong> закладки <strong>Головна</strong>. Формат відображення даних не впливає на результат обчислень. Наприклад, якщо в комірці зберігається число 1.555, а при форматуванні комірки встановлено вивід цілого числа (тобто відобразиться 2), то при подвоєнні цього числа (1.555 × 2) буде отримано вірний результат 3.11 (на екрані – 3, якщо формат буде цілочисельний).</p>
+<p>Для рядків і стовпців програма дозволяє налаштувати висоту або ширину, а також приховати і знову відобразити їх на екрані.</p>
+<p>Змінити ширину стовпця найпростіше за допомогою миші, протягнувши нею за вертикальний розділювач справа від заголовка стовпця. Аналогічно для зміни висоти рядка потрібно перемістити розділювач знизу від його номера – заголовка. Курсор миші в цей момент прийме форму двонапрямленої стрілки.</p>
+<p>В процесі регулювання розмірів рядка / стовпця над курсором спливає поле з показником поточного розміру (в точках і пікселах). Однак для встановлення розмірів з більшою точністю краще скористатися командами меню кнопки <strong>Формат</strong> на панелі <strong>Клітинки</strong> закладки <strong>Головна</strong>. Пункти меню <strong>Висота рядка</strong> і <strong>Ширина стовпця</strong> викликають діалогові вікна установки потрібних розмірів. Можна підібрати таку ширину стовпця (висоту рядка), яка б точно відповідала розміру даних, що є в ньому. Для цього служать пункти  <strong>Автопідбір висоти рядка / ширини столпця</strong>.</p>
+<p>Дуже корисною є можливість тимчасово приховати виділені стовпці / рядки. Це необхідно, якщо таблиця містить велику кількість стовпців (вони не поміщаються на екрані), а в даний момент потрібна інформація лише для деяких. Для приховання чи відображення стовпців / рядків і навіть аркушів служить однойменна команда в списку кнопки <strong>Формат</strong> на панелі <strong>Клітинки</strong> закладки <strong>Головна</strong>. Для відображення прихованих стовпців / рядків попередньо потрібно виділити по одному стовпцю / рядку, які прилягають до виділених з обох боків. Команди <strong>Приховати</strong>, <strong>Відобразити, Ширина стовпця, Висота рядка</strong> присутні також у контекстних меню стовпців / рядків.</p>
+</section>
+<section id="id16">
+<h3><span class="section-number">4.1.16. </span><strong>5.5. Застосування стилів і тем оформлення таблиць</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Щоб встановити одночасно декілька характеристик форматів можна використати стилі комірок. <em>Стиль комірки</em> – це певний набір параметрів форматування. Excel пропонує широкий набір готових стилів, але можна розробити й свої.</p>
+<p>Для застосування одного з вбудованих стилів, потрібно виділити комірки і на закладці <strong>Головна</strong> вибрати в групі <strong>Стиль</strong> відповідний стиль у списку <strong>Стилі клітинок</strong>. При наведені курсора на назві стилю в цьому списку результат його застосування буде накладатися на виділені комірки.</p>
+<p>Аналогічно стиль можна вилучити. При цьому буде відмінено форматування даним стилем всіх комірок.</p>
+<p>Весь документ можна оперативно відформатувати, застосувавши до нього <em>тему документа</em> – набір варіантів форматування, включаючи кольорову тему (набір кольорів оформлення), тему шрифтів (набір шрифтів заголовка і основного тексту) і тему ефектів (набір ліній, границь й заливок). Для роботи з темами документа служить група кнопок <strong>Теми</strong> закладки <strong>Размітка сторінки</strong>. Для застосування певної теми необхідно вибрати її зі списку кнопки <strong>Теми</strong>. У процесі вибору можна спостерігати у вікні документа ефекти майбутнього використання теми. Вибрана тема вплине на використані в документі стилі.</p>
+<p>Тема документа може бути налаштована. Для цього на панелі <strong>Теми</strong> призначені кнопки <strong>Кольори, Шрифти, Ефекти</strong>. Зміни, внесені в один або декілька компонентів даної теми, негайно вплинуть на стилі, які використовуються в активному документі. Щоб зберегти тему, необхідно виконати команду <strong>Зберегти поточну тему</strong> у списку кнопки <strong>Теми</strong>.</p>
+</section>
+</section>
+<section id="id17">
+<h2><span class="section-number">4.2. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Розгляньте які закладки є на стрічці, які в них є команди.</p></li>
+<li><p>Розгляньте структуру рядка стану. Налаштуйте рядок стану. – Використати контектне меню рядка стану.</p></li>
+<li><p>Установіть стиль адресації комірок R1C1/зніміть його. – Команда <strong>Файл⇒Параметри⇒Формули⇒Работа з формулами</strong>.</p></li>
+<li><p>Введіть в комірку А1 число 5, а в комірку С2 формулу =А1+1. Прочитайте результат.</p></li>
+<li><p>Перемістіть комірку А1 і скопіюйте комірку С2 на інший аркуш. – Команди <strong>Головна⇒Вирізати/Копиювати</strong>.</p></li>
+<li><p>Очистіть комірки з цього аркуша. – Клавіша Del.</p></li>
+<li><p>Заповніть комірки стовпця місяцями року. – Написати в першій комірці назву місяця і протягнути маркер заповнення (■).</p></li>
+<li><p>Заповніть стовпчик В послідовними числами 1, 2, … , 100.</p></li>
+<li><p>Заповніть стовпчик Е послідовними парними числами 2, 4, … , 200.</p></li>
+<li><p>Викликати вікно Формат клітинок. – Команда <strong>Головна⇒Клітинки⇒Формат</strong>, або команда <strong>Формат клітинок</strong> контекстного меню.</p></li>
+<li><p>Для комірки В2 виконайте обрамлення межі комірки. – Команда <strong>Головна⇒</strong> група <strong>Шрифт⇒Межі</strong>.</p></li>
+<li><p>Залийте комірку С3 вибраним кольором. – Команда <strong>Головна⇒</strong> група <strong>Шрифт⇒Колір заливки</strong>. Виставити в цій комірці деякий узор.</p></li>
+<li><p>Для комірок , що заповнені числами установити інші числові формати. Зробіть так щоб ці числа мали тільки два знаки після коми. – У вікні <strong>Формат клітинок</strong> вибрати закладку число.</p></li>
+<li><p>Проілюструйте вирівнювання даних у комірках. – Команда  <strong>Головна ⇒</strong> група <strong>Вирівнювання</strong>.</p></li>
+<li><p>Сформуйте у декількох комірках назву таблиці. – Команда <strong>Головна ⇒</strong> група <strong>Вирівнювання⇒Об’єднати і розмістити по центру</strong>.</p></li>
+<li><p>Змініть висоти трьох рядків. Команда <strong>Головна⇒</strong> група <strong>Клітинки⇒Формат⇒Висота рядка</strong>.</p></li>
+<li><p>Приховати та відобразити деякі стовпці. – Виділити стовпці. Команда <strong>Головна⇒</strong>група <strong>Клітинки⇒Формат⇒Приховати</strong>.</p></li>
+</ol>
+</section>
+<section id="id18">
+<h2><span class="section-number">4.3. </span><strong>Контрольні питання</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Як добавити на стрічку нові закладки, як створити групи команд?</p></li>
+<li><p>Як налаштувати панель швидкого доступу?</p></li>
+<li><p>Що таке робоча книга? З яких елементів вона складається?</p></li>
+<li><p>Як відкрити/зберегти книгу?</p></li>
+<li><p>Як налаштувати параметри сторінки?</p></li>
+<li><p>Які є стилі адресації комірок? Як їх установлювати?</p></li>
+<li><p>Які типи даних можна вводити в комірки таблиці?</p></li>
+<li><p>Як ввести дані одразу в декілька комірок?</p></li>
+<li><p>Як ввести дату/ поточну дату в комірку?</p></li>
+<li><p>Як ввести числа, які мають інтерпретуватися як час?</p></li>
+<li><p>Як виділити діапазон комірок/рядок/стовпчик?</p></li>
+<li><p>Як виконати обрамлення комірок?</p></li>
+<li><p>Як заповнити комірки кольором/узором?</p></li>
+<li><p>Як заповнити комірки днями тижня/непарними числами?</p></li>
+<li><p>Як відредагувати дані в комірках?</p></li>
+<li><p>Як змінити числові формати?</p></li>
+<li><p>Як змінити ширину стовпців?</p></li>
+<li><p>Як приховати рядки/стовпці таблиці?</p></li>
+<li><p>Як об’єднати комірки?</p></li>
+<li><p>Як розмістити дані вертикально в комірці?</p></li>
+<li><p>Як вирівнювати дані в комірках?</p></li>
+<li><p>Як повернути дані в комірках на бажаний кут?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id19">
+<h2><span class="section-number">4.4. </span>Вимоги до виконання і подання<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>Microsoft Excel</strong> (настільна або веб‑версія);</p></li>
+<li><p>у <strong>Google SpreadSheets</strong>;</p></li>
+<li><p>у <strong>третьому редакторі на вибір</strong>: LibreOffice Calc / WPS Spreadsheets / OnlyOffice / Apple Numbers (для macOS).</p></li>
+</ol>
+<p><strong>Подання в Classroom:</strong> завантажте <strong>три PDF‑файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">редактору&gt;_&lt;група&gt;_&lt;ім'я</span> <span class="pre">та</span> <span class="pre">прізвище&gt;.pdf</span></code></p>
+<p><strong>Приклади:</strong>
+<code class="docutils literal notranslate"><span class="pre">Excel_144_Алукі</span> <span class="pre">Анастасія.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">GoogleSpreadSheets_143_Петренко</span> <span class="pre">Іван.pdf</span></code>
+<code class="docutils literal notranslate"><span class="pre">AppleNumbers_141_Петренко</span> <span class="pre">Іван.pdf</span></code></p>
+<div class="note admonition">
+<p class="admonition-title"><strong>Коментар щодо недоступних опцій:</strong></p>
+<p>якщо певної опції немає у вашому табличному процесорі, у звіті коротко вкажіть це і опишіть обраний еквівалент дії (скрін за можливості)..</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>ЛАБОРАТОРНА РОБОТА №3</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>ЛАБОРАТОРНА РОБОТА №5</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ms-excel-2010">4.1.1. <strong>1.1. Завантаження програми MS Excel 2010</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.1.2. <strong>1.2. Інтерфейс MS Excel 2010</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.1.3. <strong>2.1. Створення, відкриття та збереження файлів робочих книг</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.1.4. <strong>2.2. Основні об’єкти робочих книг та їх характеристика</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4.1.5. <strong>2.3.  Закриття робочої книги</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.1.6. <strong>3.1. Типи даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.1.7. <strong>3.2.</strong> <strong>Введення числових значень та даних типу часу і дати</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">4.1.8. <strong>3.3. Введення текстових значень та формул</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.1.9. <strong>4.1. Виділення та переміщення даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.1.10. <strong>4.2. Вилучення й очистка комірок, рядків, стовпців та аркушів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.1.11. <strong>4.3. Створення рядів даних та автозаповнення</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.1.12. <strong>5.1. Найпоширеніші інструменти оформлення таблиці</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4.1.13. <strong>5.2. Форматування комірок</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">4.1.14. <strong>5.3. Форматування та вирівнювання даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">4.1.15. <strong>5.4. Збереження і відображення даних</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">4.1.16. <strong>5.5. Застосування стилів і тем оформлення таблиць</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">4.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4.3. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">4.4. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

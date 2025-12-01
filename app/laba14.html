@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>14. ЛАБОРАТОРНА РОБОТА №14 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/laba14';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="prev" title="13. ЛАБОРАТОРНА РОБОТА №13" href="laba13.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="laba1.html">1. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba2.html">2. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba3.html">3. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba4.html">4. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba5.html">5. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba6.html">6. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba7.html">7. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba8.html">8. ЛАБОРАТОРНА РОБОТА №8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba9.html">9. ЛАБОРАТОРНА РОБОТА №9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba10.html">10. ЛАБОРАТОРНА РОБОТА №10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba11.html">11. ЛАБОРАТОРНА РОБОТА №11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba12.html">12. ЛАБОРАТОРНА РОБОТА №12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laba13.html">13. ЛАБОРАТОРНА РОБОТА №13</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">14. ЛАБОРАТОРНА РОБОТА №14</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/blob/dev/docs/app/laba14.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/edit/dev/docs/app/laba14.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://volodymyr-kovdrysh.github.io/ITinLingvo/issues/new?title=Issue%20on%20page%20%2Fapp/laba14.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/laba14.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №14</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">14.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">14.1.1. <strong>Медіаграмотність і її складові</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">14.1.2. <strong>Фактчекінг: фейки та базові критерії перевірки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">14.1.3. <strong>Перевірка фото, відео, месенджер-каналів і волонтерських організацій</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">14.1.4. <strong>Боти, тролі та фактчекінгові ініціативи під час війни</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">14.1.5. <strong>Інформаційно-психологічні операції (ІПСО) та російська пропаганда</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">14.1.6. <strong>Журналістика під час війни та інформаційні бульбашки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">14.1.7. <strong>Інформаційний фронт: відповідальне створення й поширення контенту</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">14.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">14.3. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">14.4. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o14">
+<h1><span class="section-number">14. </span>ЛАБОРАТОРНА РОБОТА №14<a class="headerlink" href="#o14" title="Link to this heading">#</a></h1>
+<p><strong>Медіаграмотність в умовах інформаційної війни (курс Prometheus)</strong></p>
+<p><strong>План</strong></p>
+<ol class="arabic simple">
+<li><p>Медіаграмотність і її складові в умовах інформаційної війни</p></li>
+<li><p>Фактчекінг: критерії виявлення фейків та маніпуляцій</p></li>
+<li><p>Перевірка фото, відео, месенджер-каналів і волонтерських організацій</p></li>
+<li><p>Боти, тролі та фактчекінгові ініціативи під час війни</p></li>
+<li><p>Інформаційно-психологічні операції (ІПСО) та російська пропаганда</p></li>
+<li><p>Журналістика під час війни й інформаційні бульбашки</p></li>
+<li><p>Інформаційний фронт: відповідальне створення й поширення контенту</p></li>
+<li><p>Проходження онлайн-курсу Prometheus та отримання сертифіката</p></li>
+</ol>
+<section id="id1">
+<h2><span class="section-number">14.1. </span><strong>Методичні вказівки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">14.1.1. </span><strong>Медіаграмотність і її складові</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>У першому модулі курсу розглядаються:</p>
+<ul class="simple">
+<li><p>поняття медіаграмотності та її ключові компоненти;</p></li>
+<li><p>рівень медіаграмотності в Україні та світі;</p></li>
+<li><p>способи перевірки й розвитку власної медіаграмотності;</p></li>
+<li><p>теорія інокуляції — «інформаційної вакцинації», що допомагає виробити стійкість до маніпуляцій і нав’язування переконань.</p></li>
+</ul>
+<p>Пам’ятаємо, що медіаграмотність — це не тільки «не вірити фейкам», а ціла система навичок: аналіз джерел, критичне мислення, розуміння емоційного впливу, здатність перевіряти інформацію та власні упередження.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">14.1.2. </span><strong>Фактчекінг: фейки та базові критерії перевірки</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Другий модуль присвячений фактчекінгу в умовах війни. Окремі лекції пояснюють:</p>
+<ul class="simple">
+<li><p>що таке фактчекінг і чим він відрізняється від звичайного «гуглення»;</p></li>
+<li><p>основні критерії виявлення фейків та маніпуляцій (джерело, дата, контекст, відповідність фактам, емоційність, логічні суперечності);</p></li>
+<li><p>як відрізнити помилку від цілеспрямованого обману;</p></li>
+<li><p>чому під час війни особливо небезпечно ділитися неперевіреною інформацією.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">14.1.3. </span><strong>Перевірка фото, відео, месенджер-каналів і волонтерських організацій</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>У модулі 2 окремі лекції присвячені практичним інструментам:</p>
+<ul class="simple">
+<li><p><strong>перевірка фото</strong> — зворотний пошук зображень, аналіз метаданих, виявлення монтажу;</p></li>
+<li><p><strong>перевірка відео</strong> — пошук оригіналу, аналіз кадрів, співставлення з іншими джерелами;</p></li>
+<li><p><strong>оцінка Telegram-каналів і Viber-чатів</strong> — хто адміністратор, які джерела посилаються, які наративи просуваються;</p></li>
+<li><p><strong>перевірка волонтерських організацій</strong> — офіційна реєстрація, прозорі звіти, публічна репутація, відгуки, перевірені реквізити.</p></li>
+</ul>
+<p>Ваше завдання — навчитися застосовувати ці інструменти на практиці, а не лише знати їх назви.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">14.1.4. </span><strong>Боти, тролі та фактчекінгові ініціативи під час війни</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Завершальні лекції другого модуля присвячені:</p>
+<ul class="simple">
+<li><p>виявленню ботів і тролів у соцмережах (типові ознаки: однотипні коментарі, «зливи» під ключові теми, відсутність особистого контенту);</p></li>
+<li><p>розумінню, як працюють ботоферми та координовані інформаційні кампанії;</p></li>
+<li><p>знайомству з українськими та міжнародними фактчекінговими ініціативами (StopFake, VoxCheck тощо), які системно перевіряють інформацію й публікують спростування.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><span class="section-number">14.1.5. </span><strong>Інформаційно-психологічні операції (ІПСО) та російська пропаганда</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Третій модуль розкриває:</p>
+<ul class="simple">
+<li><p>ІПСО як складову інформаційної війни: цілі, етапи, цільові аудиторії;</p></li>
+<li><p>традиційні інструменти пропаганди (образ ворога, напівправда, повторення, підміна понять);</p></li>
+<li><p>тактики російської пропаганди в Україні під час повномасштабної війни;</p></li>
+<li><p>російську пропаганду на Заході, її ключові наративи;</p></li>
+<li><p>досвід різних країн та України у протидії ІПСО.</p></li>
+</ul>
+<p>Ви маєте уміти впізнавати пропагандистські наративи й розуміти, чому вони небезпечні для суспільства.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">14.1.6. </span><strong>Журналістика під час війни та інформаційні бульбашки</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Четвертий модуль зосереджено на:</p>
+<ul class="simple">
+<li><p>тому, як змінилися інформаційні звички українців під час війни (зростання ролі месенджерів, Telegram-каналів, волонтерських спільнот);</p></li>
+<li><p>різниці між експертом-блогером та професійним журналістом;</p></li>
+<li><p>журналістських стандартах (баланс, перевірка фактів, відокремлення фактів від думок);</p></li>
+<li><p>оцінюванні якості контенту закордонних медіа;</p></li>
+<li><p>пастках когнітивних упереджень, які формують інформаційні бульбашки.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3><span class="section-number">14.1.7. </span><strong>Інформаційний фронт: відповідальне створення й поширення контенту</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>П’ятий модуль присвячений активній позиції користувача:</p>
+<ul class="simple">
+<li><p>як бути ефективним на інформаційному фронті, не нашкодивши обороні та безпеці;</p></li>
+<li><p>що таке «політика спільноти» (community guidelines) та як уникати блокування контенту;</p></li>
+<li><p>як взаємодіяти з людьми, які повторюють пропагандистські наративи;</p></li>
+<li><p>які ресурси та інструменти допомагають відповідально створювати і поширювати контент (освітні платформи, фактчекінгові проєкти, офіційні джерела державних органів).</p></li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">14.2. </span><strong>Практичні завдання</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Зареєструватися / увійти</strong> на платформу <a class="reference external" href="https://prometheus.org.ua">Prometheus</a> та приєднатися до курсу
+<a class="reference external" href="https://prometheus.org.ua/prometheus-free/resisting-media-manipulation/"><strong>«Медіаграмотність в умовах інформаційної війни»</strong></a>.</p></li>
+<li><p><strong>Пройти всі 5 модулів курсу</strong>, уважно переглянувши відеолекції.</p></li>
+<li><p><strong>Виконати всі проміжні тести</strong> та фінальний підсумковий тест.</p></li>
+<li><p><strong>Отримати сертифікат</strong> про проходження курсу (у форматі PDF).</p></li>
+<li><p>Зробити <strong>3–5 скріншотів</strong>:</p>
+<ul class="simple">
+<li><p>сторінки курсу з переліком модулів;</p></li>
+<li><p>прикладу тесту;</p></li>
+<li><p>будь-якого фрагмента лекції або інтерфейсу.</p></li>
+</ul>
+</li>
+<li><p>Скласти <strong>короткий конспект</strong> (по 3–4 речення) до КОЖНОГО модуля:</p>
+<ul class="simple">
+<li><p>головна ідея модуля;</p></li>
+<li><p>які інструменти / поняття були для вас новими;</p></li>
+<li><p>як це можна застосувати у реальному житті.</p></li>
+</ul>
+</li>
+<li><p>Навести <strong>мінімум 3 приклади фейків або маніпуляцій</strong>, які ви зустрічали (в соцмережах, месенджерах, новинах), і описати:</p>
+<ul class="simple">
+<li><p>як їх можна було перевірити за допомогою інструментів фактчекінгу з курсу;</p></li>
+<li><p>чому ці повідомлення були небезпечними.</p></li>
+</ul>
+</li>
+<li><p>Описати <strong>один приклад ІПСО або пропагандистського наративу</strong>, який згадувався в курсі або в реальних подіях, і проаналізувати:</p>
+<ul class="simple">
+<li><p>ціль аудиторії;</p></li>
+<li><p>які емоції викликає;</p></li>
+<li><p>до чого може призвести його поширення.</p></li>
+</ul>
+</li>
+<li><p>Скласти <strong>«Пам’ятку безпечного поширення інформації під час війни»</strong> (не менше 8–10 правил).</p></li>
+<li><p>Завантажити <strong>сертифікат + звіт</strong> у Google Classroom.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Якщо курс тимчасово недоступний або є технічні проблеми з платформою:</strong>
+✔ зробити скріншот помилки / повідомлення;
+✔ описати ситуацію у звіті.</p>
+</div></blockquote>
+</section>
+<section id="id10">
+<h2><span class="section-number">14.3. </span><strong>Контрольні питання</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Що таке медіаграмотність у контексті інформаційної війни?</p></li>
+<li><p>Які основні складові медіаграмотності розглядаються у курсі?</p></li>
+<li><p>У чому полягає теорія інокуляції й як вона допомагає протидіяти маніпуляціям?</p></li>
+<li><p>Що таке фактчекінг і чим він відрізняється від звичайного «пошуку в Google»?</p></li>
+<li><p>Назвіть основні критерії виявлення фейків та маніпуляцій.</p></li>
+<li><p>Які інструменти пропонуються в курсі для перевірки достовірності фото?</p></li>
+<li><p>Як перевірити відео на справжність (основні кроки)?</p></li>
+<li><p>Які ознаки ненадійного Telegram-каналу або Viber-чату?</p></li>
+<li><p>Як перевірити, чи волонтерська організація є реальним і надійним фондом?</p></li>
+<li><p>За якими ознаками можна розпізнати бота або троля в соцмережах?</p></li>
+<li><p>Що таке ІПСО і які їхні цілі під час війни проти України?</p></li>
+<li><p>Які основні наративи російської пропаганди в Україні й на Заході згадуються в курсі?</p></li>
+<li><p>Чим відрізняється професійний журналіст від експерта-блогера?</p></li>
+<li><p>Які базові журналістські стандарти треба враховувати при оцінці новини?</p></li>
+<li><p>Що таке «інформаційна бульбашка» і як вона виникає?</p></li>
+<li><p>Що мається на увазі під «політикою спільноти» (community guidelines) і чому важливо її знати?</p></li>
+<li><p>Як варто реагувати на близьких людей, які поширюють пропагандистські наративи?</p></li>
+<li><p>Які ресурси курс рекомендує для перевірки інформації та відповідального створення контенту?</p></li>
+<li><p>Чому поширення неперевіреної інформації під час війни може бути небезпечним?</p></li>
+<li><p>Які три особисті правила ви для себе сформували після проходження курсу?</p></li>
+</ol>
+</section>
+<section id="id11">
+<h2><span class="section-number">14.4. </span><strong>Вимоги до виконання і подання</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Виконати всі практичні завдання (1–10).</p></li>
+<li><p>Підготувати <strong>звіт</strong> у форматі <code class="docutils literal notranslate"><span class="pre">.docx</span></code> або <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>, який містить:</p>
+<ul class="simple">
+<li><p>титульну сторінку;</p></li>
+<li><p>тему та <strong>мету роботи</strong>;</p></li>
+<li><p>короткий опис курсу та його структури (5 модулів);</p></li>
+<li><p>скріншоти з платформи;</p></li>
+<li><p>конспекти модулів;</p></li>
+<li><p>приклади фейків/маніпуляцій і аналіз перевірки;</p></li>
+<li><p>приклад ІПСО з коротким розбором;</p></li>
+<li><p>«Пам’ятку безпечного поширення інформації»;</p></li>
+<li><p>відповіді на контрольні питання;</p></li>
+<li><p>висновки;</p></li>
+<li><p>копію сертифіката (скріншот або вставлений PDF-фрагмент).</p></li>
+</ul>
+</li>
+<li><p>Додати окремим файлом <strong>сертифікат Prometheus</strong> (якщо не вбудовано у звіт).</p></li>
+<li><p>Завантажити всі матеріали в <strong>Google Classroom</strong> до встановленого дедлайну.</p></li>
+<li><p>Схема імені файлу звіту:</p>
+<p><strong>&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР14.pdf</strong></p>
+<p>Наприклад:
+<code class="docutils literal notranslate"><span class="pre">143_ПетренкоІван_ЛР14.pdf</span></code></p>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba13.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">13. </span>ЛАБОРАТОРНА РОБОТА №13</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">14.1. <strong>Методичні вказівки</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">14.1.1. <strong>Медіаграмотність і її складові</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">14.1.2. <strong>Фактчекінг: фейки та базові критерії перевірки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">14.1.3. <strong>Перевірка фото, відео, месенджер-каналів і волонтерських організацій</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">14.1.4. <strong>Боти, тролі та фактчекінгові ініціативи під час війни</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">14.1.5. <strong>Інформаційно-психологічні операції (ІПСО) та російська пропаганда</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">14.1.6. <strong>Журналістика під час війни та інформаційні бульбашки</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">14.1.7. <strong>Інформаційний фронт: відповідальне створення й поширення контенту</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">14.2. <strong>Практичні завдання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">14.3. <strong>Контрольні питання</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">14.4. <strong>Вимоги до виконання і подання</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
